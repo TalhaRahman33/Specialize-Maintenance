@@ -152,7 +152,7 @@ const Footer = () => {
 
                       <div>
                         <img
-                          src="/images/saudi-logo.AVIF"
+                          src="/images/saudilogo.AVIF"
                           alt="Saudi Arabia"
                           style={{ height: 36, width: "auto", marginTop: 6 }}
                         />
@@ -241,19 +241,19 @@ const Footer = () => {
             {/* PAYMENT METHODS (white pills like screenshot) */}
             <div className="paymentRow">
               <div className="payPill">
-                <img src="/images/cod_mini.AVIF" alt="الدفع عند الاستلام" className="payImg" />
+                <img src="/images/cod.AVIF" alt="الدفع عند الاستلام" className="payImg" />
               </div>
               <div className="payPill">
-                <img src="/images/apple_pay_mini.AVIF" alt="Apple Pay" className="payImg" />
+                <img src="/images/apple.AVIF" alt="Apple Pay" className="payImg" />
               </div>
               <div className="payPill">
-                <img src="/images/credit_card_mini.AVIF" alt="Visa" className="payImg" />
+                <img src="/images/credit.AVIF" alt="Visa" className="payImg" />
               </div>
               <div className="payPill">
-                <img src="/images/mada_mini.AVIF" alt="Mastercard" className="payImg" />
+                <img src="/images/mada.AVIF" alt="Mastercard" className="payImg" />
               </div>
               <div className="payPill">
-                <img src="/images/bank_mini.AVIF" alt="مدى" className="payImg" />
+                <img src="/images/bank.AVIF" alt="مدى" className="payImg" />
               </div>
             </div>
           </div>
