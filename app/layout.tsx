@@ -19,7 +19,7 @@ export default function RootLayout({
         <meta name="robots" content="" />
         <meta name="description" content="" />
 
-        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/images/favicon-32x32.png" type="image/x-icon" />
         <link
           rel="shortcut icon"
           type="image/x-icon"

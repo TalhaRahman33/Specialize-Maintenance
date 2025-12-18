@@ -12,6 +12,8 @@ import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 import GoToTop from '../components/GoToTop'
 import '../components/navbar.module.css'
+import Hero from '../components/Hero'
+
 
 
 const page = () => {
@@ -21,7 +23,7 @@ const page = () => {
     
           <div className="page-content">
     
-    
+    <Hero />
           <Spacialization />
           <AboutComp />
            <Services />

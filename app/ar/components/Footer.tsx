@@ -1,19 +1,22 @@
+"use client";
+
 import React from "react";
 import type { CSSProperties } from "react";
 import {
-  FaWhatsapp,
-  FaMobileAlt,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTiktok,
-  FaYoutube,
-  FaFacebookF,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+  Instagram,
+  Twitter,
+  Ghost,
+  Music,
+  Youtube,
+  Facebook,
+  MessageCircle,
+  Phone,
+  Smartphone,
+  Mail,
+} from "lucide-react";
 
 const Footer = () => {
+  // Social button (lucide) — same feel
   const socialBtnStyle: CSSProperties = {
     width: 38,
     height: 38,
@@ -39,7 +42,7 @@ const Footer = () => {
     listStyle: "none",
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start", // ✅ starts under heading
+    alignItems: "flex-start",
     gap: 12,
   };
 
@@ -51,7 +54,7 @@ const Footer = () => {
     alignItems: "center",
     justifyContent: "flex-start",
     gap: 12,
-    direction: "ltr", // ✅ keep +966 correct
+    direction: "ltr", // keep +966 correct
   };
 
   const contactLink: CSSProperties = {
@@ -67,6 +70,7 @@ const Footer = () => {
         {/* FOOTER TOP */}
         <div className="footer-top overlay-wraper">
           <div className="overlay-main" />
+
           <div className="container">
             <div className="row">
               {/* COMPANY - RIGHT SIDE */}
@@ -80,7 +84,7 @@ const Footer = () => {
                     المبتكرة للشركات والمؤسسات والأفراد.
                   </p>
 
-                  {/* SOCIAL ICONS (start from RIGHT) */}
+                  {/* SOCIAL ICONS (lucide) start from RIGHT */}
                   <ul
                     className="social-icons mt-social-links"
                     style={{
@@ -95,32 +99,32 @@ const Footer = () => {
                   >
                     <li>
                       <a href="#" title="فيسبوك" style={socialBtnStyle}>
-                        <FaFacebookF size={18} />
+                        <Facebook size={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#" title="يوتيوب" style={socialBtnStyle}>
-                        <FaYoutube size={18} />
+                        <Youtube size={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#" title="إنستغرام" style={socialBtnStyle}>
-                        <FaInstagram size={18} />
+                        <Instagram size={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#" title="إكس" style={socialBtnStyle}>
-                        <FaXTwitter size={18} />
+                        <Twitter size={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#" title="سناب شات" style={socialBtnStyle}>
-                        <FaSnapchatGhost size={18} />
+                        <Ghost size={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#" title="تيك توك" style={socialBtnStyle}>
-                        <FaTiktok size={18} />
+                        <Music size={18} />
                       </a>
                     </li>
                   </ul>
@@ -173,7 +177,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* CONTACT US - LEFT SIDE (FIXED) */}
+              {/* CONTACT US - LEFT SIDE */}
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div
                   className="widget widget_address_outer"
@@ -186,11 +190,12 @@ const Footer = () => {
                     تواصل معنا
                   </h4>
 
-                  {/* ✅ Wrapper breaks theme floats/padding */}
                   <div style={contactWrap}>
                     <ul className="widget_address" style={contactUl}>
                       <li style={contactLi}>
-                        <FaWhatsapp size={18} color="#fff" />
+                        <span className="iconWrap">
+                          <MessageCircle size={18} />
+                        </span>
                         <a
                           href="https://wa.me/966539771718"
                           target="_blank"
@@ -202,21 +207,27 @@ const Footer = () => {
                       </li>
 
                       <li style={contactLi}>
-                        <FaMobileAlt size={18} color="#fff" />
+                        <span className="iconWrap">
+                          <Smartphone size={18} />
+                        </span>
                         <a href="tel:+966539774020" style={contactLink}>
                           +966539774020
                         </a>
                       </li>
 
                       <li style={contactLi}>
-                        <FaPhoneAlt size={17} color="#fff" />
+                        <span className="iconWrap">
+                          <Phone size={17} />
+                        </span>
                         <a href="tel:+966539771718" style={contactLink}>
-                          966539771718
+                          +966539771718
                         </a>
                       </li>
 
                       <li style={contactLi}>
-                        <FaEnvelope size={17} color="#fff" />
+                        <span className="iconWrap">
+                          <Mail size={17} />
+                        </span>
                         <a href="mailto:a22@live.at" style={contactLink}>
                           a22@live.at
                         </a>
@@ -227,41 +238,23 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* PAYMENT ICONS */}
-            <div
-              style={{
-                marginTop: 26,
-                display: "flex",
-                justifyContent: "center",
-                gap: 14,
-                flexWrap: "wrap",
-              }}
-            >
-              <img
-                src="/images/payments/applepay.png"
-                alt="آبل باي"
-                style={{ height: 28 }}
-              />
-              <img
-                src="/images/payments/mada.png"
-                alt="مدى"
-                style={{ height: 28 }}
-              />
-              <img
-                src="/images/payments/bank.png"
-                alt="تحويل بنكي"
-                style={{ height: 28 }}
-              />
-              <img
-                src="/images/payments/visa.png"
-                alt="فيزا"
-                style={{ height: 28 }}
-              />
-              <img
-                src="/images/payments/mastercard.png"
-                alt="ماستركارد"
-                style={{ height: 28 }}
-              />
+            {/* PAYMENT METHODS (white pills like screenshot) */}
+            <div className="paymentRow">
+              <div className="payPill">
+                <img src="/images/cod_mini.AVIF" alt="الدفع عند الاستلام" className="payImg" />
+              </div>
+              <div className="payPill">
+                <img src="/images/apple_pay_mini.AVIF" alt="Apple Pay" className="payImg" />
+              </div>
+              <div className="payPill">
+                <img src="/images/credit_card_mini.AVIF" alt="Visa" className="payImg" />
+              </div>
+              <div className="payPill">
+                <img src="/images/mada_mini.AVIF" alt="Mastercard" className="payImg" />
+              </div>
+              <div className="payPill">
+                <img src="/images/bank_mini.AVIF" alt="مدى" className="payImg" />
+              </div>
             </div>
           </div>
         </div>
@@ -279,6 +272,45 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* Local styles (same idea as English version) */}
+        <style jsx>{`
+          .iconWrap {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            flex: 0 0 auto;
+          }
+
+          .paymentRow {
+            margin-top: 26px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+
+          .payPill {
+            background: #fff;
+            border-radius: 999px;
+            padding: 8px 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+          }
+
+          .payImg {
+            height: 22px;
+            width: auto;
+            display: block;
+          }
+        `}</style>
       </footer>
       {/* FOOTER END */}
     </div>
