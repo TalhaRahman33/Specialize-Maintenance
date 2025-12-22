@@ -15,11 +15,13 @@ const Spacialization = () => {
               {/* ITEM 1 */}
               <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
                 <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic1.jpg" alt="الإنشاءات" />
+                  <img src="/images/pic1.avif" alt="تركيب كاميرات المراقبة" />
                   <div className="figcaption">
-                    <h4>الإنشاءات</h4>
-                    <p>نحن نجعل أحلامك في البناء حقيقة بخبرة ودقة.</p>
-                    <a href="/en/services">
+                    <h4>تركيب كاميرات المراقبة</h4>
+                    <p>
+                      تركيب وإعداد أنظمة كاميرات المراقبة لتعزيز الأمان والمراقبة الفعّالة.
+                    </p>
+                    <a href="/ar/services">
                       <i className="link-plus site-bg-primary" />
                     </a>
                   </div>
@@ -29,11 +31,13 @@ const Spacialization = () => {
               {/* ITEM 2 */}
               <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
                 <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic2.jpg" alt="الهندسة المعمارية" />
+                  <img src="/images/pic2.avif" alt="أعمال البناء" />
                   <div className="figcaption">
-                    <h4>الهندسة المعمارية</h4>
-                    <p>تصميم المساحات التي تلهم، وتبتكر، وتخلق ذكريات دائمة.</p>
-                    <a href="/en/services">
+                    <h4>أعمال البناء</h4>
+                    <p>
+                      نحول أحلامك في البناء إلى واقع بخبرة عالية ودقة في التنفيذ.
+                    </p>
+                    <a href="/ar/services">
                       <i className="link-plus site-bg-primary" />
                     </a>
                   </div>
@@ -43,11 +47,13 @@ const Spacialization = () => {
               {/* ITEM 3 */}
               <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
                 <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic3.jpg" alt="الترميم" />
+                  <img src="/images/pic3.avif" alt="أعمال اللحام" />
                   <div className="figcaption site-bg-dark">
-                    <h4>الترميم</h4>
-                    <p>تحويل المساحات مع التركيز على الأسلوب، والوظيفية، والابتكار.</p>
-                    <a href="/en/services">
+                    <h4>أعمال اللحام</h4>
+                    <p>
+                      تنفيذ هياكل قوية ومتينة بدقة عالية وخبرة احترافية.
+                    </p>
+                    <a href="/ar/services">
                       <i className="link-plus site-bg-primary" />
                     </a>
                   </div>
@@ -59,13 +65,14 @@ const Spacialization = () => {
                 <div className="mt-box our-speciallization-content text-right">
                   <h3 className="m-t0">
                     <span className="font-weight-100">البناء</span> <br />
-                    الأفضل عندما يكون بالخرسانة.
+                    الأفضل دائمًا مع الخرسانة.
                   </h3>
                   <p>
-                    في شركتنا، لا نبني المنازل فقط؛ بل نصنع منازل حقيقية. التزامنا بالجودة والابتكار يضمن أن رؤيتك تتحقق.
+                    في شركتنا، لا نقوم ببناء المنازل فقط؛ بل نصنع بيوتًا متكاملة.
+                    التزامنا بالجودة والابتكار يضمن تحويل رؤيتك إلى واقع ملموس.
                   </p>
-                  <a href="/en/services" className="site-button btn-effect">
-                    عرض الكل
+                  <a href="/ar/services" className="site-button btn-effect">
+                    عرض جميع الخدمات
                   </a>
                 </div>
               </div>
@@ -75,7 +82,7 @@ const Spacialization = () => {
 
         {/* BACKGROUND TITLE */}
         <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
-          <strong>مرحبًا</strong>
+          <strong>التخصصات</strong>
         </div>
       </div>
       {/* OUR SPECIALIZATION END */}
