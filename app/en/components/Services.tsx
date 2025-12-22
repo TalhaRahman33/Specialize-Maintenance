@@ -53,7 +53,7 @@ const services = [
   {
     id: 6,
     clientUrl: "",
-    img: "/images/interior.jpg",
+    img: "/images/interiorD.avif",
     title: "Interior Designing",
     desc:
       "Complete interior design solutions including concept, materials, colors, and layout to match your space and style.",

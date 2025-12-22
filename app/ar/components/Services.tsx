@@ -47,7 +47,7 @@ const services = [
   },
   {
     id: 6,
-    img: "/images/interior.jpg",
+    img: "/images/interiorD.avif",
     title: "التصميم الداخلي",
     desc:
       "حلول تصميم داخلي متكاملة تشمل الألوان والخامات والتوزيع بما يلائم ذوقك.",
