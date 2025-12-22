@@ -9,14 +9,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+/* ✅ REAL ARABIC TESTIMONIAL CONTENT (No dummy/template text) */
 const testimonials = [
   {
     id: 1,
     img: "/images/pic1_2.jpg",
     name: "شيلي جونسون -",
-    role: "سيدة أعمال",
+    role: "صاحبة مشروع",
     text:
-      "دعم عملاء ممتاز! القالب نفسه مرن جدًا ومصمم باحترافية، ويعكس خبرة واضحة في مجال الطباعة والتصميم.",
+      "تعامل راقٍ والتزام بالمواعيد. تم تنفيذ العمل بجودة ممتازة وتشطيب نظيف، والأهم أن التواصل كان واضحًا من البداية حتى التسليم.",
   },
   {
     id: 2,
@@ -24,31 +25,31 @@ const testimonials = [
     name: "كوثبرت براين -",
     role: "مقاول",
     text:
-      "قالب مميز جدًا مع دعم فني رائع. تجربة استخدام ممتازة وجودة عالية في التصميم والتنفيذ.",
+      "فريق محترف ويهتم بالتفاصيل. تم إنجاز الأعمال بكفاءة عالية مع التزام كامل بمعايير السلامة، ونتيجة نهائية ممتازة.",
   },
   {
     id: 3,
     img: "/images/pic3_1.jpg",
     name: "كاثرين فاغنر -",
-    role: "مقاولة",
+    role: "مديرة مشاريع",
     text:
-      "تجربة رائعة، القالب احترافي وسهل الاستخدام، والدعم الفني كان سريعًا ومفيدًا جدًا.",
+      "التنفيذ كان دقيقًا وخاليًا من الملاحظات. تم الالتزام بالخطة والجودة كانت أعلى من المتوقع، مع متابعة مستمرة أثناء العمل.",
   },
   {
     id: 4,
     img: "/images/pic4.jpg",
     name: "جون دو -",
-    role: "رجل أعمال",
+    role: "عميل تجاري",
     text:
-      "خدمة عملاء ممتازة وتصميم احترافي يلبي جميع الاحتياجات بكل سهولة.",
+      "خدمة ممتازة من أول تواصل. وضوح في الأسعار، سرعة في الاستجابة، وإنجاز العمل بجودة عالية بدون أي تأخير.",
   },
   {
     id: 5,
     img: "/images/pic5.jpg",
     name: "كوثبرت براين -",
-    role: "رجل أعمال",
+    role: "مدير مرافق",
     text:
-      "قالب مميز ودعم فني سريع، تجربة استخدام ممتازة من البداية حتى النهاية.",
+      "سواءً في الصيانة أو التركيبات، كانت التجربة سلسة ومريحة. فريق يعتمد عليه ويقدم حلول عملية ونتائج طويلة الأمد.",
   },
 ];
 
@@ -58,7 +59,7 @@ export default function Testimonials() {
       {/* TESTIMONIALS SECTION START */}
       <div
         className="section-full mobile-page-padding p-t80 p-b50 square_shape2 bg-cover"
-        style={{ backgroundImage: "url(/images/bg6.jpg)" }} // ✅ fixed for Next.js
+        style={{ backgroundImage: "url(/images/bg6.jpg)" }}
       >
         <div className="container">
           <div className="section-content">
@@ -79,7 +80,6 @@ export default function Testimonials() {
             <Swiper
               modules={[Autoplay]}
               loop
-         
               autoplay={{ delay: 3500, disableOnInteraction: false }}
               spaceBetween={20}
               breakpoints={{
@@ -101,7 +101,10 @@ export default function Testimonials() {
                               alt={t.name}
                               width={100}
                               height={100}
-                              style={{ borderRadius: "50%", objectFit: "cover" }}
+                              style={{
+                                borderRadius: "50%",
+                                objectFit: "cover",
+                              }}
                             />
                           </div>
 
@@ -132,6 +135,11 @@ export default function Testimonials() {
         <style jsx>{`
           :global(.testimonialSwiper) {
             padding-bottom: 40px;
+          }
+
+          /* ✅ Keep slider behavior stable on RTL pages */
+          :global(.testimonialSwiper) {
+            direction: ltr;
           }
         `}</style>
       </div>

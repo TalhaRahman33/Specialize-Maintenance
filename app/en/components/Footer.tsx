@@ -23,80 +23,64 @@ const Footer = () => {
 
           <div className="container">
             <div className="row">
-              {/* COMPANY INFO - LEFT SIDE */}
+              {/* COMPANY INFO */}
               <div className="col-lg-4 col-md-12 col-sm-12">
                 <div className="widget widget_about text-left">
                   <h4 className="widget-title">Specialist Business Company</h4>
 
-                  <p className="max-w400" style={{ marginRight: "auto" }}>
+                  <p className="max-w400">
                     Specialized Business Company specializes in electrical
                     materials, offering high-quality products at competitive
-                    prices. We provide a wide range of innovative electrical
-                    solutions for companies, institutions, and individuals.
+                    prices. We provide innovative electrical solutions for
+                    companies and individuals.
                   </p>
 
-                  {/* SOCIAL ICONS (lucide-react) */}
-                  <ul
-                    className="social-icons mt-social-links"
-                    style={{ justifyContent: "flex-start", gap: 10 }}
-                  >
+                  {/* SOCIAL ICONS */}
+                  <ul className="social-icons mt-social-links">
                     <li>
-                      <a href="#" title="TikTok" className="socialBtn">
-                        <Music size={18} />
+                      <a href="#" className="socialBtn">
+                        <Music size={16} />
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="Snapchat" className="socialBtn">
-                        <Ghost size={18} />
+                      <a href="#" className="socialBtn">
+                        <Ghost size={16} />
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="X" className="socialBtn">
-                        <Twitter size={18} />
+                      <a href="#" className="socialBtn">
+                        <Twitter size={16} />
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="Instagram" className="socialBtn">
-                        <Instagram size={18} />
+                      <a href="#" className="socialBtn">
+                        <Instagram size={16} />
                       </a>
                     </li>
                   </ul>
 
-                  {/* TAX & REGISTRATION */}
-                  <div style={{ marginTop: 18, textAlign: "left" }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: 24,
-                        justifyContent: "flex-start",
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <div>
-                        <div style={{ fontWeight: 600 }}>Tax ID Number</div>
-                        <div>310448142800003</div>
-                      </div>
-
-                      <div>
-                        <div style={{ fontWeight: 600 }}>Commercial Register</div>
-                        <div>1010601919</div>
-                      </div>
-
-                      <div>
-                        <img
-                          src="/images/saudilogo.AVIF"
-                          alt="Saudi Arabia"
-                          style={{ height: 36, width: "auto", marginTop: 4 }}
-                        />
-                      </div>
+                  {/* TAX INFO */}
+                  <div className="taxRow">
+                    <div>
+                      <strong>Tax ID</strong>
+                      <div>310448142800003</div>
                     </div>
+                    <div>
+                      <strong>CR</strong>
+                      <div>1010601919</div>
+                    </div>
+                    <img
+                      src="/images/saudilogo.AVIF"
+                      alt="Saudi"
+                      className="saudiLogo"
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* IMPORTANT LINKS - CENTER */}
+              {/* IMPORTANT LINKS */}
               <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
-                <div className="widget widget_services inline-links text-center">
+                <div className="widget widget_services text-center">
                   <h4 className="widget-title">Important Links</h4>
                   <ul>
                     <li>
@@ -109,21 +93,20 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* CONTACT US - RIGHT SIDE */}
+              {/* CONTACT US */}
               <div className="col-lg-4 col-md-6 col-sm-6">
-                <div className="widget widget_address_outer text-right">
+                <div className="widget widget_address_outer contactBlock">
                   <h4 className="widget-title">Contact Us</h4>
 
                   <ul className="widget_address">
                     <li>
                       <span className="iconWrap">
-                        <MessageCircle size={18} />
+                        <MessageCircle size={16} />
                       </span>
                       <a
                         href="https://wa.me/966539771718"
                         target="_blank"
                         rel="noreferrer"
-                        style={{ color: "white" }}
                       >
                         +966 539 771 718
                       </a>
@@ -131,27 +114,27 @@ const Footer = () => {
 
                     <li>
                       <span className="iconWrap">
-                        <Smartphone size={18} />
+                        <Smartphone size={16} />
                       </span>
-                      <a href="tel:+966539774020" style={{ color: "white" }}>
+                      <a href="tel:+966539774020">
                         +966 539 774 020
                       </a>
                     </li>
 
                     <li>
                       <span className="iconWrap">
-                        <Phone size={18} />
+                        <Phone size={16} />
                       </span>
-                      <a href="tel:+966539771718" style={{ color: "white" }}>
+                      <a href="tel:+966539771718">
                         +966 539 771 718
                       </a>
                     </li>
 
                     <li>
                       <span className="iconWrap">
-                        <Mail size={18} />
+                        <Mail size={16} />
                       </span>
-                      <a href="mailto:a22@live.at" style={{ color: "white" }}>
+                      <a href="mailto:a22@live.at">
                         a22@live.at
                       </a>
                     </li>
@@ -160,35 +143,17 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* PAYMENT METHODS (white background like screenshot) */}
+            {/* PAYMENT METHODS */}
             <div className="paymentRow">
-              <div className="payPill">
-                <img
-                  src="/images/cod.AVIF"
-                  alt="Cash on Delivery"
-                  className="payImg"
-                />
-              </div>
-
-              <div className="payPill">
-                <img
-                  src="/images/apple.AVIF"
-                  alt="Apple Pay"
-                  className="payImg"
-                />
-              </div>
-
-              <div className="payPill">
-                <img src="/images/credit.AVIF" alt="Visa" className="payImg" />
-              </div>
-
-              <div className="payPill">
-                <img src="/images/mada.AVIF" alt="Mastercard" className="payImg" />
-              </div>
-
-              <div className="payPill">
-                <img src="/images/bank.AVIF" alt="Mada" className="payImg" />
-              </div>
+              {["cod", "apple", "credit", "mada", "bank"].map((p) => (
+                <div className="payPill" key={p}>
+                  <img
+                    src={`/images/${p}.AVIF`}
+                    alt={p}
+                    className="payImg"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -196,84 +161,88 @@ const Footer = () => {
         {/* FOOTER BOTTOM */}
         <div className="footer-bottom overlay-wraper">
           <div className="overlay-main" />
-          <div className="container">
-            <div className="row">
-              <div className="mt-footer-bot-center text-center">
-                <span className="copyrights-text">
-                  © 2025 Specialized Business Company. All rights reserved.
-                </span>
-              </div>
-            </div>
+          <div className="container text-center">
+            © 2025 Specialized Business Company. All rights reserved.
           </div>
         </div>
 
-        {/* Local styles */}
+        {/* LOCAL STYLES */}
         <style jsx>{`
+          /* Social buttons */
           .socialBtn {
-            width: 38px;
-            height: 38px;
-            border-radius: 999px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: #fff;
-            transition: 0.2s ease;
           }
-          .socialBtn:hover {
-            transform: translateY(-1px);
-            border-color: rgba(255, 255, 255, 0.7);
+
+          /* Contact list */
+          .widget_address {
+            margin-top: 12px;
+            display: grid;
+            gap: 8px; /* 🔽 reduced spacing */
           }
 
           .widget_address li {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
             gap: 10px;
-            margin-bottom: 10px;
+            padding-left: 6px; /* 👉 move right slightly */
           }
 
           .iconWrap {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.12);
-            color: #fff;
-            flex: 0 0 auto;
+            flex-shrink: 0;
           }
 
+          .widget_address a {
+            color: #fff;
+            font-size: 14.5px;
+            font-weight: 600;
+            line-height: 1.1;
+          }
+
+          /* Payment pills */
           .paymentRow {
-            margin-top: 26px;
+            margin-top: 24px;
             display: flex;
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
           }
 
-          /* White pills like your screenshot */
           .payPill {
             background: #fff;
             border-radius: 999px;
             padding: 8px 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
           }
 
           .payImg {
             height: 22px;
-            width: auto;
-            display: block;
           }
 
-          @media (max-width: 768px) {
-            .widget_address li {
-              justify-content: flex-start;
-            }
+          /* Tax */
+          .taxRow {
+            margin-top: 18px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+
+          .saudiLogo {
+            height: 34px;
           }
         `}</style>
       </footer>
