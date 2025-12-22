@@ -32,7 +32,7 @@ const page = () => {
          
           <Callus />
           <Projects />
-          <Blogs />
+          {/* <Blogs /> */}
           <Testimonials />
     
     
