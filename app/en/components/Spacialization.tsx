@@ -12,7 +12,19 @@ const Spacialization = () => {
             <div className="row">
               <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
                 <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic1.jpg" alt="Construction" />
+                  <img src="/images/pic1.avif" alt="cctv" />
+                  <div className="figcaption">
+                    <h4>CCTV camera installation</h4>
+                    <p>Installing and setting up CCTV systems for enhanced security and surveillance.</p>
+                    <a href="/en/services">
+                      <i className="link-plus site-bg-primary" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
+                <div className="image-effect-one hover-shadow">
+                  <img src="/images/pic2.avif" alt="construction" />
                   <div className="figcaption">
                     <h4>Construction</h4>
                     <p>Bringing your construction dreams to life with precision and expertise.</p>
@@ -24,22 +36,10 @@ const Spacialization = () => {
               </div>
               <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
                 <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic2.jpg" alt="Architecture" />
-                  <div className="figcaption">
-                    <h4>Architecture</h4>
-                    <p>Designing spaces that inspire, innovate, and create lasting memories.</p>
-                    <a href="/en/services">
-                      <i className="link-plus site-bg-primary" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-4 col-md-6 m-b30">
-                <div className="image-effect-one hover-shadow">
-                  <img src="/images/pic3.jpg" alt="Renovation" />
+                  <img src="/images/pic3.avif" alt="welding" />
                   <div className="figcaption site-bg-dark">
-                    <h4>Renovation</h4>
-                    <p>Transforming spaces with a focus on style, functionality, and innovation.</p>
+                    <h4>Welding</h4>
+                    <p>Creating strong, durable structures with precision and expertise.</p>
                     <a href="/en/services">
                       <i className="link-plus site-bg-primary" />
                     </a>
@@ -64,7 +64,7 @@ const Spacialization = () => {
           </div>
         </div>
         <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
-          <strong>Welcome</strong>
+          <strong>SPECIALIZATION</strong>
         </div>
       </div>
       {/* OUR SPECIALIZATION END */}
