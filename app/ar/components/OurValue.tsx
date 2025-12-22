@@ -42,7 +42,7 @@ const OurValue = () => {
                   </div>
                 </div>
 
-                <div
+                {/* <div
                   className="video-section-full bg-no-repeat bg-cover overlay-wraper"
                   style={{ backgroundImage: "url(images/video-bg.jpg)" }}
                 >
@@ -68,7 +68,8 @@ const OurValue = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
+
               </div>
 
               {/* COUNTERS */}

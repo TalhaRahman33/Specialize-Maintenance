@@ -31,14 +31,14 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-/* Arabic only when dir="rtl" */
+/* ===== Arabic only when dir="rtl" ===== */
 [dir="rtl"] {
-  font-family: var(--font-arabic), system-ui, sans-serif;
+  font-family: var(--font-tajawal), system-ui, sans-serif;
   line-height: 1.8;
   letter-spacing: 0;
 }
 
-/* Arabic headings better look */
+/* ===== Arabic headings better look ===== */
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,
@@ -47,14 +47,13 @@ body {
   font-weight: 600;
 }
 
-
-/* ===== FORCE Arabic font on all text inside RTL ===== */
+/* ===== FORCE Tajawal on all text inside RTL ===== */
 [dir="rtl"],
 [dir="rtl"] * {
-  font-family: var(--font-arabic), system-ui, sans-serif !important;
+  font-family: var(--font-tajawal), system-ui, sans-serif !important;
 }
 
-/* Better readability for Arabic paragraphs */
+/* ===== Better readability for Arabic paragraphs ===== */
 [dir="rtl"] p {
   line-height: 1.5;
   font-weight: 400;

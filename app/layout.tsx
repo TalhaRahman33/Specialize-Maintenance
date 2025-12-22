@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
-import { geistSans, geistMono, arabicFont } from "./fonts"; // ✅ fonts.ts se
+import { tajawal } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Specialize Maintenance",
@@ -25,7 +25,7 @@ export default function RootLayout({
           type="image/x-icon"
           href="/images/favicon.png"
         />
-      
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -55,19 +55,10 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/css/settings.css" />
         <link rel="stylesheet" type="text/css" href="/css/navigation.css" />
 
-        {/* ✅ OPTIONAL: you can remove Roboto/Poppins if you want full control via next/font */}
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet"
-        />
       </head>
 
       <body
-        className={`antialiased ${geistSans.variable} ${geistMono.variable} ${arabicFont.variable}`}
+        className={`${tajawal.variable}`}
       >
         {children}
 

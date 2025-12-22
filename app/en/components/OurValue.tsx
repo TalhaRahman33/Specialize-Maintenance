@@ -40,7 +40,9 @@ const OurValue = () => {
                 <p>Architect &amp; Founder</p>
               </div>
             </div>
-            <div
+
+
+            {/* <div
               className="video-section-full bg-no-repeat bg-cover overlay-wraper"
               style={{ backgroundImage: "url(images/video-bg.jpg)" }}
             >
@@ -66,7 +68,9 @@ const OurValue = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="mt-count m-b30 text-white mt-icon-box-wraper center  site-bg-dark p-a20">

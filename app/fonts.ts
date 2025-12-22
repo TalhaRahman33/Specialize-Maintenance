@@ -1,18 +1,25 @@
-// app/fonts.ts
-import { Geist, Geist_Mono, IBM_Plex_Sans_Arabic } from "next/font/google";
+ // app/fonts.ts
 
-export const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from "next/font/local";
 
-export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const arabicFont = IBM_Plex_Sans_Arabic({
-  variable: "--font-arabic",
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "600", "700"],
+export const tajawal = localFont({
+  src: [
+    {
+      path: "../public/fonts/Tajawal-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Tajawal-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Tajawal-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-tajawal",
+  display: "swap",
 });

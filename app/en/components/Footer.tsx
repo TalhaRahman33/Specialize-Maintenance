@@ -25,7 +25,9 @@ const Footer = () => {
             <div className="row">
               {/* COMPANY INFO */}
               <div className="col-lg-4 col-md-12 col-sm-12">
+
                 <div className="widget widget_about text-left">
+
                   <h4 className="widget-title">Specialist Business Company</h4>
 
                   <p className="max-w400">
@@ -96,6 +98,8 @@ const Footer = () => {
               {/* CONTACT US */}
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="widget widget_address_outer contactBlock">
+
+
                   <h4 className="widget-title">Contact Us</h4>
 
                   <ul className="widget_address">
@@ -139,6 +143,8 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
+
+
                 </div>
               </div>
             </div>
@@ -182,9 +188,9 @@ const Footer = () => {
 
           /* Contact list */
           .widget_address {
-            margin-top: 12px;
+            margin-top: 10px;
             display: grid;
-            gap: 8px; /* 🔽 reduced spacing */
+            gap: 0px; /* 🔽 reduced spacing */
           }
 
           .widget_address li {
