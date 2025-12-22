@@ -10,6 +10,10 @@ type Service = {
   details: string[];
 };
 
+// ✅ WhatsApp Settings (Arabic)
+const WHATSAPP_NUMBER = "966576150857"; // change if needed
+const WHATSAPP_DEFAULT_TEXT = "مرحباً! أريد الاستفسار عن خدماتكم.";
+
 const services: Service[] = [
   {
     id: 1,
@@ -153,8 +157,17 @@ export default function SerAr() {
     setOpen(true);
   };
 
-  const closeDialog = () => {
-    setOpen(false);
+  const closeDialog = () => setOpen(false);
+
+  // ✅ One function used for BOTH card + dialog buttons
+  const goWhatsapp = (serviceTitle?: string) => {
+    const serviceName = serviceTitle ? `الخدمة: ${serviceTitle}` : "استفسار خدمة";
+    const text = encodeURIComponent(`${WHATSAPP_DEFAULT_TEXT}\n${serviceName}`);
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -201,12 +214,28 @@ export default function SerAr() {
                       <div className="card-content">
                         <h4 className="title-clamp">{s.title}</h4>
                         <p className="desc-clamp">{s.desc}</p>
+
+                        {/* ✅ CARD BUTTON */}
+                        <div className="card-actions">
+                          <button
+                            type="button"
+                            className="btn-primary btn-small"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              goWhatsapp(s.title);
+                            }}
+                            aria-label={`واتساب للاستفسار عن ${s.title}`}
+                          >
+                            تواصل معنا (واتساب)
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
+              {/* ✅ Dialog */}
               {open && selected && (
                 <div className="dialog-backdrop" onClick={closeDialog} role="presentation">
                   <div
@@ -238,6 +267,17 @@ export default function SerAr() {
                             <li key={idx}>{d}</li>
                           ))}
                         </ul>
+                      </div>
+
+                      {/* ✅ DIALOG BUTTON */}
+                      <div className="dialog-actions">
+                        <button
+                          type="button"
+                          className="btn-primary"
+                          onClick={() => goWhatsapp(selected.title)}
+                        >
+                          تواصل معنا (واتساب)
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -280,11 +320,11 @@ export default function SerAr() {
                   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
                 }
 
-                /* ✅ same as English (image height increased) */
+                /* ✅ EXACT MATCH TO ENGLISH */
                 .card-media {
                   position: relative;
                   width: 100%;
-                  height: 240px;
+                  height: 290px; /* ✅ SAME AS ENGLISH */
                   overflow: hidden;
                 }
 
@@ -318,11 +358,13 @@ export default function SerAr() {
                   opacity: 1;
                 }
 
+                /* ✅ IMPORTANT: SAME AS ENGLISH (flex:1 + height:auto) */
                 .card-content {
-                  padding: 22px 22px 26px 22px;
+                  padding: 16px 18px 18px 18px;
                   display: flex;
                   flex-direction: column;
-                  height: 100%;
+                  flex: 1;
+                  height: auto; /* ✅ removes extra space */
                   text-align: right;
                 }
 
@@ -336,9 +378,10 @@ export default function SerAr() {
                   margin-bottom: 12px;
                 }
 
+                /* ✅ SAME AS ENGLISH */
                 .desc-clamp {
                   display: -webkit-box;
-                  -webkit-line-clamp: 4;
+                  -webkit-line-clamp: 3;
                   -webkit-box-orient: vertical;
                   overflow: hidden;
                   line-height: 1.8;
@@ -346,7 +389,28 @@ export default function SerAr() {
                   margin: 0;
                 }
 
-                /* ✅ DIALOG (RTL) */
+                .card-actions {
+                  margin-top: auto;
+                  padding-top: 12px;
+                }
+
+                .btn-primary {
+                  border: 0;
+                  padding: 12px 16px;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  background: var(--site-primary-color, #f5a623);
+                  color: #111;
+                  font-weight: 700;
+                }
+
+                .btn-small {
+                  padding: 10px 14px;
+                  font-size: 14px;
+                  border-radius: 10px;
+                }
+
+                /* Dialog (RTL) */
                 .dialog-backdrop {
                   position: fixed;
                   inset: 0;
@@ -379,7 +443,7 @@ export default function SerAr() {
                 .dialog-close {
                   position: absolute;
                   top: 10px;
-                  left: 10px; /* ✅ close button better for RTL */
+                  left: 10px;
                   width: 38px;
                   height: 38px;
                   border-radius: 10px;
@@ -430,6 +494,13 @@ export default function SerAr() {
                   padding-right: 18px;
                   padding-left: 0;
                   line-height: 1.9;
+                }
+
+                .dialog-actions {
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                  margin-top: 12px;
                 }
               `}</style>
             </div>

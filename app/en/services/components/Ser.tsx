@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-// ❌ remove useRouter if not used
-// import { useRouter } from "next/navigation";
 
 type Service = {
   id: number;
@@ -11,6 +9,10 @@ type Service = {
   desc: string;
   details: string[];
 };
+
+// ✅ WhatsApp Settings
+const WHATSAPP_NUMBER = "966576150857"; // change if needed
+const WHATSAPP_DEFAULT_TEXT = "Hello! I want to inquire about your services.";
 
 const services: Service[] = [
   {
@@ -142,9 +144,6 @@ const services: Service[] = [
 ];
 
 export default function Ser() {
-  // ❌ remove router if not used
-  // const router = useRouter();
-
   const [open, setOpen] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
@@ -153,14 +152,22 @@ export default function Ser() {
     [selectedId]
   );
 
-  // ✅ FIX: give type to parameter
   const openDialog = (service: Service) => {
     setSelectedId(service.id);
     setOpen(true);
   };
 
-  const closeDialog = () => {
-    setOpen(false);
+  const closeDialog = () => setOpen(false);
+
+  // ✅ One function used for BOTH card + dialog buttons
+  const goWhatsapp = (serviceTitle?: string) => {
+    const serviceName = serviceTitle ? `Service: ${serviceTitle}` : "Service Inquiry";
+    const text = encodeURIComponent(`${WHATSAPP_DEFAULT_TEXT}\n${serviceName}`);
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -208,12 +215,28 @@ export default function Ser() {
                       <div className="card-content">
                         <h4 className="title-clamp">{s.title}</h4>
                         <p className="desc-clamp">{s.desc}</p>
+
+                        {/* ✅ CARD BUTTON */}
+                        <div className="card-actions">
+                          <button
+                            type="button"
+                            className="btn-primary btn-small"
+                            onClick={(e) => {
+                              e.stopPropagation(); // ✅ prevent opening dialog
+                              goWhatsapp(s.title);
+                            }}
+                            aria-label={`WhatsApp about ${s.title}`}
+                          >
+                            Call to Us (WhatsApp)
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
+              {/* ✅ Dialog */}
               {open && selected && (
                 <div className="dialog-backdrop" onClick={closeDialog} role="presentation">
                   <div
@@ -245,6 +268,17 @@ export default function Ser() {
                             <li key={idx}>{d}</li>
                           ))}
                         </ul>
+                      </div>
+
+                      {/* ✅ DIALOG BUTTON */}
+                      <div className="dialog-actions">
+                        <button
+                          type="button"
+                          className="btn-primary"
+                          onClick={() => goWhatsapp(selected.title)}
+                        >
+                          Call to Us (WhatsApp)
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -287,13 +321,12 @@ export default function Ser() {
                   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
                 }
 
-                /* ✅ only change: increased image height */
-                .card-media {
-                  position: relative;
-                  width: 100%;
-                  height: 240px;
-                  overflow: hidden;
-                }
+            .card-media {
+  position: relative;
+  width: 100%;
+  height: 290px; /* ✅ increase image height */
+  overflow: hidden;
+}
 
                 .card-img {
                   width: 100%;
@@ -325,12 +358,13 @@ export default function Ser() {
                   opacity: 1;
                 }
 
-                .card-content {
-                  padding: 22px 22px 26px 22px;
-                  display: flex;
-                  flex-direction: column;
-                  height: 100%;
-                }
+            .card-content {
+  padding: 16px 18px 18px 18px; /* ✅ reduce padding */
+  display: flex;
+  flex-direction: column;
+  flex: 1;              /* ✅ take remaining space only */
+  height: auto;         /* ✅ IMPORTANT: remove height:100% */
+}
 
                 .title-clamp {
                   display: -webkit-box;
@@ -342,16 +376,25 @@ export default function Ser() {
                   margin-bottom: 12px;
                 }
 
-                .desc-clamp {
-                  display: -webkit-box;
-                  -webkit-line-clamp: 4;
-                  -webkit-box-orient: vertical;
-                  overflow: hidden;
-                  line-height: 1.65;
-                  opacity: 0.95;
-                  margin: 0;
-                }
+              
+.desc-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ✅ reduce lines so content area gets smaller */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.65;
+  opacity: 0.95;
+  margin: 0;
+}
 
+
+                /* ✅ CARD BUTTON AREA */
+               .card-actions {
+  margin-top: auto; /* ✅ button goes to bottom, no extra space */
+  padding-top: 12px;
+}
+
+                /* Dialog */
                 .dialog-backdrop {
                   position: fixed;
                   inset: 0;
@@ -432,6 +475,29 @@ export default function Ser() {
                   margin: 0 0 16px 0;
                   padding-left: 18px;
                   line-height: 1.7;
+                }
+
+                .dialog-actions {
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                  margin-top: 12px;
+                }
+
+                .btn-primary {
+                  border: 0;
+                  padding: 12px 16px;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  background: var(--site-primary-color, #f5a623);
+                  color: #111;
+                  font-weight: 700;
+                }
+
+                .btn-small {
+                  padding: 10px 14px;
+                  font-size: 14px;
+                  border-radius: 10px;
                 }
               `}</style>
             </div>
