@@ -9,11 +9,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const aboutSlides = [
-  { id: 1, img: "/images/pic1_1.jpg", link: "/about" },
-  { id: 2, img: "/images/pic8.jpg", link: "/about" },
-  { id: 3, img: "/images/pic9.jpg", link: "/about" },
-  { id: 4, img: "/images/pic6_1.jpg", link: "/about" },
-  { id: 5, img: "/images/pic2_4.jpg", link: "/about" },
+  { id: 1, img: "/images/pic1_1.jpg", link: "/en/about" },
+  { id: 2, img: "/images/pic8.jpg", link: "/en/about" },
+  { id: 3, img: "/images/pic9.jpg", link: "/en/about" },
+  { id: 4, img: "/images/pic6_1.jpg", link: "/en/about" },
+  { id: 5, img: "/images/pic2_4.jpg", link: "/en/about" },
 ];
 
 export default function AboutComp() {
@@ -45,7 +45,6 @@ export default function AboutComp() {
                 <Swiper
                   modules={[Autoplay]}
                   loop
-           
                   autoplay={{ delay: 2500, disableOnInteraction: false }}
                   spaceBetween={20}
                   breakpoints={{
@@ -86,17 +85,18 @@ export default function AboutComp() {
                   </h3>
                   <p>
                     <strong>
-                      Contrary to popular belief, lorem Ipsum is not simply text. It
-                      has roots in a piece of classical Latin literature from 45 BC.
+                      At our company, we are committed to delivering exceptional
+                      services that meet the needs and expectations of our clients.
                     </strong>
                   </p>
                   <p>
-                    There are many variations passages available, but the majority have
-                    suffered alteration in or some form, by inject humour, or randomised
-                    words which don't look slightly believable.
+                    We focus on providing innovative solutions in construction,
+                    architecture, and renovation. Our dedicated team works tirelessly to
+                    transform your ideas into reality, ensuring every project is completed
+                    with the highest standards of quality and precision.
                   </p>
                   <div className="text-right">
-                    <a className="site-button-link" href="/about" data-hover="Read More">
+                    <a className="site-button-link" href="/en/about" data-hover="Read More">
                       Read More <i className="fa fa-angle-right arrow-animation" />
                     </a>
                   </div>

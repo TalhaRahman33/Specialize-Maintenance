@@ -46,7 +46,6 @@ export default function AboutCompAr() {
                 <Swiper
                   modules={[Autoplay]}
                   loop
-                 
                   autoplay={{ delay: 2500, disableOnInteraction: false }}
                   spaceBetween={20}
                   breakpoints={{
@@ -99,14 +98,18 @@ export default function AboutCompAr() {
                     التغيير بإضافة الفكاهة أو كلمات عشوائية لا تبدو واقعية.
                   </p>
 
-                  {/* ✅ keep like English position (bottom-right) */}
+                  {/* ✅ Icon fix */}
                   <div className="text-left" dir="rtl">
                     <Link
                       href="/ar/about"
                       className="site-button-link"
                       data-hover="اقرأ المزيد"
                     >
-                      اقرأ المزيد <i className="fa fa-angle-left arrow-animation" />
+                      اقرأ المزيد
+                      <i
+                        className="fa fa-arrow-right arrow-animation"
+                        style={{ marginLeft: "10px", fontSize: "18px" }}
+                      />
                     </Link>
                   </div>
                 </div>
@@ -137,6 +140,27 @@ export default function AboutCompAr() {
           /* ✅ make Swiper arrows behave like English even in Arabic pages */
           :global(.aboutSwiper) {
             direction: ltr;
+          }
+
+          /* Adjustments for better Arabic text rendering */
+          .text-right {
+            text-align: right;
+          }
+
+          .text-left {
+            text-align: left;
+          }
+
+          /* Ensure readability of Arabic content */
+          .about-home-right p {
+            line-height: 1.6;
+            font-size: 18px;
+          }
+
+          /* Styling for the icon */
+          .fa-arrow-right {
+            margin-left: 10px;
+            font-size: 18px;
           }
         `}</style>
       </div>

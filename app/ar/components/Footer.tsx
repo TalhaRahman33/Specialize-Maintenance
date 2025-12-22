@@ -150,12 +150,16 @@ const Footer = () => {
                         <div>1010601919</div>
                       </div>
 
-                      <div>
+                      <div>  
+
+
                         <img
                           src="/images/saudilogo.AVIF"
                           alt="Saudi Arabia"
                           style={{ height: 36, width: "auto", marginTop: 6 }}
                         />
+
+                        
                       </div>
                     </div>
                   </div>

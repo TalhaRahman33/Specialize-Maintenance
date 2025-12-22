@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,  EffectFade } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,25 +13,25 @@ const slides = [
   {
     id: 1,
     image: "/images/slide1.jpg", // put in /public/images/
-    title: "We Build Your Dream",
-    desc: "It is a long established fact that a reader will be distracted by the readable content.",
-    btnText: "More About",
+    title: "We Bring Your Vision to Life",
+    desc: "From initial concept to full-scale implementation, we provide innovative construction solutions tailored to your needs.",
+    btnText: "Discover More",
     btnLink: "/en/about",
   },
   {
     id: 2,
     image: "/images/slide2.jpg",
-    title: "From concept to creation.",
-    desc: "It is a long established fact that a reader will be distracted by the readable content.",
-    btnText: "More About",
+    title: "Turning Ideas Into Reality",
+    desc: "Our expertise in architecture ensures that your dreams are transformed into functional, aesthetically pleasing designs.",
+    btnText: "Learn More",
     btnLink: "/en/about",
   },
   {
     id: 3,
     image: "/images/slide3.jpg",
-    title: "Making dreams come to life",
-    desc: "It is a long established fact that a reader will be distracted by the readable content.",
-    btnText: "More About",
+    title: "Building Your Future",
+    desc: "We believe in creating long-lasting structures that are both beautiful and sustainable, meeting the needs of tomorrow.",
+    btnText: "Our Services",
     btnLink: "/en/about",
   },
 ];
@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <Swiper
-        modules={[Autoplay,  EffectFade]}
+        modules={[Autoplay, EffectFade]}
         effect="fade"
         loop
         navigation

@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay} from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,86 +12,107 @@ import "swiper/css/pagination";
 const services = [
   {
     id: 1,
-    number: "1",
-    icon: "/images/crane-1.png",
-    title: "إنشاء\nالمباني",
-    desc: "تتوفر نصوص عديدة، ولكن معظمها تعرض للتغيير أو التعديل بشكل ما، أحيانًا بشكل غير مقصود.",
+    img: "/images/plumbing.webp",
+    title: "أعمال السباكة",
+    desc:
+      "تركيب وصيانة شبكات السباكة والخزانات وإصلاح التسريبات باحترافية وجودة مضمونة.",
   },
   {
     id: 2,
-    number: "2",
-    icon: "/images/renovation.png",
-    title: "ترميم\nالمباني",
-    desc: "تتوفر نصوص عديدة، ولكن معظمها تعرض للتغيير أو التعديل بشكل ما، أحيانًا بشكل غير مقصود.",
+    img: "/images/painting.webp",
+    title: "دهانات الجدران والأسقف",
+    desc:
+      "دهانات عالية الجودة للجدران والأسقف بلمسة نهائية أنيقة وحماية تدوم طويلاً.",
   },
   {
     id: 3,
-    number: "3",
-    icon: "/images/toolbox.png",
-    title: "صيانة\nالمباني",
-    desc: "تتوفر نصوص عديدة، ولكن معظمها تعرض للتغيير أو التعديل بشكل ما، أحيانًا بشكل غير مقصود.",
+    img: "/images/electrician.avif",
+    title: "أعمال الكهرباء",
+    desc:
+      "تنفيذ تمديدات كهربائية آمنة، صيانة، إصلاح الأعطال، وتركيب الأنظمة باحتراف.",
   },
   {
     id: 4,
-    number: "4",
-    icon: "/images/compass.png",
-    title: "تصميم\nمعماري",
-    desc: "تتوفر نصوص عديدة، ولكن معظمها تعرض للتغيير أو التعديل بشكل ما، أحيانًا بشكل غير مقصود.",
+    img: "/images/floor.avif",
+    title: "تركيب الأرضيات",
+    desc:
+      "تركيب بلاط وأرضيات بدقة عالية مع تسوية مثالية وتشطيب راقٍ للمنازل والمشاريع.",
   },
-  // ✅ add 2 more if you want
   {
     id: 5,
-    number: "5",
-    icon: "/images/helmet.png", // add icon in /public/images/
-    title: "تخطيط\nالمشاريع",
-    desc: "إدارة التخطيط والجدولة والتنسيق لضمان تسليم المشروع في الوقت المحدد وبأعلى جودة.",
+    img: "/images/gypsum.avif",
+    title: "جبس بورد",
+    desc:
+      "تنفيذ أسقف وجدران جبس بورد بتصاميم حديثة وتشطيب ناعم يناسب جميع المساحات.",
   },
   {
     id: 6,
-    number: "6",
-    icon: "/images/brickwall.png", // add icon in /public/images/
-    title: "تشطيب\nداخلي",
-    desc: "حلول تشطيب متكاملة تشمل الدهانات والأرضيات والتقسيمات وتجهيزات الموقع.",
+    img: "/images/interior.jpg",
+    title: "التصميم الداخلي",
+    desc:
+      "حلول تصميم داخلي متكاملة تشمل الألوان والخامات والتوزيع بما يلائم ذوقك.",
+  },
+  {
+    id: 7,
+    img: "/images/Layout.jpg",
+    title: "تخطيط المساحات",
+    desc:
+      "تصميم مخططات ثنائية وثلاثية الأبعاد لتحسين استغلال المساحة والوظائف.",
+  },
+  {
+    id: 8,
+    img: "/images/CCTV.webp",
+    title: "تركيب كاميرات مراقبة",
+    desc:
+      "تركيب أنظمة CCTV مع توزيع احترافي، توصيلات آمنة، وإعداد كامل للتشغيل.",
+  },
+  {
+    id: 9,
+    img: "/images/welding.webp",
+    title: "أعمال اللحام",
+    desc:
+      "خدمات لحام احترافية للأبواب، الهياكل المعدنية، والتصنيع بجودة عالية.",
   },
 ];
 
-export default function Services() {
+export default function ServicesSliderAr() {
   const router = useRouter();
-  const goServices = () => router.push("/ar/services"); // change to /en/services if needed
+  const goServices = () => router.push("/ar/services");
 
   return (
     <div dir="rtl">
-      {/* OUR SERVICES START */}
       <div className="section-full mobile-page-padding our-service-wrap p-b50 square_shape2">
         <div className="section-content">
+          {/* HEADER */}
           <div
             className="Service-half-top p-t80 site-bg-dark bg-moving"
-            style={{ backgroundImage: "url(/images/bg-6.png)" }} // ✅ fixed
+            style={{ backgroundImage: "url(/images/bg-6.png)" }}
           >
             <div className="container">
               <div className="section-head text-white text-right">
                 <div className="mt-separator-outer separator-right">
                   <div className="mt-separator">
                     <h2 className="text-white text-uppercase sep-line-one">
-                      <span className="font-weight-300 site-text-primary">خدماتنا</span>
+                      <span className="font-weight-300 site-text-primary">
+                        خدماتنا
+                      </span>
                     </h2>
                   </div>
                 </div>
-                <h3>
-                  تتوفر العديد من الصيغ المختلفة، ولكن الغالبية تعرضت للتعديل أو التغيير.
-                </h3>
+                <h3>جودة مضمونة للمشاريع السكنية والتجارية.</h3>
               </div>
             </div>
           </div>
 
+          {/* SLIDER */}
           <div className="services-half-bottom">
             <div className="container">
               <Swiper
                 modules={[Autoplay]}
                 loop
-             
+                navigation
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{ delay: 3200, disableOnInteraction: false }}
                 spaceBetween={20}
                 breakpoints={{
                   0: { slidesPerView: 1 },
@@ -100,76 +120,119 @@ export default function Services() {
                   992: { slidesPerView: 3 },
                   1200: { slidesPerView: 4 },
                 }}
-                className="servicesSwiper"
               >
                 {services.map((s) => (
                   <SwiperSlide key={s.id}>
-                    {/* ✅ card click */}
                     <div
-                      className="mt-icon-box-wraper m-b30"
-                      style={{ cursor: "pointer" }}
-                      onClick={goServices}
+                      className="service-card"
                       role="button"
                       tabIndex={0}
+                      onClick={goServices}
                       onKeyDown={(e) => e.key === "Enter" && goServices()}
                     >
-                      <div className="relative icon-count-2 bg-gray p-a30 p-tb50 text-right">
-                        <span className="icon-count-number">{s.number}</span>
-
-                        <div className="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                          <span className="icon-cell">
-                            <Image src={s.icon} alt={s.title} width={54} height={54} />
-                          </span>
+                      <div className="card-inner bg-gray">
+                        {/* IMAGE */}
+                        <div className="card-media">
+                          <img
+                            src={s.img}
+                            alt={s.title}
+                            className="card-img"
+                            loading="lazy"
+                          />
+                          <div className="media-overlay" />
                         </div>
 
-                        <div className="icon-content">
-                          <h4 className="mt-tilte m-b25" style={{ whiteSpace: "pre-line" }}>
-                            {s.title}
-                          </h4>
-
-                          <p>{s.desc}</p>
-
-                          {/* ✅ button click */}
-                          <button
-                            type="button"
-                            className="site-button-link"
-                            data-hover="اقرأ المزيد"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              goServices();
-                            }}
-                          >
-                            اقرأ المزيد <i className="fa fa-angle-left arrow-animation" />
-                          </button>
+                        {/* CONTENT */}
+                        <div className="card-content">
+                          <h4 className="title-clamp">{s.title}</h4>
+                          <p className="desc-clamp">{s.desc}</p>
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
+
+              {/* STYLES */}
+              <style jsx>{`
+                .service-card {
+                  height: 100%;
+                  cursor: pointer;
+                }
+
+                .card-inner {
+                  height: 100%;
+                  border-radius: 10px;
+                  overflow: hidden;
+                  display: flex;
+                  flex-direction: column;
+                  transition: transform 0.25s ease, box-shadow 0.25s ease;
+                }
+
+                .service-card:hover .card-inner {
+                  transform: translateY(-6px);
+                  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+                }
+
+                .card-media {
+                  position: relative;
+                  width: 100%;
+                  height: 190px;
+                  overflow: hidden;
+                }
+
+                .card-img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  transition: transform 0.35s ease;
+                }
+
+                .service-card:hover .card-img {
+                  transform: scale(1.08);
+                }
+
+                .media-overlay {
+                  position: absolute;
+                  inset: 0;
+                  background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.45)
+                  );
+                  opacity: 0.9;
+                  transition: opacity 0.35s ease;
+                }
+
+                .card-content {
+                  padding: 22px;
+                  text-align: right;
+                }
+
+                .title-clamp {
+                  -webkit-line-clamp: 2;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  margin-bottom: 12px;
+                }
+
+                .desc-clamp {
+                  -webkit-line-clamp: 4;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  line-height: 1.7;
+                }
+              `}</style>
             </div>
           </div>
         </div>
 
-        {/* BACKGROUND TITLE */}
         <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
           <strong>الخدمات</strong>
         </div>
-
-        {/* make button same style as anchor */}
-        <style jsx>{`
-          :global(.site-button-link) {
-            background: transparent;
-            border: 0;
-            padding: 0;
-            cursor: pointer;
-          }
-          :global(.servicesSwiper) {
-            padding-bottom: 40px;
-          }
-        `}</style>
       </div>
-      {/* OUR SERVICES END */}
     </div>
   );
 }
