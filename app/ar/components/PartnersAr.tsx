@@ -22,9 +22,19 @@ const PartnersAr = () => {
     <section className="py-16 bg-white" dir="rtl">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-center text-3xl font-semibold mb-10">
-          شركاؤنا الموثوقون
-        </h2>
+        {/* Heading */}
+        <div className="section-head">
+          <div className="mt-separator-outer separator-center">
+            <div className="mt-separator">
+              <h2 className="text-uppercase sep-line-one">
+                <span className="font-weight-300 site-text-primary">
+                  الشركاء
+                </span>{" "}
+                الموثوقون
+              </h2>
+            </div>
+          </div>
+        </div>
 
         {/* Slider */}
         <Swiper
