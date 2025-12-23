@@ -200,10 +200,11 @@ const Footer = () => {
             <div className="paymentRow">
               {["cod", "apple", "credit", "mada", "bank"].map((p) => (
                 <div className="payPill" key={p}>
-                  <img src={`/images/${p}.AVIF`} className="payImg" />
+                  <img src={`/images/${p}.avif`} className="payImg" alt={p} />
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 
