@@ -111,7 +111,7 @@ const Footer = () => {
                       </div>
 
                       <img
-                        src="/images/saudilogo.AVIF"
+                        src="/images/saudilogo.avif"
                         alt="Saudi Arabia"
                         style={{ height: 36 }}
                       />
