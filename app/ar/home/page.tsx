@@ -13,6 +13,7 @@ import Footer from '../components/Footer'
 import GoToTop from '../components/GoToTop'
 import '../components/navbar.module.css'
 import Hero from '../components/Hero'
+import PartnersAr from '../components/PartnersAr'
 
 
 
@@ -36,7 +37,7 @@ const page = () => {
           <Testimonials />
     
     
-    
+          <PartnersAr />
     
             </div>
     

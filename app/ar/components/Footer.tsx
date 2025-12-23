@@ -228,14 +228,14 @@ const Footer = () => {
                         </a>
                       </li>
 
-                      <li style={contactLi}>
+                      {/* <li style={contactLi}>
                         <span className="iconWrap">
                           <Mail size={17} />
                         </span>
                         <a href="mailto:a22@live.at" style={contactLink}>
                           a22@live.at
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
