@@ -8,9 +8,9 @@ const OurValue = () => {
         <div className="container">
           <div className="section-content">
             <div className="row">
+
               {/* LEFT COLUMN */}
               <div className="col-lg-4 col-md-12">
-                {/* TITLE START */}
                 <div className="section-head text-right">
                   <div className="mt-separator-outer separator-right">
                     <div className="mt-separator">
@@ -20,79 +20,54 @@ const OurValue = () => {
                         </span>
                       </h2>
                     </div>
+
                     <p>
-                      من الحقائق المعروفة أن القارئ قد يتشتت بسبب المحتوى المقروء
-                      لصفحة ما عند النظر إلى تصميمها وترتيب عناصرها.
+                      نساعد الشركات على النمو من خلال خدمات احترافية، تواصل واضح،
+                      وتنفيذ يعتمد على النتائج. سواء كنت تحتاج حلول رقمية، دعم تشغيلي،
+                      أو استشارات متخصصة — نحن ننجز العمل بجودة واستمرارية.
+                    </p>
+
+                    <p className="m-b0">
+                      تركيزنا بسيط: <b>حل مشاكل حقيقية</b>، تحسين الأداء، وبناء قيمة
+                      طويلة المدى لعملائنا.
                     </p>
                   </div>
                 </div>
-                {/* TITLE END */}
 
-                <div className="author-info p-t20 text-right">
-                  <div className="author-signature">
-                    <img
-                      src="/images/Signature%2BBlack.png"
-                      alt="التوقيع"
-                      width={150}
-                    />
-                  </div>
-                  <div className="author-name">
-                    <h4 className="m-t0">ديفيد هوكر</h4>
-                    <p>مهندس معماري ومؤسس</p>
-                  </div>
+              
+
+                {/* QUICK HIGHLIGHTS */}
+                <div className="p-t20 text-right">
+                  <ul className="list-check-circle">
+                    <li>دعم سريع واستجابة واضحة</li>
+                    <li>تقارير شفافة وتحديثات دورية</li>
+                    <li>حلول مخصصة حسب نشاطك</li>
+                    <li>مراجعة جودة قبل التسليم</li>
+                  </ul>
                 </div>
-
-                {/* <div
-                  className="video-section-full bg-no-repeat bg-cover overlay-wraper"
-                  style={{ backgroundImage: "url(images/video-bg.jpg)" }}
-                >
-                  <div className="overlay-main bg-black opacity-07" />
-                  <div className="video-section-inner">
-                    <div className="video-section-content">
-                      <div className="video-section-left">
-                        <a
-                          href="https://player.vimeo.com/video/34741214?color=ffffff&title=0&byline=0&portrait=0"
-                          className="mfp-video play-now"
-                        >
-                          <i className="icon fa fa-play" />
-                          <span className="ripple" />
-                        </a>
-                      </div>
-                      <div className="video-section-right">
-                        <a
-                          href="https://player.vimeo.com/video/34741214?color=ffffff&title=0&byline=0&portrait=0"
-                          className="mfp-video font-weight-600 text-uppercase"
-                        >
-                          عرض تقديمي بالفيديو
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-
               </div>
 
               {/* COUNTERS */}
               <div className="col-lg-3 col-md-6">
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
                   <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    450
+                    120+
                   </div>
-                  <h4 className="m-tb0">خبراء نشطون</h4>
+                  <h4 className="m-tb0">شركات تعاملنا معها</h4>
                 </div>
 
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
                   <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    670
+                    320+
                   </div>
-                  <h4 className="m-tb0">عملاء راضون</h4>
+                  <h4 className="m-tb0">مشروع تم تسليمه</h4>
                 </div>
 
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
                   <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    1500
+                    98%
                   </div>
-                  <h4 className="m-tb0">مشروع مكتمل</h4>
+                  <h4 className="m-tb0">رضا العملاء</h4>
                 </div>
               </div>
 
@@ -101,91 +76,97 @@ const OurValue = () => {
                 <div className="our-exp text-right">
                   <div className="mt-box">
                     <h3 className="m-t0">
-                      <span className="font-weight-100">لدينا</span>
-                      <span className="site-text-primary"> 15 سنة</span>{" "}
-                      من الخبرة في مجال الإنشاءات
+                      <span className="font-weight-100">ندعم</span>
+                      <span className="site-text-primary"> نمو الأعمال</span>{" "}
+                      عبر تنفيذ خدمات متعددة بشكل احترافي
                     </h3>
+
+                    <p className="m-b20">
+                      من التخطيط إلى التنفيذ — فريقنا يتولى الاستراتيجية، التطوير،
+                      التحسين، والمتابعة المستمرة لضمان النتائج.
+                    </p>
                   </div>
 
                   <span className="progressText text-black">
-                    <b>الهندسة المعمارية</b>
+                    <b>استشارات الأعمال والاستراتيجية</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
                       className="progress-bar site-bg-primary progress-bar-striped progress-bar-animated text-black"
                       role="progressbar"
-                      style={{ width: "85%" }}
-                      aria-valuenow={85}
+                      style={{ width: "90%" }}
+                      aria-valuenow={90}
                       aria-valuemin={0}
                       aria-valuemax={100}
                     >
-                      <span>85%</span>
+                      <span>90%</span>
                     </div>
                   </div>
 
                   <span className="progressText text-black">
-                    <b>الإنشاءات</b>
+                    <b>الحلول الرقمية (مواقع / أنظمة)</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
                       className="progress-bar site-bg-primary progress-bar-striped progress-bar-animated text-black"
                       role="progressbar"
-                      style={{ width: "78%" }}
-                      aria-valuenow={78}
+                      style={{ width: "88%" }}
+                      aria-valuenow={88}
                       aria-valuemin={0}
                       aria-valuemax={100}
                     >
-                      <span>78%</span>
+                      <span>88%</span>
                     </div>
                   </div>
 
                   <span className="progressText text-black">
-                    <b>التصميم الداخلي</b>
+                    <b>التسويق وتوليد العملاء المحتملين</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
                       className="progress-bar site-bg-primary progress-bar-striped progress-bar-animated text-black"
                       role="progressbar"
-                      style={{ width: "65%" }}
-                      aria-valuenow={65}
+                      style={{ width: "82%" }}
+                      aria-valuenow={82}
                       aria-valuemin={0}
                       aria-valuemax={100}
                     >
-                      <span>65%</span>
+                      <span>82%</span>
                     </div>
                   </div>
 
                   <span className="progressText text-black">
-                    <b>البناء</b>
+                    <b>الهوية البصرية والتصميم الإبداعي</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
                       className="progress-bar site-bg-primary progress-bar-striped progress-bar-animated text-black"
                       role="progressbar"
-                      style={{ width: "78%" }}
-                      aria-valuenow={78}
+                      style={{ width: "86%" }}
+                      aria-valuenow={86}
                       aria-valuemin={0}
                       aria-valuemax={100}
                     >
-                      <span>78%</span>
+                      <span>86%</span>
                     </div>
                   </div>
 
                   <span className="progressText text-black">
-                    <b>المشاريع التجارية</b>
+                    <b>الدعم التشغيلي وخدمة العملاء</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
                       className="progress-bar site-bg-primary progress-bar-striped progress-bar-animated text-black"
                       role="progressbar"
-                      style={{ width: "95%" }}
-                      aria-valuenow={95}
+                      style={{ width: "92%" }}
+                      aria-valuenow={92}
                       aria-valuemin={0}
                       aria-valuemax={100}
                     >
-                      <span>95%</span>
+                      <span>92%</span>
                     </div>
                   </div>
+
                 </div>
               </div>
 

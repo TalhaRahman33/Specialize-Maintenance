@@ -4,14 +4,27 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+/* ✅ WhatsApp Config */
+const WHATSAPP_NUMBER = "966576150857";
+const WHATSAPP_TEXT = "مرحبًا، أود الاستفسار عن خدماتكم.";
+
 const Mission = () => {
+  const goWhatsapp = () => {
+    const text = encodeURIComponent(WHATSAPP_TEXT);
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <div dir="rtl">
       {/* OUR MISSION START */}
       <div
         className="section-full mobile-page-padding mission-outer-section p-t80 p-b30 bg-gray bg-no-repeat bg-right-center"
         style={{
-          backgroundImage: "url(/images/left-men.png), url(/images/bg-4.png)", // ✅ fixed
+          backgroundImage: "url(/images/left-men.png), url(/images/bg-4.png)",
         }}
       >
         <div className="section-content">
@@ -29,11 +42,80 @@ const Mission = () => {
             {/* TITLE END */}
 
             <div className="row">
-              {/* LEFT BOX */}
-              <div className="col-lg-4 col-md-6">
+              {/* CONTACT FORM (LEFT) */}
+              <div className="col-lg-4 col-md-12 order-lg-1 order-3">
+                <div className="contact-home1-left site-bg-dark p-a30 m-b0 text-right">
+                  <h3 className="text-white m-t0">
+                    <span className="font-weight-100">تواصل</span> معنا
+                  </h3>
+
+                  <form
+                    className="cons-contact-form2 form-transparent rtlForm"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      alert("ارسلنا النموذج لاحقًا عبر API في Next.js");
+                    }}
+                  >
+                    <div className="input input-animate">
+                      {/* <label htmlFor="name">الاسم</label> */}
+                      <input type="text" name="username" id="name" placeholder="الاسم" />
+                      <span className="spin" />
+                    </div>
+
+                    <div className="input input-animate">
+                      {/* <label htmlFor="email">البريد الإلكتروني</label> */}
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="البريد الإلكتروني"
+                      />
+                      <span className="spin" />
+                    </div>
+
+                    <div className="input input-animate">
+                      {/* <label htmlFor="Phone">رقم الهاتف</label> */}
+                      <input type="text" name="phone" id="Phone" placeholder="رقم الهاتف" />
+                      <span className="spin" />
+                    </div>
+
+                    <div className="input input-animate">
+                      {/* <label htmlFor="message">الرسالة</label> */}
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="اكتب رسالتك هنا..."
+                      />
+                      <span className="spin" />
+                    </div>
+
+                    <div className="text-center p-t10">
+                      <button type="submit" className="site-button btn-effect">
+                        إرسال الآن
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              {/* MID IMAGE (CENTER) */}
+              <div className="col-lg-4 col-md-6 order-lg-2 order-2">
+                <div className="mission-mid m-b30 missionImageWrap">
+                  <Image
+                    src="/images/mission.jpg"
+                    alt="رسالتنا"
+                    fill
+                    sizes="(max-width: 992px) 100vw, 33vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </div>
+
+              {/* SERVICES BOX (RIGHT) */}
+              <div className="col-lg-4 col-md-6 order-lg-3 order-1">
                 <div
                   className="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left text-right"
-                  style={{ backgroundImage: "url(/images/bg-site.png)" }} // ✅ fixed
+                  style={{ backgroundImage: "url(/images/bg-site.png)" }}
                 >
                   <h3 className="m-t0">
                     <span className="font-weight-100">مجالات العمل</span>
@@ -46,7 +128,6 @@ const Mission = () => {
                   </p>
 
                   <ul className="list-angle-right anchor-line">
-                    {/* ✅ route to your Next.js page */}
                     <li>
                       <Link href="/ar/services">إدارة مشاريع الإنشاء</Link>
                     </li>
@@ -64,72 +145,26 @@ const Mission = () => {
                     </li>
                   </ul>
 
+                  {/* ✅ SAME BUTTON STYLE AS YOUR OTHER FILE */}
                   <div className="text-left">
-                    <Link href="/ar/about" className="site-button-link" data-hover="اقرأ المزيد">
-                      اقرأ المزيد <i className="fa fa-angle-left arrow-animation" />
-                    </Link>
+                    <button
+                      type="button"
+                      onClick={goWhatsapp}
+                      className="site-button-link"
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        cursor: "pointer",
+                        padding: 0,
+                        fontWeight: 600,
+                      }}
+                      data-hover="تواصل عبر واتساب"
+                    >
+                      تواصل عبر واتساب
+                      {/* ✅ Use FAB for FontAwesome 5/6 */}
+                      <i className="fab fa-whatsapp arrow-animation waIcon" />
+                    </button>
                   </div>
-                </div>
-              </div>
-
-              {/* MID IMAGE (Next/Image) */}
-              <div className="col-lg-4 col-md-6">
-                <div className="mission-mid m-b30 missionImageWrap">
-                  <Image
-                    src="/images/mission.jpg"
-                    alt="رسالتنا"
-                    fill
-                    sizes="(max-width: 992px) 100vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-              </div>
-
-              {/* CONTACT FORM */}
-              <div className="col-lg-4 col-md-12">
-                <div className="contact-home1-left site-bg-dark p-a30 m-b0 text-right">
-                  <h3 className="text-white m-t0">
-                    <span className="font-weight-100">تواصل</span> معنا
-                  </h3>
-
-                  {/* ⚠️ PHP action won't work in Next.js unless you host PHP separately */}
-                  <form
-                    className="cons-contact-form2 form-transparent"
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      alert("ارسلنا النموذج لاحقًا عبر API في Next.js");
-                    }}
-                  >
-                    <div className="input input-animate">
-                      <label htmlFor="name">الاسم</label>
-                      <input type="text" name="username" id="name" />
-                      <span className="spin" />
-                    </div>
-
-                    <div className="input input-animate">
-                      <label htmlFor="email">البريد الإلكتروني</label>
-                      <input type="email" name="email" id="email" />
-                      <span className="spin" />
-                    </div>
-
-                    <div className="input input-animate">
-                      <label htmlFor="Phone">رقم الهاتف</label>
-                      <input type="text" name="phone" id="Phone" />
-                      <span className="spin" />
-                    </div>
-
-                    <div className="input input-animate">
-                      <label htmlFor="message">الرسالة</label>
-                      <textarea name="message" id="message" />
-                      <span className="spin" />
-                    </div>
-
-                    <div className="text-center p-t10">
-                      <button type="submit" className="site-button btn-effect">
-                        إرسال الآن
-                      </button>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -152,6 +187,33 @@ const Mission = () => {
             .missionImageWrap {
               height: 280px;
             }
+          }
+
+          /* RTL FIXES for Contact Form */
+          .rtlForm,
+          .rtlForm input,
+          .rtlForm textarea {
+            direction: rtl;
+            text-align: right;
+          }
+          .rtlForm label {
+            right: 0;
+            left: auto;
+            text-align: right;
+            width: 100%;
+            display: block;
+          }
+          .rtlForm input::placeholder,
+          .rtlForm textarea::placeholder {
+            text-align: right;
+            direction: rtl;
+            opacity: 0.85;
+          }
+
+          /* ✅ WhatsApp icon spacing for RTL */
+          .waIcon {
+            margin-right: 0;
+            margin-left: 8px;
           }
         `}</style>
       </div>

@@ -14,6 +14,7 @@ import GoToTop from '../components/GoToTop'
 import '../components/navbar.module.css'
 import Hero from '../components/Hero'
 import Partners from '../components/Partners'
+import Lighting from '../components/Lighting'
 
 
 const page = () => {
@@ -34,10 +35,12 @@ const page = () => {
           <Callus />
           <Projects />
           {/* <Blogs /> */}
+           <Lighting />
           <Testimonials />
     
           <Partners />
     
+   
     
             </div>
     
