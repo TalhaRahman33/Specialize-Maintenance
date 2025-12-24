@@ -107,7 +107,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>Digital Solutions (Web / Systems)</b>
+                    <b>Plumbing</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -123,7 +123,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>Marketing & Lead Generation</b>
+                    <b>Electrician</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -139,7 +139,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>Branding & Creative Production</b>
+                    <b>CCTV Camera Installation</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -155,7 +155,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>Customer Support & Operations</b>
+                    <b>Welding</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div

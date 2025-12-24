@@ -88,7 +88,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>استشارات الأعمال والاستراتيجية</b>
+                    <b> الاستشارات والاستراتيجيات التجارية </b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -104,7 +104,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>الحلول الرقمية (مواقع / أنظمة)</b>
+                    <b>السباكة  </b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -120,7 +120,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>التسويق وتوليد العملاء المحتملين</b>
+                    <b> كهربائي </b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -136,7 +136,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>الهوية البصرية والتصميم الإبداعي</b>
+                    <b> تركيب كاميرات المراقبة </b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -152,7 +152,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>الدعم التشغيلي وخدمة العملاء</b>
+                    <b> لحام </b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div

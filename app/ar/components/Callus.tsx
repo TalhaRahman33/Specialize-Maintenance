@@ -19,14 +19,16 @@ const Callus = () => {
               <h4 className="m-b15">لنعمل معًا</h4>
 
               {/* REAL PHONE NUMBER */}
-              <h2 className="call-us-number m-b10">
-                <a
-                  href="tel:+966539771718"
-                  style={{ color: "#fff", textDecoration: "none" }}
-                >
+              <h2
+                className="call-us-number m-b10"
+                dir="ltr"
+                style={{ unicodeBidi: "bidi-override" }}
+              >
+                <a href="tel:+966539771718" style={{ color: "#fff" }}>
                   +966 539 771 718
                 </a>
               </h2>
+
 
               {/* Professional subtitle instead of fake address */}
               <h4 className="call-us-address m-t0 m-b25">

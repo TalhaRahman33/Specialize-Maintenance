@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
           <Link href={`/${currentLang}/home`}>
-            <img src="/images/logoo.png" alt="Logo" />
+            <Image src="/images/logoo.png" alt="Logo" width={60} height={50} />
           </Link>
         </div>
         <div className={styles.menuToggle} onClick={toggleMenu}>

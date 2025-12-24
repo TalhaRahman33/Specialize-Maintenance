@@ -1,18 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay, EffectFade, } from "swiper/modules";
 
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 
-const slides = [
+type Slide = {
+  id: number;
+  image: string;
+  title: string;
+  desc: string;
+  btnText: string;
+  btnLink: string;
+};
+
+const slides: Slide[] = [
   {
     id: 1,
-    image: "/images/slide1.jpg", // put in /public/images/
+    image: "/images/slide1.jpg",
     title: "We Bring Your Vision to Life",
     desc: "From initial concept to full-scale implementation, we provide innovative construction solutions tailored to your needs.",
     btnText: "Discover More",
@@ -32,7 +42,7 @@ const slides = [
     title: "Building Your Future",
     desc: "We believe in creating long-lasting structures that are both beautiful and sustainable, meeting the needs of tomorrow.",
     btnText: "Our Services",
-    btnLink: "/en/about",
+    btnLink: "/en/services",
   },
 ];
 
@@ -68,9 +78,10 @@ export default function Hero() {
               <div className="content">
                 <h1>{s.title}</h1>
                 <p>{s.desc}</p>
-                <a className="btn" href={s.btnLink}>
+
+                <Link className="btn" href={s.btnLink} prefetch>
                   {s.btnText}
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -80,16 +91,17 @@ export default function Hero() {
       <style jsx>{`
         .hero {
           width: 100%;
-          height: 100vh; /* fullscreen */
+          height: 100vh;
         }
         .heroSwiper {
           width: 100%;
           height: 100%;
         }
         .slide {
-          position: relative;
+          position: relative; /* REQUIRED for next/image fill */
           width: 100%;
-          height: 100vh;
+          height: 100vh; /* REQUIRED for next/image fill */
+          overflow: hidden;
         }
         .overlay {
           position: absolute;
@@ -130,7 +142,6 @@ export default function Hero() {
           letter-spacing: 1px;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
           .content {
             left: 20px;
