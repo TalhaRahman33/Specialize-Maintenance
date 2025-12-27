@@ -53,23 +53,20 @@ const OurValue = () => {
               {/* MID: KPI / STATS */}
               <div className="col-lg-3 col-md-6">
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
-                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    120+
-                  </div>
+                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">120</div>
+                  <span className="counter-suffix">+</span>
                   <h4 className="m-tb0">Business Clients</h4>
                 </div>
 
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
-                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    320+
-                  </div>
+                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">320</div>
+                  <span className="counter-suffix">+</span>
                   <h4 className="m-tb0">Projects Delivered</h4>
                 </div>
 
                 <div className="mt-count m-b30 text-white mt-icon-box-wraper center site-bg-dark p-a20">
-                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">
-                    98%
-                  </div>
+                  <div className="counter font-30 font-weight-800 m-b15 site-text-primary">98</div>
+                  <span className="counter-suffix">%</span>
                   <h4 className="m-tb0">Client Satisfaction</h4>
                 </div>
               </div>

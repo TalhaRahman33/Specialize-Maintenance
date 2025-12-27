@@ -81,9 +81,9 @@ const Spacialization = () => {
         </div>
 
         {/* BACKGROUND TITLE */}
-        <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
           <strong>التخصصات</strong>
-        </div>
+        </div> */}
       </div>
       {/* OUR SPECIALIZATION END */}
     </div>

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
@@ -25,29 +25,56 @@ const Navbar = () => {
   };
 
   const switchLang = () => {
-    router.push(`/en${pathname.replace(/^\/ar/, '')}`);
+    if (pathname) {
+      router.push(`/en${pathname.replace(/^\/ar/, '')}`);
+    }
+  };
+
+  const isActive = (path: string): boolean => {
+    if (!pathname) return false;
+    return pathname === path || pathname.startsWith(path + '/');
   };
 
   return (
-    <nav className={styles.navbar} dir="rtl">
-      <div className={styles.navbarContainer}>
-        <div className={styles.logo}>
+    <nav className={styles.navbarAr}>
+      <div className={styles.navbarContainerAr}>
+        <div className={styles.logoAr}>
           <Link href="/ar/home">
             <img src="/images/logoo.png" alt="Logo" />
           </Link>
         </div>
-        <div className={styles.menuToggle} onClick={toggleMenu}>
+        <div className={styles.menuToggleAr} onClick={toggleMenu}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
         </div>
-        <ul className={`${styles.navMenu} ${menuOpen ? styles.navMenuOpen : ''}`}>
-          <li><Link href="/ar/home" onClick={() => setMenuOpen(false)}>{texts.ar.home}</Link></li>
-          <li><Link href="/ar/about" onClick={() => setMenuOpen(false)}>{texts.ar.about}</Link></li>
-          <li><Link href="/ar/services" onClick={() => setMenuOpen(false)}>{texts.ar.services}</Link></li>
-          <li><Link href="/ar/portfolio" onClick={() => setMenuOpen(false)}>{texts.ar.portfolio}</Link></li>
+        <ul className={`${styles.navMenuAr} ${menuOpen ? styles.navMenuOpenAr : ''}`}>
+          <li className={isActive('/ar/home') ? styles.active : ''}>
+            <Link href="/ar/home" onClick={() => setMenuOpen(false)}>
+              {texts.ar.home}
+              <span className={styles.underlineAr}></span>
+            </Link>
+          </li>
+          <li className={isActive('/ar/about') ? styles.active : ''}>
+            <Link href="/ar/about" onClick={() => setMenuOpen(false)}>
+              {texts.ar.about}
+              <span className={styles.underlineAr}></span>
+            </Link>
+          </li>
+          <li className={isActive('/ar/services') ? styles.active : ''}>
+            <Link href="/ar/services" onClick={() => setMenuOpen(false)}>
+              {texts.ar.services}
+              <span className={styles.underlineAr}></span>
+            </Link>
+          </li>
+          <li className={isActive('/ar/portfolio') ? styles.active : ''}>
+            <Link href="/ar/portfolio" onClick={() => setMenuOpen(false)}>
+              {texts.ar.portfolio}
+              <span className={styles.underlineAr}></span>
+            </Link>
+          </li>
         </ul>
-        <div className={styles.langSwitch} onClick={switchLang}>
+        <div className={styles.langSwitchAr} onClick={switchLang}>
           English
         </div>
       </div>

@@ -191,9 +191,9 @@ export default function Mission() {
           </div>
         </div>
 
-        <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
           <strong>Mission</strong>
-        </div>
+        </div> */}
 
         <style jsx>{`
           .missionImageWrap {

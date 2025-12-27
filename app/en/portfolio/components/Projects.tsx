@@ -107,7 +107,7 @@ type CardProps = {
 const ProjectCard = ({ img, title, location }: CardProps) => {
   return (
     <div className="col-lg-3 col-md-6 m-b30">
-      <div className="mt-box image-hover-block position-relative">
+      <div className="mt-box image-hover-block position-relative" style={{ zIndex: 3 }}>
         <div className="mt-thum-bx">
           <img src={img} alt={title} />
         </div>

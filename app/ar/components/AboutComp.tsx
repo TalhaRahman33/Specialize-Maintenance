@@ -130,9 +130,9 @@ export default function AboutCompAr() {
         </div>
 
         {/* Background Title */}
-        <div className="hilite-title text-left p-l50 text-uppercase hilite-dark">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase hilite-dark">
           <strong>عن</strong>
-        </div>
+        </div> */}
       </div>
       {/* ABOUT COMPANY END */}
 

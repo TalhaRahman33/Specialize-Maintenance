@@ -1,117 +1,182 @@
+/* Navbar Styles */
 .navbar {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(255, 107, 53, 0.2);
 }
 
 .logo img {
-  height: 40px;
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
+.logo a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Menu Toggle (Hamburger) */
 .menuToggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
 }
 
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #333;
-  margin: 3px 0;
-  transition: 0.3s;
+  background: #ff6b35;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
+.menuToggle:hover .bar {
+  background: #ff8c42;
+}
+
+/* Navigation Menu */
 .navMenu {
   display: flex;
   list-style: none;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navMenu li {
-  margin: 0 1rem;
+  position: relative;
 }
 
-.navMenu a {
+.navMenu li a {
+  color: #e0e0e0;
   text-decoration: none;
-  color: #333;
+  font-size: 1.05rem;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 0.5rem 0;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.navMenu a:hover {
-  color: #007bff;
+.navMenu li a:hover {
+  color: #ff6b35;
 }
 
-.langSelect {
-  background-color: #007bff;
+/* Underline Animation */
+.underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navMenu li a:hover .underline {
+  width: 100%;
+}
+
+/* Active State */
+.navMenu li.active a {
+  color: #ff6b35;
+}
+
+.navMenu li.active .underline {
+  width: 100%;
+}
+
+/* Language Switch Button */
+.langSwitch {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.langSelect:hover {
-  background-color: #0056b3;
-}
-
-.langSwitch {
-  color: #007bff;
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  margin-left: 2rem;
 }
 
 .langSwitch:hover {
-  color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
-.navMenuOpen {
-  display: flex !important;
-}
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .navbarContainer {
-    padding: 1rem;
-  }
-
   .menuToggle {
     display: flex;
   }
 
   .navMenu {
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 70px;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    gap: 1.5rem;
   }
 
-  .navMenu li {
-    margin: 0.5rem 0;
-    text-align: center;
+  .navMenuOpen {
+    left: 0;
+  }
+
+  .navMenu li a {
+    font-size: 1.2rem;
   }
 
   .langSwitch {
+    margin-left: 0;
     margin-top: 1rem;
+  }
+
+  .logo a {
+    padding: 6px;
+  }
+
+  .logo img {
+    height: 38px;
+    width: 38px;
   }
 }

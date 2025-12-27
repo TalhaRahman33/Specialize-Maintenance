@@ -130,9 +130,9 @@ export default function AboutComp() {
           </div>
         </div>
 
-        <div className="hilite-title text-left p-l50 text-uppercase hilite-dark">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase hilite-dark">
           <strong>About</strong>
-        </div>
+        </div> */}
       </div>
       {/* ABOUT COMPANY END */}
 

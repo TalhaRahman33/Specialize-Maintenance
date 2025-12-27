@@ -127,9 +127,9 @@ export default function Testimonials() {
         </div>
 
         {/* BACKGROUND TITLE */}
-        <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
           <strong>العملاء</strong>
-        </div>
+        </div> */}
 
         {/* Small spacing fix for pagination */}
         <style jsx>{`

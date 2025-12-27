@@ -132,9 +132,9 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
           <strong>Clients</strong>
-        </div>
+        </div> */}
 
         <style jsx>{`
           :global(.testimonialSwiper) {

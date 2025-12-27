@@ -15,31 +15,35 @@ import '../components/navbar.module.css'
 import Hero from '../components/Hero'
 import PartnersAr from '../components/PartnersAr'
 import LightingAr from '../components/LightingAr'
+import Topbar from '../components/Topbar'
 
 
 
 const page = () => {
   return (
          <div>
+          <Topbar />
           <Navbar />
     
           <div className="page-content">
     
     <Hero />
-          <Spacialization />
+       <Services />
+     
+          <PartnersAr />
           <AboutComp />
-           <Services />
+        
           <OurValue />
           <Mission />
          
           <Callus />
           <Projects />
           {/* <Blogs /> */}
+               {/* <Spacialization /> */}
           <LightingAr />
           <Testimonials />
     
-    
-          <PartnersAr />
+  
     
             </div>
     
