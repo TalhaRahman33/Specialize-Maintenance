@@ -504,9 +504,9 @@ export default function Ser() {
           </div>
         </div>
 
-        <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
           <strong>Services</strong>
-        </div>
+        </div> */}
       </div>
     </div>
   );

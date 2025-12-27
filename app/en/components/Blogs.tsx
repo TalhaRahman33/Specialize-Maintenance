@@ -177,9 +177,9 @@ const Blogs = () => {
         </div>
       </div>
     </div>
-    <div className="hilite-title text-right p-r50 text-uppercase hilite-dark">
+    {/* <div className="hilite-title text-right p-r50 text-uppercase hilite-dark">
       <strong>Blog</strong>
-    </div>
+    </div> */}
   </div>
   {/* OUR BLOG END */}
     </div>

@@ -507,9 +507,9 @@ export default function SerAr() {
           </div>
         </div>
 
-        <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-right p-r50 text-uppercase text-pop-up-top">
           <strong>الخدمات</strong>
-        </div>
+        </div> */}
       </div>
     </div>
   );

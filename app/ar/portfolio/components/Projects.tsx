@@ -83,9 +83,9 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
+        {/* <div className="hilite-title text-left p-l50 text-uppercase text-pop-up-top">
           <strong>Projects</strong>
-        </div>
+        </div> */}
       </div>
       {/* OUR PROJECT END */}
     </div>

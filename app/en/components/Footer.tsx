@@ -1,17 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Instagram,
-  Twitter,
-  Youtube,
-  Facebook,
-  MessageCircle,
-  Phone,
-  Smartphone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Instagram, Twitter, Youtube, Facebook, MessageCircle, Phone, Smartphone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -29,13 +19,12 @@ const Footer = () => {
                   <div className="footer-logo">
                     <img src="/images/logoo.png" alt="Logo" />
                   </div>
-                  <h4 className="widget-title">Specialist Business Company</h4>
+
+                  <h4 className="widget-title">Specialized Maintanance Company</h4>
 
                   <p className="footer-description">
-                    Specialized Business Company specializes in electrical
-                    materials, offering high-quality products at competitive
-                    prices. We provide innovative electrical solutions for
-                    companies and individuals.
+                    Specialized Business Company specializes in electrical materials, offering high-quality products at competitive
+                    prices. We provide innovative electrical solutions for companies and individuals.
                   </p>
 
                   {/* Social Icons */}
@@ -43,36 +32,51 @@ const Footer = () => {
                     <h5 className="social-title">Follow Us</h5>
                     <ul className="social-icons">
                       <li>
-                        <a href="#" className="social-btn facebook">
+                        <a href="#" className="social-btn facebook" aria-label="Facebook">
                           <Facebook size={20} />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-btn youtube">
+                        <a href="#" className="social-btn youtube" aria-label="YouTube">
                           <Youtube size={20} />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-btn instagram">
+                        <a href="#" className="social-btn instagram" aria-label="Instagram">
                           <Instagram size={20} />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-btn twitter">
+                        <a href="#" className="social-btn twitter" aria-label="Twitter">
                           <Twitter size={20} />
                         </a>
                       </li>
                     </ul>
                   </div>
+
+                  {/* Tax + CR */}
+                  <div className="credentials">
+                    <div className="cred-item">
+                      <strong>Tax ID</strong>
+                      <span>310448142800003</span>
+                    </div>
+                    <div className="cred-item">
+                      <strong>CR</strong>
+                      <span>1010601919</span>
+                    </div>
+
+                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
+                  </div>
                 </div>
               </div>
 
-              {/* CENTER: IMPORTANT LINKS */}
+              {/* CENTER: QUICK LINKS */}
               <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
                 <div className="widget widget_services">
                   <h4 className="widget-title">Quick Links</h4>
 
-                  <ul className="footer-links">
+                  {/* ✅ Dotted border removed from links */}
+                  <ul className="footer-links no-borders">
                     <li>
                       <a href="/en/home">
                         <span className="link-icon">›</span>
@@ -108,7 +112,8 @@ const Footer = () => {
               </div>
 
               {/* RIGHT: CONTACT US */}
-              <div className="col-lg-4 col-md-6 col-sm-6">
+              <div className="col-lg-4 col-md-6 col-sm-6 footer-contact-col">
+
                 <div className="widget widget_address_outer">
                   <h4 className="widget-title">Contact Us</h4>
 
@@ -154,37 +159,10 @@ const Footer = () => {
                       </div>
                     </li>
                   </ul>
-
-                  {/* Tax + CR */}
-                  <div className="credentials">
-                    <div className="cred-item">
-                      <strong>Tax ID</strong>
-                      <span>310448142800003</span>
-                    </div>
-                    <div className="cred-item">
-                      <strong>CR</strong>
-                      <span>1010601919</span>
-                    </div>
-                    <img
-                      src="/images/saudilogo.avif"
-                      alt="Saudi Arabia"
-                      className="saudi-logo"
-                    />
-                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* PAYMENT METHODS */}
-            <div className="payment-section">
-              <h5 className="payment-title">We Accept</h5>
-              <div className="payment-row">
-                {["cod", "apple", "credit", "mada", "bank"].map((p) => (
-                  <div className="pay-pill" key={p}>
-                    <img src={`/images/${p}.avif`} className="pay-img" alt={p} />
-                  </div>
-                ))}
-              </div>
+
             </div>
           </div>
         </div>
@@ -194,12 +172,12 @@ const Footer = () => {
           <div className="overlay-main" />
           <div className="container">
             <div className="footer-bottom-content">
-              <p className="copyright">
-                © 2025 Specialist Business Company. All rights reserved.
-              </p>
+              <p className="copyright">© 2025 Specialist Business Company. All rights reserved.</p>
               <p className="dev-credit">
                 Designed & Developed with <span className="heart">❤</span> by{" "}
-                <a href="#" className="dev-link">Your Company</a>
+                <a href="#" className="dev-link">
+                  Your Company
+                </a>
               </p>
             </div>
           </div>
@@ -207,10 +185,17 @@ const Footer = () => {
 
         {/* STYLES */}
         <style jsx>{`
+          /* eslint-disable */
           .site-footer {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #e0e0e0;
           }
+
+          .footer-contact-col {
+  display: flex;
+  justify-content: flex-start;
+
+}
 
           .footer-top {
             padding: 60px 0 40px;
@@ -265,7 +250,7 @@ const Footer = () => {
           }
 
           .widget-title::after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             bottom: 0;
@@ -316,12 +301,9 @@ const Footer = () => {
           }
 
           .social-btn::before {
-            content: '';
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transition: transform 0.3s ease;
@@ -371,6 +353,14 @@ const Footer = () => {
 
           .footer-links li {
             margin-bottom: 12px;
+            /* ❌ If you had dotted border from theme, this will override it */
+            border: none !important;
+          }
+
+          .footer-links.no-borders li,
+          .footer-links.no-borders a {
+            border: none !important;
+            background: transparent !important;
           }
 
           .footer-links a {
@@ -381,6 +371,14 @@ const Footer = () => {
             gap: 8px;
             transition: all 0.3s ease;
             font-weight: 500;
+            /* ✅ force remove any dotted underline/border coming from global css */
+            border-bottom: none !important;
+            outline: none !important;
+          }
+
+          .footer-links a:hover {
+            color: #ff6b35;
+            padding-left: 8px;
           }
 
           .link-icon {
@@ -390,37 +388,33 @@ const Footer = () => {
             transition: transform 0.3s ease;
           }
 
-          .footer-links a:hover {
-            color: #ff6b35;
-            padding-left: 8px;
-          }
-
           .footer-links a:hover .link-icon {
             transform: translateX(4px);
           }
 
-          /* Contact List */
+          /* ✅ Contact List - RIGHT aligned (desktop) */
           .contact-list {
             list-style: none;
             padding: 0;
             margin: 0;
-          }
-
-          .contact-item {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            flex-direction: column; /* ✅ stack items for clean alignment */
+            gap: 14px;
           }
 
-          .contact-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateX(-4px);
+          .contact-right {
+            align-items: flex-end; /* ✅ whole list to the right side */
           }
+
+
+
+        /* ✅ Each row stays aligned (icon + text) */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: flex-start;
+}
 
           .icon-wrap {
             width: 46px;
@@ -450,6 +444,8 @@ const Footer = () => {
             display: flex;
             flex-direction: column;
             gap: 4px;
+            text-align: right; /* ✅ label + number right aligned */
+            align-items: flex-end; /* ✅ keep text on right edge */
           }
 
           .label {
@@ -466,6 +462,7 @@ const Footer = () => {
             font-weight: 600;
             font-size: 16px;
             transition: color 0.3s ease;
+            white-space: nowrap; /* ✅ numbers break nahi honge */
           }
 
           .contact-link:hover {
@@ -508,46 +505,6 @@ const Footer = () => {
             margin-left: auto;
           }
 
-          /* Payment Section */
-          .payment-section {
-            margin-top: 50px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-          }
-
-          .payment-title {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-          }
-
-          .payment-row {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-          }
-
-          .pay-pill {
-            background: #fff;
-            border-radius: 12px;
-            padding: 10px 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-          }
-
-          .pay-pill:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
-          }
-
-          .pay-img {
-            height: 26px;
-            display: block;
-          }
-
           /* Footer Bottom */
           .footer-bottom {
             padding: 25px 0;
@@ -563,12 +520,7 @@ const Footer = () => {
             gap: 15px;
           }
 
-          .copyright {
-            margin: 0;
-            color: #b0b0b0;
-            font-size: 14px;
-          }
-
+          .copyright,
           .dev-credit {
             margin: 0;
             color: #b0b0b0;
@@ -581,9 +533,16 @@ const Footer = () => {
           }
 
           @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.2); }
-            50% { transform: scale(1); }
+            0%,
+            100% {
+              transform: scale(1);
+            }
+            25% {
+              transform: scale(1.2);
+            }
+            50% {
+              transform: scale(1);
+            }
           }
 
           .dev-link {
@@ -598,6 +557,20 @@ const Footer = () => {
           }
 
           /* Responsive */
+          /* ✅ On tablet/mobile center it */
+@media (max-width: 992px) {
+  .footer-contact-col {
+    justify-content: center;
+  }
+  .footer-contact-col .widget_address_outer {
+    margin-left: 0;
+    text-align: center;
+  }
+  .contact-item {
+    justify-content: center;
+  }
+}
+  
           @media (max-width: 992px) {
             .col-lg-4 {
               flex: 0 0 100%;
@@ -627,15 +600,16 @@ const Footer = () => {
               align-items: center;
             }
 
-            .contact-list {
-              display: flex;
-              flex-direction: column;
+            /* ✅ On mobile: contact list center (better UX) */
+            .contact-right {
               align-items: center;
             }
-
             .contact-item {
-              max-width: 400px;
-              width: 100%;
+              justify-content: center;
+            }
+            .contact-info {
+              text-align: center;
+              align-items: center;
             }
 
             .credentials {
@@ -666,19 +640,8 @@ const Footer = () => {
             .widget-title {
               font-size: 18px;
             }
-
-            .payment-row {
-              gap: 10px;
-            }
-
-            .pay-pill {
-              padding: 8px 14px;
-            }
-
-            .pay-img {
-              height: 22px;
-            }
           }
+          /* eslint-enable */
         `}</style>
       </footer>
     </div>
