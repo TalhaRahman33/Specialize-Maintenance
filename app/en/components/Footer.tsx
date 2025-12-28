@@ -23,8 +23,9 @@ const Footer = () => {
                   <h4 className="widget-title">Specialized Maintanance Company</h4>
 
                   <p className="footer-description">
-                    Specialized Business Company specializes in electrical materials, offering high-quality products at competitive
-                    prices. We provide innovative electrical solutions for companies and individuals.
+                 
+                    Specialized Maintenance Company is a leading provider of maintenance
+                    services, dedicated to ensuring the optimal performance and longevity of your assets.
                   </p>
 
                   {/* Social Icons */}
@@ -53,20 +54,6 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
-
-                  {/* Tax + CR */}
-                  <div className="credentials">
-                    <div className="cred-item">
-                      <strong>Tax ID</strong>
-                      <span>310448142800003</span>
-                    </div>
-                    <div className="cred-item">
-                      <strong>CR</strong>
-                      <span>1010601919</span>
-                    </div>
-
-                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
-                  </div>
                 </div>
               </div>
 
@@ -75,7 +62,6 @@ const Footer = () => {
                 <div className="widget widget_services">
                   <h4 className="widget-title">Quick Links</h4>
 
-                  {/* ✅ Dotted border removed from links */}
                   <ul className="footer-links no-borders">
                     <li>
                       <a href="/en/home">
@@ -86,7 +72,7 @@ const Footer = () => {
                     <li>
                       <a href="/en/about">
                         <span className="link-icon">›</span>
-                        About Us
+                        About 
                       </a>
                     </li>
                     <li>
@@ -104,7 +90,7 @@ const Footer = () => {
                     <li>
                       <a href="/policy">
                         <span className="link-icon">›</span>
-                        Exchange & Return Policy
+                        Privacy Policy
                       </a>
                     </li>
                   </ul>
@@ -113,7 +99,6 @@ const Footer = () => {
 
               {/* RIGHT: CONTACT US */}
               <div className="col-lg-4 col-md-6 col-sm-6 footer-contact-col">
-
                 <div className="widget widget_address_outer">
                   <h4 className="widget-title">Contact Us</h4>
 
@@ -159,10 +144,22 @@ const Footer = () => {
                       </div>
                     </li>
                   </ul>
+
+                  {/* Tax + CR moved here */}
+                  <div className="credentials">
+                    <div className="cred-item">
+                      <strong>Tax ID</strong>
+                      <span>310448142800003</span>
+                    </div>
+                    <div className="cred-item">
+                      <strong>CR</strong>
+                      <span>1010601919</span>
+                    </div>
+
+                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
+                  </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -172,11 +169,11 @@ const Footer = () => {
           <div className="overlay-main" />
           <div className="container">
             <div className="footer-bottom-content">
-              <p className="copyright">© 2025 Specialist Business Company. All rights reserved.</p>
+              <p className="copyright">© 2025 Specialized Work Company. All rights reserved.</p>
               <p className="dev-credit">
-                Designed & Developed with <span className="heart">❤</span> by{" "}
+                Designed & Developed  <span className="heart">❤</span> by{" "}
                 <a href="#" className="dev-link">
-                  Your Company
+                  Muhammad Talha 
                 </a>
               </p>
             </div>
@@ -192,13 +189,40 @@ const Footer = () => {
           }
 
           .footer-contact-col {
-  display: flex;
-  justify-content: flex-start;
+            display: flex;
+            justify-content: flex-end;
+          }
 
-}
+          .widget_about {
+            max-width: 100%;
+          }
+
+          .widget_services {
+            max-width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .widget_services .widget-title {
+            text-align: center;
+            width: 100%;
+          }
+
+          .widget_address_outer {
+            max-width: 100%;
+          }
 
           .footer-top {
             padding: 60px 0 40px;
+          }
+
+          .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
           }
 
           .row {
@@ -207,23 +231,34 @@ const Footer = () => {
             margin: 0 -15px;
           }
 
-          .col-lg-4,
-          .col-md-6,
-          .col-sm-6,
-          .col-md-12,
-          .col-sm-12 {
-            padding: 0 15px;
+          .widget {
             margin-bottom: 30px;
           }
 
           .col-lg-4 {
             flex: 0 0 33.333%;
             max-width: 33.333%;
+            padding: 0 15px;
           }
 
           .col-md-6 {
             flex: 0 0 50%;
             max-width: 50%;
+            padding: 0 15px;
+          }
+
+          /* Ensure all columns stay in one row on desktop */
+          @media (min-width: 993px) {
+            .row {
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: flex-start;
+            }
+            
+            .col-lg-4 {
+              flex: 1 1 33.333%;
+              min-width: 0;
+            }
           }
 
           /* Logo */
@@ -258,6 +293,12 @@ const Footer = () => {
             height: 3px;
             background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
             border-radius: 2px;
+          }
+
+          /* Center the underline for Quick Links */
+          .widget_services .widget-title::after {
+            left: 50%;
+            transform: translateX(-50%);
           }
 
           .footer-description {
@@ -349,12 +390,16 @@ const Footer = () => {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
           }
 
           .footer-links li {
             margin-bottom: 12px;
-            /* ❌ If you had dotted border from theme, this will override it */
             border: none !important;
+            width: 100%;
           }
 
           .footer-links.no-borders li,
@@ -363,22 +408,29 @@ const Footer = () => {
             background: transparent !important;
           }
 
+          /* Override global CSS dotted border */
+          .site-footer .widget_services ul li {
+            border-bottom: none !important;
+            padding: 0 !important;
+            margin-bottom: 8px !important;
+          }
+
           .footer-links a {
             color: #b0b0b0;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
             font-weight: 500;
-            /* ✅ force remove any dotted underline/border coming from global css */
             border-bottom: none !important;
             outline: none !important;
+            font-size: 15px;
           }
 
           .footer-links a:hover {
             color: #ff6b35;
-            padding-left: 8px;
+            transform: translateX(5px);
           }
 
           .link-icon {
@@ -392,29 +444,26 @@ const Footer = () => {
             transform: translateX(4px);
           }
 
-          /* ✅ Contact List - RIGHT aligned (desktop) */
+          /* Contact List */
           .contact-list {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
-            flex-direction: column; /* ✅ stack items for clean alignment */
+            flex-direction: column;
             gap: 14px;
           }
 
           .contact-right {
-            align-items: flex-end; /* ✅ whole list to the right side */
+            align-items: flex-end;
           }
 
-
-
-        /* ✅ Each row stays aligned (icon + text) */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  justify-content: flex-start;
-}
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: flex-end;
+          }
 
           .icon-wrap {
             width: 46px;
@@ -444,8 +493,8 @@ const Footer = () => {
             display: flex;
             flex-direction: column;
             gap: 4px;
-            text-align: right; /* ✅ label + number right aligned */
-            align-items: flex-end; /* ✅ keep text on right edge */
+            text-align: right;
+            align-items: flex-end;
           }
 
           .label {
@@ -462,7 +511,7 @@ const Footer = () => {
             font-weight: 600;
             font-size: 16px;
             transition: color 0.3s ease;
-            white-space: nowrap; /* ✅ numbers break nahi honge */
+            white-space: nowrap;
           }
 
           .contact-link:hover {
@@ -471,7 +520,7 @@ const Footer = () => {
 
           /* Credentials */
           .credentials {
-            margin-top: 25px;
+            margin-top: 30px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
@@ -479,12 +528,15 @@ const Footer = () => {
             gap: 20px;
             align-items: center;
             flex-wrap: wrap;
+            justify-content: flex-end;
           }
 
           .cred-item {
             display: flex;
             flex-direction: column;
             gap: 6px;
+            align-items: flex-end;
+            text-align: right;
           }
 
           .cred-item strong {
@@ -502,7 +554,8 @@ const Footer = () => {
 
           .saudi-logo {
             height: 40px;
-            margin-left: auto;
+            margin-left: 15px;
+            order: -1;
           }
 
           /* Footer Bottom */
@@ -557,21 +610,18 @@ const Footer = () => {
           }
 
           /* Responsive */
-          /* ✅ On tablet/mobile center it */
-@media (max-width: 992px) {
-  .footer-contact-col {
-    justify-content: center;
-  }
-  .footer-contact-col .widget_address_outer {
-    margin-left: 0;
-    text-align: center;
-  }
-  .contact-item {
-    justify-content: center;
-  }
-}
-  
           @media (max-width: 992px) {
+            .footer-contact-col {
+              justify-content: center;
+            }
+            .footer-contact-col .widget_address_outer {
+              margin-left: 0;
+              text-align: center;
+            }
+            .contact-item {
+              justify-content: center;
+            }
+
             .col-lg-4 {
               flex: 0 0 100%;
               max-width: 100%;
@@ -600,7 +650,6 @@ const Footer = () => {
               align-items: center;
             }
 
-            /* ✅ On mobile: contact list center (better UX) */
             .contact-right {
               align-items: center;
             }

@@ -1,71 +1,11 @@
 "use client";
 
 import React from "react";
-import type { CSSProperties } from "react";
-import {
-  Instagram,
-  Twitter,
-  Ghost,
-  Music,
-  Youtube,
-  Facebook,
-  MessageCircle,
-  Phone,
-  Smartphone,
-  Mail,
-} from "lucide-react";
+import { Instagram, Twitter, Youtube, Facebook, MessageCircle, Phone, Smartphone, Ghost, Music } from "lucide-react";
 
 const Footer = () => {
-  // Social button (lucide) — same feel
-  const socialBtnStyle: CSSProperties = {
-    width: 38,
-    height: 38,
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 10,
-    border: "1px solid rgba(255,255,255,0.2)",
-    color: "#f5c400",
-  };
-
-  // ✅ Strong wrapper to stop theme floats/spacing issues
-  const contactWrap: CSSProperties = {
-    width: "100%",
-    display: "block",
-    clear: "both",
-  };
-
-  const contactUl: CSSProperties = {
-    width: "100%",
-    margin: 0,
-    padding: 0,
-    listStyle: "none",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    gap: 12,
-  };
-
-  const contactLi: CSSProperties = {
-    width: "100%",
-    margin: 0,
-    padding: 0,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    gap: 12,
-    direction: "ltr", // keep +966 correct
-  };
-
-  const contactLink: CSSProperties = {
-    color: "white",
-    display: "inline-block",
-    whiteSpace: "nowrap",
-  };
-
   return (
     <div dir="rtl">
-      {/* FOOTER START */}
       <footer className="site-footer footer-large footer-dark footer-wide">
         {/* FOOTER TOP */}
         <div className="footer-top overlay-wraper">
@@ -73,176 +13,167 @@ const Footer = () => {
 
           <div className="container">
             <div className="row">
-              {/* COMPANY - RIGHT SIDE */}
+              {/* RIGHT: COMPANY */}
               <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="widget widget_about text-right">
+                <div className="widget widget_about">
+                  <div className="footer-logo">
+                    <img src="/images/logoo.png" alt="Logo" />
+                  </div>
+
                   <h4 className="widget-title">شركة الأعمال المتخصصة</h4>
 
-                  <p className="max-w400" style={{ marginLeft: "auto" }}>
+                  <p className="footer-description">
                     تختص شركة الأعمال المتخصصة بجميع المواد الكهربائية، وتوفر أفضل
                     جودة بأقل سعر ممكن. نقدم مجموعة واسعة من المنتجات الكهربائية
                     المبتكرة للشركات والمؤسسات والأفراد.
                   </p>
 
-                  {/* SOCIAL ICONS (lucide) start from RIGHT */}
-                  <ul
-                    className="social-icons mt-social-links"
-                    style={{
-                      display: "flex",
-                      justifyContent: "flex-end",
-                      gap: 10,
-                      marginTop: 14,
-                      padding: 0,
-                      listStyle: "none",
-                      flexDirection: "row-reverse",
-                    }}
-                  >
-                    <li>
-                      <a href="#" title="فيسبوك" style={socialBtnStyle}>
-                        <Facebook size={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="يوتيوب" style={socialBtnStyle}>
-                        <Youtube size={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="إنستغرام" style={socialBtnStyle}>
-                        <Instagram size={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="إكس" style={socialBtnStyle}>
-                        <Twitter size={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="سناب شات" style={socialBtnStyle}>
-                        <Ghost size={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="تيك توك" style={socialBtnStyle}>
-                        <Music size={18} />
-                      </a>
-                    </li>
-                  </ul>
-
-                  {/* TAX + CR + SAUDI LOGO */}
-                  <div style={{ marginTop: 18, textAlign: "right" }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: 24,
-                        justifyContent: "flex-end",
-                        flexWrap: "wrap",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div>
-                        <div style={{ fontWeight: 600 }}>الرقم الضريبي</div>
-                        <div>310448142800003</div>
-                      </div>
-
-                      <div>
-                        <div style={{ fontWeight: 600 }}>السجل التجاري</div>
-                        <div>1010601919</div>
-                      </div>
-
-                      <div>  
-
-
-                        <img
-                          src="/images/saudilogo.avif"
-                          alt="Saudi Arabia"
-                          style={{ height: 36, width: "auto", marginTop: 6 }}
-                        />
-
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* IMPORTANT LINKS - CENTER */}
-              <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
-                <div className="widget widget_services inline-links text-center">
-                  <h4 className="widget-title">روابط مهمة</h4>
-                  <ul>
-                    <li>
-                      <a href="/about">من نحن؟</a>
-                    </li>
-                    <li>
-                      <a href="/policy">سياسة الاستبدال والاسترجاع</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* CONTACT US - LEFT SIDE */}
-              <div className="col-lg-4 col-md-6 col-sm-6">
-                <div
-                  className="widget widget_address_outer"
-                  style={{ textAlign: "left" }}
-                >
-                  <h4
-                    className="widget-title"
-                    style={{ textAlign: "left", marginBottom: 14 }}
-                  >
-                    تواصل معنا
-                  </h4>
-
-                  <div style={contactWrap}>
-                    <ul className="widget_address" style={contactUl}>
-                      <li style={contactLi}>
-                        <span className="iconWrap">
-                          <MessageCircle size={18} />
-                        </span>
-                        <a
-                          href="https://wa.me/966539771718"
-                          target="_blank"
-                          rel="noreferrer"
-                          style={contactLink}
-                        >
-                          +966539771718
+                  {/* Social Icons */}
+                  <div className="social-section">
+                    <h5 className="social-title">تابعنا</h5>
+                    <ul className="social-icons">
+                      <li>
+                        <a href="#" className="social-btn facebook" aria-label="Facebook">
+                          <Facebook size={20} />
                         </a>
                       </li>
-
-                      <li style={contactLi}>
-                        <span className="iconWrap">
-                          <Smartphone size={18} />
-                        </span>
-                        <a href="tel:+966539774020" style={contactLink}>
-                          +966539774020
+                      <li>
+                        <a href="#" className="social-btn youtube" aria-label="YouTube">
+                          <Youtube size={20} />
                         </a>
                       </li>
-
-                      <li style={contactLi}>
-                        <span className="iconWrap">
-                          <Phone size={17} />
-                        </span>
-                        <a href="tel:+966539771718" style={contactLink}>
-                          +966539771718
+                      <li>
+                        <a href="#" className="social-btn instagram" aria-label="Instagram">
+                          <Instagram size={20} />
                         </a>
                       </li>
-
-                      {/* <li style={contactLi}>
-                        <span className="iconWrap">
-                          <Mail size={17} />
-                        </span>
-                        <a href="mailto:a22@live.at" style={contactLink}>
-                          a22@live.at
+                      <li>
+                        <a href="#" className="social-btn twitter" aria-label="Twitter">
+                          <Twitter size={20} />
+                        </a>
+                      </li>
+                      {/* <li>
+                        <a href="#" className="social-btn snapchat" aria-label="Snapchat">
+                          <Ghost size={20} />
+                        </a>
+                      </li> */}
+                      {/* <li>
+                        <a href="#" className="social-btn tiktok" aria-label="TikTok">
+                          <Music size={20} />
                         </a>
                       </li> */}
                     </ul>
                   </div>
                 </div>
               </div>
+
+              {/* CENTER: QUICK LINKS */}
+              <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
+                <div className="widget widget_services">
+                  <h4 className="widget-title">روابط مهمة</h4>
+
+                  <ul className="footer-links no-borders">
+                    <li>
+                      <a href="/ar/home">
+                        <span className="link-icon">‹</span>
+                        الرئيسية
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ar/about">
+                        <span className="link-icon">‹</span>
+                        من نحن
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ar/services">
+                        <span className="link-icon">‹</span>
+                        خدماتنا
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ar/portfolio">
+                        <span className="link-icon">‹</span>
+                        معرض الأعمال
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/policy">
+                        <span className="link-icon">‹</span>
+                        سياسة الاستبدال والاسترجاع
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* LEFT: CONTACT US */}
+              <div className="col-lg-4 col-md-6 col-sm-6 footer-contact-col">
+                <div className="widget widget_address_outer">
+                  <h4 className="widget-title">تواصل معنا</h4>
+
+                  <ul className="contact-list">
+                    <li className="contact-item">
+                      <div className="icon-wrap whatsapp">
+                        <MessageCircle size={20} />
+                      </div>
+                      <div className="contact-info">
+                        <span className="label">واتساب</span>
+                        <a
+                          href="https://wa.me/966539771718"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="contact-link"
+                          dir="ltr"
+                        >
+                          +966 539 771 718
+                        </a>
+                      </div>
+                    </li>
+
+                    <li className="contact-item">
+                      <div className="icon-wrap mobile">
+                        <Smartphone size={20} />
+                      </div>
+                      <div className="contact-info">
+                        <span className="label">جوال</span>
+                        <a href="tel:+966539774020" className="contact-link" dir="ltr">
+                          +966 539 774 020
+                        </a>
+                      </div>
+                    </li>
+
+                    <li className="contact-item">
+                      <div className="icon-wrap phone">
+                        <Phone size={20} />
+                      </div>
+                      <div className="contact-info">
+                        <span className="label">هاتف</span>
+                        <a href="tel:+966539771718" className="contact-link" dir="ltr">
+                          +966 539 771 718
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  {/* Tax + CR */}
+                  <div className="credentials">
+                    <div className="cred-item">
+                      <strong>الرقم الضريبي</strong>
+                      <span>310448142800003</span>
+                    </div>
+                    <div className="cred-item">
+                      <strong>السجل التجاري</strong>
+                      <span>1010601919</span>
+                    </div>
+
+                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* PAYMENT METHODS (white pills like screenshot) */}
+            {/* PAYMENT METHODS */}
             <div className="paymentRow">
               <div className="payPill">
                 <img src="/images/cod.avif" alt="الدفع عند الاستلام" className="payImg" />
@@ -267,56 +198,613 @@ const Footer = () => {
         <div className="footer-bottom overlay-wraper">
           <div className="overlay-main" />
           <div className="container">
-            <div className="row">
-              <div className="mt-footer-bot-center text-center">
-                <span className="copyrights-text">
-                  شركة الأعمال المتخصصة - جميع الحقوق محفوظة | 2025
-                </span>
-              </div>
+            <div className="footer-bottom-content">
+              <p className="copyright">© 2025 شركة الأعمال المتخصصة. جميع الحقوق محفوظة.</p>
+              <p className="dev-credit">
+                صمم وطور بكل <span className="heart">❤</span> بواسطة{" "}
+                <a href="#" className="dev-link">
+                  شركتك
+                </a>
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Local styles (same idea as English version) */}
+        {/* STYLES */}
         <style jsx>{`
-          .iconWrap {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.12);
-            color: #fff;
-            flex: 0 0 auto;
+          /* eslint-disable */
+          .site-footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
           }
 
+          .footer-contact-col {
+            display: flex;
+            justify-content: flex-start;
+          }
+
+          .footer-top {
+            padding: 60px 0 40px;
+          }
+
+          .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+
+          .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+          }
+
+          .widget {
+            margin-bottom: 30px;
+          }
+
+          .col-lg-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+            padding: 0 15px;
+          }
+
+          .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+          }
+
+          /* Ensure all columns stay in one row on desktop */
+          @media (min-width: 993px) {
+            .row {
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: flex-start;
+            }
+            
+            .col-lg-4 {
+              flex: 1 1 33.333%;
+              min-width: 0;
+            }
+          }
+
+          /* Logo */
+          .footer-logo {
+            margin-bottom: 20px;
+          }
+
+          .footer-logo img {
+            height: 60px;
+            width: 60px;
+            background: white;
+            padding: 8px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+          }
+
+          .widget-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+            text-align: right;
+          }
+
+          .widget-title::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
+            border-radius: 2px;
+          }
+
+          /* Center the underline for Quick Links */
+          .widget_services .widget-title {
+            text-align: center;
+          }
+
+          .widget_services .widget-title::after {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          .widget_address_outer .widget-title {
+            text-align: left;
+            margin-bottom: 20px;
+          }
+
+          .widget_address_outer .widget-title::after {
+            right: auto;
+            left: 0;
+          }
+
+          .footer-description {
+            line-height: 1.8;
+            color: #b0b0b0;
+            margin-bottom: 25px;
+            text-align: right;
+          }
+
+          /* Social Icons */
+          .social-section {
+            margin-top: 25px;
+          }
+
+          .social-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: right;
+          }
+
+          .social-icons {
+            display: flex;
+            gap: 12px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+          }
+
+          .social-btn {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .social-btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            z-index: 0;
+          }
+
+          .social-btn:hover::before {
+            transform: scale(1.2);
+          }
+
+          .social-btn svg {
+            position: relative;
+            z-index: 1;
+          }
+
+          .facebook {
+            background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+          }
+
+          .youtube {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+          }
+
+          .instagram {
+            background: linear-gradient(135deg, #e1306c 0%, #fd1d1d 50%, #f77737 100%);
+            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+          }
+
+          .twitter {
+            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+            box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
+          }
+
+          .snapchat {
+            background: linear-gradient(135deg, #fffc00 0%, #f5e600 100%);
+            box-shadow: 0 4px 15px rgba(255, 252, 0, 0.3);
+          }
+
+          .tiktok {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          }
+
+          .social-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+          }
+
+          /* Footer Links */
+          .widget_about {
+            max-width: 100%;
+          }
+
+          .widget_services {
+            max-width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .widget_services .widget-title {
+            text-align: center;
+            width: 100%;
+          }
+
+          .widget_address_outer {
+            max-width: 100%;
+          }
+
+          .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+          }
+
+          .footer-links li {
+            margin-bottom: 12px;
+            border: none !important;
+            width: 100%;
+          }
+
+          .footer-links.no-borders li,
+          .footer-links.no-borders a {
+            border: none !important;
+            background: transparent !important;
+          }
+
+          /* Override global CSS dotted border */
+          .site-footer .widget_services ul li {
+            border-bottom: none !important;
+            padding: 0 !important;
+            margin-bottom: 12px !important;
+          }
+
+          .footer-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border-bottom: none !important;
+            outline: none !important;
+            font-size: 15px;
+            direction: rtl;
+          }
+
+          .footer-links a:hover {
+            color: #ff6b35;
+            transform: translateX(-5px);
+          }
+
+          .link-icon {
+            color: #ff6b35;
+            font-size: 22px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+          }
+
+          .footer-links a:hover .link-icon {
+            transform: translateX(-4px);
+          }
+
+          /* Contact List */
+          .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+          }
+
+          .contact-right {
+            align-items: flex-start;
+          }
+
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: flex-start;
+            direction: ltr;
+            width: 100%;
+          }
+
+          .icon-wrap {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          }
+
+          .whatsapp {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+          }
+
+          .mobile {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+          }
+
+          .phone {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          }
+
+          .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: left;
+            align-items: flex-start;
+            flex: 1;
+          }
+
+          .label {
+            font-size: 11px;
+            color: #888;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+          }
+
+          .contact-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+          }
+
+          .contact-link:hover {
+            color: #ff6b35;
+          }
+
+          /* Credentials */
+          .credentials {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+          }
+
+          .cred-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-start;
+            text-align: left;
+          }
+
+          .cred-item strong {
+            color: #ff6b35;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .cred-item span {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+          }
+
+          .saudi-logo {
+            height: 40px;
+            margin-right: 15px;
+            order: -1;
+          }
+
+          /* Payment Methods */
           .paymentRow {
-            margin-top: 26px;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
           }
 
           .payPill {
             background: #fff;
             border-radius: 999px;
-            padding: 8px 14px;
+            padding: 8px 16px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .payPill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
           }
 
           .payImg {
-            height: 22px;
+            height: 24px;
             width: auto;
             display: block;
           }
+
+          /* Footer Bottom */
+          .footer-bottom {
+            padding: 25px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+          }
+
+          .copyright,
+          .dev-credit {
+            margin: 0;
+            color: #b0b0b0;
+            font-size: 14px;
+          }
+
+          .heart {
+            color: #ff6b35;
+            animation: heartbeat 1.5s ease-in-out infinite;
+          }
+
+          @keyframes heartbeat {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+            25% {
+              transform: scale(1.2);
+            }
+            50% {
+              transform: scale(1);
+            }
+          }
+
+          .dev-link {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+          }
+
+          .dev-link:hover {
+            color: #ff8c42;
+          }
+
+          /* Responsive */
+          @media (max-width: 992px) {
+            .footer-contact-col {
+              justify-content: center;
+            }
+            .footer-contact-col .widget_address_outer {
+              margin-right: 0;
+              text-align: center;
+            }
+            .contact-item {
+              justify-content: center;
+            }
+
+            .col-lg-4 {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+
+            .footer-top {
+              padding: 40px 0 30px;
+            }
+
+            .widget {
+              text-align: center;
+            }
+
+            .widget-title {
+              text-align: center;
+            }
+
+            .widget-title::after {
+              right: auto;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .social-icons {
+              justify-content: center;
+            }
+
+            .footer-links {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .contact-right {
+              align-items: center;
+            }
+            .contact-item {
+              justify-content: center;
+            }
+            .contact-info {
+              text-align: center;
+              align-items: center;
+            }
+
+            .credentials {
+              justify-content: center;
+            }
+
+            .saudi-logo {
+              margin-right: 0;
+            }
+
+            .footer-bottom-content {
+              flex-direction: column;
+              text-align: center;
+            }
+
+            .footer-description {
+              text-align: center;
+            }
+
+            .social-title {
+              text-align: center;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .col-md-6 {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+
+            .footer-logo img {
+              height: 50px;
+              width: 50px;
+            }
+
+            .widget-title {
+              font-size: 18px;
+            }
+          }
+          /* eslint-enable */
         `}</style>
       </footer>
-      {/* FOOTER END */}
     </div>
   );
 };
