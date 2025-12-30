@@ -17,7 +17,7 @@ const WHATSAPP_DEFAULT_TEXT = "Hello! I want to inquire about your services.";
 const services: Service[] = [
   {
     id: 1,
-    img: "/images/plumbing.webp",
+    img: "/images/plumbing.jpg",
     title: "Plumbing",
     desc:
       "Installation, repair, and maintenance of plumbing lines, fittings, water tanks, and leak fixing with guaranteed workmanship.",
@@ -31,7 +31,7 @@ const services: Service[] = [
   },
   {
     id: 2,
-    img: "/images/painting.webp",
+    img: "/images/Painting.jpg",
     title: "Wall & Roof Painting",
     desc:
       "Premium wall and roof painting using durable coatings for a clean finish, better protection, and long-lasting color.",
@@ -45,7 +45,7 @@ const services: Service[] = [
   },
   {
     id: 3,
-    img: "/images/electrician.avif",
+    img: "/images/Electrician.jpg",
     title: "Electrician",
     desc:
       "Safe electrical wiring, installations, troubleshooting, upgrades, and repairs handled by skilled technicians with guarantee.",
@@ -59,7 +59,7 @@ const services: Service[] = [
   },
   {
     id: 4,
-    img: "/images/floor.avif",
+    img: "/images/tiling.jpg",
     title: "Floor Tiling",
     desc:
       "Accurate floor tiling installation with clean leveling, strong bonding, and premium finishing for homes and commercial sites.",
@@ -73,7 +73,7 @@ const services: Service[] = [
   },
   {
     id: 5,
-    img: "/images/gypsum.avif",
+    img: "/images/GypsumBoard.jpg",
     title: "Gypsum Board",
     desc:
       "Gypsum board ceiling and wall installation with neat joints, smooth finishing, and design options for modern interiors.",
@@ -87,7 +87,7 @@ const services: Service[] = [
   },
   {
     id: 6,
-    img: "/images/interiorD.avif",
+    img: "/images/interiordesigning.jpg",
     title: "Interior Designing",
     desc:
       "Complete interior design solutions including concept, materials, colors, and layout to match your space and style.",
@@ -101,21 +101,21 @@ const services: Service[] = [
   },
   {
     id: 7,
-    img: "/images/Layout.jpg",
-    title: "Layout Planning",
+    img: "/images/Actechnician.jpg",
+    title: "AC Technician",
     desc:
-      "2D/3D layout planning to optimize space usage, flow, and functionality for renovations and new interior work.",
+      "Professional air conditioning installation, maintenance, and repair services to ensure optimal cooling performance.",
     details: [
-      "2D plan for measurements & placement.",
-      "3D visualization for better understanding.",
-      "Space flow optimization (home/office).",
-      "Renovation planning with practical layout.",
-      "Revisions based on your feedback.",
+      "AC unit installation (split/window).",
+      "Regular maintenance & cleaning services.",
+      "Refrigerant top-up & leak repairs.",
+      "Thermostat calibration & electrical checks.",
+      "Troubleshooting cooling/performance issues.",
     ],
   },
   {
     id: 8,
-    img: "/images/CCTV.webp",
+    img: "/images/cctv.jpg",
     title: "CCTV Camera Installation",
     desc:
       "CCTV installation with proper camera placement, wiring, NVR/DVR setup, and secure configuration for reliable monitoring.",
@@ -129,7 +129,7 @@ const services: Service[] = [
   },
   {
     id: 9,
-    img: "/images/welding.webp",
+    img: "/images/Welding.jpg",
     title: "Welding Services",
     desc:
       "Professional welding for gates, grills, frames, and metal fabrication with strong joints and clean finishing.",

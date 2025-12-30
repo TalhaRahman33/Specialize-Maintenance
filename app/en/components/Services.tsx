@@ -13,63 +13,63 @@ const services = [
   {
     id: 1,
     clientUrl: "https://portal.maarif.sa/",
-    img: "/images/plumbing.webp",
+    img: "/images/plumbing.jpg",
     title: "Plumbing",
     desc: "Installation, repair, and maintenance of plumbing lines, fittings, water tanks, and leak fixing with guaranteed workmanship.",
   },
   {
     id: 2,
     clientUrl: "https://www.iks.edu.sa/",
-    img: "/images/painting.webp",
+    img: "/images/Painting.jpg",
     title: "Wall & Roof Painting",
     desc: "Premium wall and roof painting using durable coatings for a clean finish, better protection, and long-lasting color.",
   },
   {
     id: 3,
     clientUrl: "https://daffah.sa/",
-    img: "/images/electrician.avif",
+    img: "/images/Electrician.jpg",
     title: "Electrician",
     desc: "Safe electrical wiring, installations, troubleshooting, upgrades, and repairs handled by skilled technicians with guarantee.",
   },
   {
     id: 4,
     clientUrl: "https://menu.broastalfarooj.com/",
-    img: "/images/floor.avif",
+    img: "/images/tiling.jpg",
     title: "Floor Tiling",
     desc: "Accurate floor tiling installation with clean leveling, strong bonding, and premium finishing for homes and commercial sites.",
   },
   {
     id: 5,
     clientUrl: "",
-    img: "/images/gypsum.avif",
+    img: "/images/GypsumBoard.jpg",
     title: "Gypsum Board",
     desc: "Gypsum board ceiling and wall installation with neat joints, smooth finishing, and design options for modern interiors.",
   },
   {
     id: 6,
     clientUrl: "",
-    img: "/images/interiorD.avif",
+    img: "/images/interiordesigning.jpg",
     title: "Interior Designing",
     desc: "Complete interior design solutions including concept, materials, colors, and layout to match your space and style.",
   },
   {
     id: 7,
     clientUrl: "",
-    img: "/images/Layout.jpg",
-    title: "Layout Planning",
-    desc: "2D/3D layout planning to optimize space usage, flow, and functionality for renovations and new interior work.",
+    img: "/images/Actechnician.jpg",
+    title: "AC Technician",
+    desc: "Professional air conditioning installation, maintenance, and repair services to ensure optimal cooling performance.",
   },
   {
     id: 8,
     clientUrl: "",
-    img: "/images/CCTV.webp",
+    img: "/images/cctv.jpg",
     title: "CCTV Camera Installation",
     desc: "CCTV installation with proper camera placement, wiring, NVR/DVR setup, and secure configuration for reliable monitoring.",
   },
   {
     id: 9,
     clientUrl: "",
-    img: "/images/welding.webp",
+    img: "/images/Welding.jpg",
     title: "Welding Services",
     desc: "Professional welding for gates, grills, frames, and metal fabrication with strong joints and clean finishing.",
   },
@@ -80,7 +80,7 @@ export default function ServicesSlider() {
   const goServices = () => router.push("/en/services");
 
   return (
-    <div>
+    <div className="services-slider-wrapper">
       <div className="section-full mobile-page-padding our-service-wrap p-b50 square_shape2">
         <div className="section-content">
           <div
@@ -101,10 +101,7 @@ export default function ServicesSlider() {
                   </div>
                 </div>
                 <h3 style={{ 
-                  background: 'linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: '#fff',
                   fontWeight: 600,
                   fontSize: '1.3rem'
                 }}>
@@ -161,11 +158,6 @@ export default function ServicesSlider() {
                               </div>
                               <p className="media-desc">{s.desc}</p>
                             </div>
-                            <button className="panel-cta">
-                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -357,43 +349,8 @@ export default function ServicesSlider() {
                   max-height: 200px;
                 }
 
-                /* Beautiful Navigation Arrows */
-                :global(.swiper-button-next),
-                :global(.swiper-button-prev) {
-                  width: 56px;
-                  height: 56px;
-                  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: #fff;
-                  top: 50%;
-                  z-index: 20;
-                  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
-                  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                  border: 3px solid rgba(255, 255, 255, 0.2);
-                }
-
-                :global(.swiper-button-next::after),
-                :global(.swiper-button-prev::after) {
-                  font-size: 22px;
-                  font-weight: 900;
-                  color: white;
-                }
-
-                :global(.swiper-button-next:hover),
-                :global(.swiper-button-prev:hover) {
-                  background: linear-gradient(135deg, #ff8c42 0%, #ffa500 100%);
-                  transform: scale(1.15);
-                  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.5);
-                }
-
-                :global(.swiper-button-prev) { left: 20px; }
-                :global(.swiper-button-next) { right: 20px; }
-
                 /* Beautiful Pagination Dots */
-                :global(.swiper-pagination-bullet) {
+                :global(.services-slider-wrapper .swiper-pagination-bullet) {
                   width: 12px;
                   height: 12px;
                   background: #ddd;
@@ -401,7 +358,7 @@ export default function ServicesSlider() {
                   transition: all 0.3s ease;
                 }
 
-                :global(.swiper-pagination-bullet-active) {
+                :global(.services-slider-wrapper .swiper-pagination-bullet-active) {
                   background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
                   opacity: 1;
                   width: 32px;
@@ -416,17 +373,14 @@ export default function ServicesSlider() {
                   .media-title {
                     font-size: 18px;
                   }
+                }
+              `}</style>
 
-                  :global(.swiper-button-next),
-                  :global(.swiper-button-prev) {
-                    width: 44px;
-                    height: 44px;
-                  }
-
-                  :global(.swiper-button-next::after),
-                  :global(.swiper-button-prev::after) {
-                    font-size: 18px;
-                  }
+              {/* Scoped Navigation Arrows - Only for this slider */}
+              <style jsx global>{`
+                .services-slider-wrapper .swiper-button-next,
+                .services-slider-wrapper .swiper-button-prev {
+                  display: none;
                 }
               `}</style>
             </div>

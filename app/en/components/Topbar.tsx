@@ -26,7 +26,7 @@ const Topbar = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '14px 20px',
+          padding: '12px 20px',
           fontWeight: 700,
           color: '#ffffff',
           fontSize: '17px',
@@ -88,7 +88,7 @@ const Topbar = () => {
           div[style*="fontSize: '17px'"] {
             font-size: 14px !important;
             letter-spacing: 0.5px !important;
-            padding: 12px 16px !important;
+            padding: 10px 16px !important;
           }
         }
       `}</style>

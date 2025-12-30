@@ -13,11 +13,11 @@ const WHATSAPP_NUMBER = "966576150857";
 const WHATSAPP_TEXT = "Hello! I would like to inquire about your services.";
 
 const aboutSlides = [
-  { id: 1, img: "/images/pic1_1.webp", link: "#" },
-  { id: 2, img: "/images/weld.avif", link: "#" },
-  { id: 3, img: "/images/elect.webp", link: "#" },
-  { id: 4, img: "/images/pic6_1.jpg", link: "#" },
-  { id: 5, img: "/images/pic2_4.jpg", link: "#" },
+  { id: 1, img: "/images/Electrician.jpg", link: "#" },
+  { id: 2, img: "/images/Welding.jpg", link: "#" },
+  { id: 3, img: "/images/Electrician.jpg", link: "#" },
+  { id: 4, img: "/images/tiling.jpg", link: "#" },
+  { id: 5, img: "/images/Actechnician.jpg", link: "#" },
 ];
 
 export default function AboutComp() {
