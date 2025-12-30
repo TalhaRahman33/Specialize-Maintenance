@@ -1,131 +1,87 @@
 "use client";
 
 import React from "react";
-import { Instagram, Twitter, Youtube, Facebook, MessageCircle, Phone, Smartphone } from "lucide-react";
+import {
+  Instagram,
+  Twitter,
+  Facebook,
+  MessageCircle,
+  Phone,
+  Smartphone,
+  Music2,
+} from "lucide-react";
 
 const Footer = () => {
   return (
     <div dir="ltr">
-      <footer className="site-footer footer-large footer-dark footer-wide">
+      <footer className="site-footer">
         {/* FOOTER TOP */}
-        <div className="footer-top overlay-wraper">
-          <div className="overlay-main" />
-
+        <div className="footer-top">
           <div className="container">
             <div className="row">
-              {/* LEFT: COMPANY */}
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="widget widget_about">
+              {/* LEFT */}
+              <div className="col">
+                <div className="widget">
                   <div className="footer-logo">
                     <img src="/images/logoo.png" alt="Logo" />
                   </div>
 
-                  <h4 className="widget-title">Specialized Maintanance Company</h4>
+                  <h4 className="widget-title">
+                    Specialize Maintenance Company
+                  </h4>
 
                   <p className="footer-description">
-                 
-                    Specialized Maintenance Company is a leading provider of maintenance
-                    services, dedicated to ensuring the optimal performance and longevity of your assets.
+                    Specialize Maintenance Company delivers reliable maintenance
+                    services and premium electrical solutions, including indoor &
+                    outdoor lighting and decorative lamps.
                   </p>
 
-                  {/* Social Icons */}
                   <div className="social-section">
                     <h5 className="social-title">Follow Us</h5>
                     <ul className="social-icons">
-                      <li>
-                        <a href="#" className="social-btn facebook" aria-label="Facebook">
-                          <Facebook size={20} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-btn youtube" aria-label="YouTube">
-                          <Youtube size={20} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-btn instagram" aria-label="Instagram">
-                          <Instagram size={20} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-btn twitter" aria-label="Twitter">
-                          <Twitter size={20} />
-                        </a>
-                      </li>
+                      <li><a className="social-btn facebook"><Facebook size={20} /></a></li>
+                      <li><a className="social-btn instagram"><Instagram size={20} /></a></li>
+                      <li><a className="social-btn twitter"><Twitter size={20} /></a></li>
+                      <li><a className="social-btn tiktok"><Music2 size={20} /></a></li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* CENTER: QUICK LINKS */}
-              <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
+              {/* CENTER */}
+              <div className="col">
                 <div className="widget widget_services">
                   <h4 className="widget-title">Quick Links</h4>
-
-                  <ul className="footer-links no-borders">
-                    <li>
-                      <a href="/en/home">
-                        <span className="link-icon">›</span>
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/en/about">
-                        <span className="link-icon">›</span>
-                        About 
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/en/services">
-                        <span className="link-icon">›</span>
-                        Services
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/en/portfolio">
-                        <span className="link-icon">›</span>
-                        Portfolio
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/policy">
-                        <span className="link-icon">›</span>
-                        Privacy Policy
-                      </a>
-                    </li>
+                  <ul className="footer-links">
+                    <li><a href="/en/home">› Home</a></li>
+                    <li><a href="/en/about">› About</a></li>
+                    <li><a href="/en/services">› Services</a></li>
+                    <li><a href="/en/portfolio">› Portfolio</a></li>
+                    <li><a href="/policy">› Privacy Policy</a></li>
                   </ul>
                 </div>
               </div>
 
-              {/* RIGHT: CONTACT US */}
-              <div className="col-lg-4 col-md-6 col-sm-6 footer-contact-col">
+              {/* RIGHT */}
+              <div className="col contact-col">
                 <div className="widget widget_address_outer">
-                  <h4 className="widget-title">Contact Us</h4>
+                  <h4 className="widget-title contact-title">Contact Us</h4>
 
                   <ul className="contact-list">
                     <li className="contact-item">
-                      <div className="icon-wrap whatsapp">
-                        <MessageCircle size={20} />
-                      </div>
+                      <span className="icon-wrap whatsapp"><MessageCircle size={20} /></span>
                       <div className="contact-info">
-                        <span className="label">WhatsApp</span>
-                        <a
-                          href="https://wa.me/966539771718"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="contact-link"
-                        >
+                        {/* <span className="label">WhatsApp</span> */}
+                        <a href="https://wa.me/966539771718" className="contact-link">
                           +966 539 771 718
                         </a>
                       </div>
                     </li>
 
                     <li className="contact-item">
-                      <div className="icon-wrap mobile">
-                        <Smartphone size={20} />
-                      </div>
+                      <span className="icon-wrap mobile"><Smartphone size={20} /></span>
                       <div className="contact-info">
-                        <span className="label">Mobile</span>
+                        {/* <span className="label">Mobile</span> */}
                         <a href="tel:+966539774020" className="contact-link">
                           +966 539 774 020
                         </a>
@@ -133,11 +89,9 @@ const Footer = () => {
                     </li>
 
                     <li className="contact-item">
-                      <div className="icon-wrap phone">
-                        <Phone size={20} />
-                      </div>
+                      <span className="icon-wrap phone"><Phone size={20} /></span>
                       <div className="contact-info">
-                        <span className="label">Phone</span>
+                        {/* <span className="label">Phone</span> */}
                         <a href="tel:+966539771718" className="contact-link">
                           +966 539 771 718
                         </a>
@@ -145,18 +99,16 @@ const Footer = () => {
                     </li>
                   </ul>
 
-                  {/* Tax + CR moved here */}
                   <div className="credentials">
-                    <div className="cred-item">
+                    <div>
                       <strong>Tax ID</strong>
                       <span>310448142800003</span>
                     </div>
-                    <div className="cred-item">
+                    <div>
                       <strong>CR</strong>
                       <span>1010601919</span>
                     </div>
-
-                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
+                    <img src="/images/saudilogo.avif" alt="Saudi" className="saudi-logo" />
                   </div>
                 </div>
               </div>
@@ -165,166 +117,60 @@ const Footer = () => {
         </div>
 
         {/* FOOTER BOTTOM */}
-        <div className="footer-bottom overlay-wraper">
-          <div className="overlay-main" />
-          <div className="container">
-            <div className="footer-bottom-content">
-              <p className="copyright">© 2025 Specialized Work Company. All rights reserved.</p>
-              <p className="dev-credit">
-                Designed & Developed  <span className="heart">❤</span> by{" "}
-                <a href="#" className="dev-link">
-                  Muhammad Talha 
-                </a>
-              </p>
-            </div>
-          </div>
+        <div className="footer-bottom">
+          <p>© 2025 Specialized Working Company. All rights reserved.</p>
+          <p>Designed & Developed ❤ by <strong>Muhammad Talha</strong></p>
         </div>
 
         {/* STYLES */}
         <style jsx>{`
-          /* eslint-disable */
           .site-footer {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: #e0e0e0;
           }
 
-          .footer-contact-col {
-            display: flex;
-            justify-content: flex-end;
-          }
-
-          .widget_about {
-            max-width: 100%;
-          }
-
-          .widget_services {
-            max-width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-
-          .widget_services .widget-title {
-            text-align: center;
-            width: 100%;
-          }
-
-          .widget_address_outer {
-            max-width: 100%;
-          }
-
           .footer-top {
-            padding: 60px 0 40px;
+            padding: 60px 0;
           }
 
           .container {
-            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 15px;
           }
 
           .row {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
           }
 
-          .widget {
-            margin-bottom: 30px;
+          .col {
+            flex: 1;
+            padding: 15px;
+            min-width: 280px;
           }
 
-          .col-lg-4 {
-            flex: 0 0 33.333%;
-            max-width: 33.333%;
-            padding: 0 15px;
-          }
-
-          .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            padding: 0 15px;
-          }
-
-          /* Ensure all columns stay in one row on desktop */
-          @media (min-width: 993px) {
-            .row {
-              display: flex;
-              flex-wrap: nowrap;
-              align-items: flex-start;
-            }
-            
-            .col-lg-4 {
-              flex: 1 1 33.333%;
-              min-width: 0;
-            }
-          }
-
-          /* Logo */
-          .footer-logo {
-            margin-bottom: 20px;
+          .contact-col {
+            display: flex;
+            justify-content: flex-end;
           }
 
           .footer-logo img {
-            height: 60px;
             width: 60px;
-            background: white;
+            background: #fff;
             padding: 8px;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
           }
 
           .widget-title {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 12px;
+            color: #fff;
+            margin: 20px 0;
           }
 
-          .widget-title::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
-            border-radius: 2px;
-          }
-
-          /* Center the underline for Quick Links */
-          .widget_services .widget-title::after {
-            left: 50%;
-            transform: translateX(-50%);
-          }
-
-          .footer-description {
-            line-height: 1.8;
-            color: #b0b0b0;
-            margin-bottom: 25px;
-          }
-
-          /* Social Icons */
-          .social-section {
-            margin-top: 25px;
-          }
-
-          .social-title {
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 15px;
-          }
-
+          /* SOCIAL */
           .social-icons {
             display: flex;
             gap: 12px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
             flex-wrap: wrap;
           }
 
@@ -336,361 +182,129 @@ const Footer = () => {
             justify-content: center;
             border-radius: 50%;
             color: #fff;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-          }
-
-          .social-btn::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-            z-index: 0;
-          }
-
-          .social-btn:hover::before {
-            transform: scale(1.2);
-          }
-
-          .social-btn svg {
-            position: relative;
-            z-index: 1;
-          }
-
-          .facebook {
-            background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
-            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
-          }
-
-          .youtube {
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-          }
-
-          .instagram {
-            background: linear-gradient(135deg, #e1306c 0%, #fd1d1d 50%, #f77737 100%);
-            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
-          }
-
-          .twitter {
-            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
-            box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
+            transition: transform 0.3s;
           }
 
           .social-btn:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
           }
 
-          /* Footer Links */
+          .facebook { background: #1877f2; }
+          .instagram { background: #e1306c; }
+          .twitter { background: #1da1f2; }
+          .tiktok { background: #000; }
+
+          /* LINKS */
           .footer-links {
             list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
           }
 
           .footer-links li {
-            margin-bottom: 12px;
-            border: none !important;
-            width: 100%;
-          }
-
-          .footer-links.no-borders li,
-          .footer-links.no-borders a {
-            border: none !important;
-            background: transparent !important;
-          }
-
-          /* Override global CSS dotted border */
-          .site-footer .widget_services ul li {
-            border-bottom: none !important;
-            padding: 0 !important;
-            margin-bottom: 8px !important;
+            margin-bottom: 8px;
           }
 
           .footer-links a {
             color: #b0b0b0;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border-bottom: none !important;
-            outline: none !important;
-            font-size: 15px;
           }
 
-          .footer-links a:hover {
-            color: #ff6b35;
-            transform: translateX(5px);
+          /* CONTACT */
+          .widget_address_outer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
           }
 
-          .link-icon {
-            color: #ff6b35;
-            font-size: 22px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-          }
-
-          .footer-links a:hover .link-icon {
-            transform: translateX(4px);
-          }
-
-          /* Contact List */
           .contact-list {
             list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-          }
-
-          .contact-right {
-            align-items: flex-end;
+            width: 100%;
           }
 
           .contact-item {
             display: flex;
             align-items: center;
-            gap: 14px;
             justify-content: flex-end;
+            gap: 14px;
+            margin-bottom: 14px;
           }
 
           .icon-wrap {
-            width: 46px;
-            height: 46px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
           }
 
-          .whatsapp {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-          }
-
-          .mobile {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-          }
-
-          .phone {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          }
+          .whatsapp { background: #25d366; }
+          .mobile { background: #ff6b35; }
+          .phone { background: #667eea; }
 
           .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
             text-align: right;
-            align-items: flex-end;
           }
 
           .label {
             font-size: 12px;
-            color: #888;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #aaa;
           }
 
           .contact-link {
-            color: #ffffff;
-            text-decoration: none;
+            color: #fff;
             font-weight: 600;
-            font-size: 16px;
-            transition: color 0.3s ease;
-            white-space: nowrap;
+            text-decoration: none;
           }
 
-          .contact-link:hover {
-            color: #ff6b35;
-          }
-
-          /* Credentials */
           .credentials {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+            margin-top: 20px;
             display: flex;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-end;
           }
 
-          .cred-item {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            align-items: flex-end;
-            text-align: right;
-          }
-
-          .cred-item strong {
-            color: #ff6b35;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
-
-          .cred-item span {
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 14px;
-          }
-
           .saudi-logo {
             height: 40px;
-            margin-left: 15px;
-            order: -1;
           }
 
-          /* Footer Bottom */
           .footer-bottom {
-            padding: 25px 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.3);
           }
 
-          .footer-bottom-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-          }
-
-          .copyright,
-          .dev-credit {
-            margin: 0;
-            color: #b0b0b0;
-            font-size: 14px;
-          }
-
-          .heart {
-            color: #ff6b35;
-            animation: heartbeat 1.5s ease-in-out infinite;
-          }
-
-          @keyframes heartbeat {
-            0%,
-            100% {
-              transform: scale(1);
+          /* 📱 MOBILE RESPONSIVE */
+          @media (max-width: 768px) {
+            .row {
+              flex-direction: column;
             }
-            25% {
-              transform: scale(1.2);
-            }
-            50% {
-              transform: scale(1);
-            }
-          }
 
-          .dev-link {
-            color: #ff6b35;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-          }
-
-          .dev-link:hover {
-            color: #ff8c42;
-          }
-
-          /* Responsive */
-          @media (max-width: 992px) {
-            .footer-contact-col {
+            .contact-col {
               justify-content: center;
             }
-            .footer-contact-col .widget_address_outer {
-              margin-left: 0;
-              text-align: center;
+
+            .widget_address_outer {
+              align-items: center;
             }
+
             .contact-item {
               justify-content: center;
             }
 
-            .col-lg-4 {
-              flex: 0 0 100%;
-              max-width: 100%;
-            }
-
-            .footer-top {
-              padding: 40px 0 30px;
-            }
-
-            .widget {
+            .contact-info {
               text-align: center;
-            }
-
-            .widget-title::after {
-              left: 50%;
-              transform: translateX(-50%);
             }
 
             .social-icons {
               justify-content: center;
             }
-
-            .footer-links {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-
-            .contact-right {
-              align-items: center;
-            }
-            .contact-item {
-              justify-content: center;
-            }
-            .contact-info {
-              text-align: center;
-              align-items: center;
-            }
-
-            .credentials {
-              justify-content: center;
-            }
-
-            .saudi-logo {
-              margin-left: 0;
-            }
-
-            .footer-bottom-content {
-              flex-direction: column;
-              text-align: center;
-            }
           }
-
-          @media (max-width: 768px) {
-            .col-md-6 {
-              flex: 0 0 100%;
-              max-width: 100%;
-            }
-
-            .footer-logo img {
-              height: 50px;
-              width: 50px;
-            }
-
-            .widget-title {
-              font-size: 18px;
-            }
-          }
-          /* eslint-enable */
         `}</style>
       </footer>
     </div>

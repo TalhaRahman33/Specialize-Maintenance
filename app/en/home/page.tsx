@@ -16,6 +16,7 @@ import Hero from '../components/Hero'
 import Partners from '../components/Partners'
 import Lighting from '../components/Lighting'
 import Topbar from '../components/Topbar'
+import WhatsappBtn from '../components/Whatsappbtn'
 
 
 const page = () => {
@@ -52,6 +53,7 @@ const page = () => {
     
             <Footer />
             <GoToTop />
+            <WhatsappBtn />
     
           </div>
   )

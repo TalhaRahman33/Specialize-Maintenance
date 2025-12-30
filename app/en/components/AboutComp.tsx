@@ -89,22 +89,19 @@ export default function AboutComp() {
               <div className="col-lg-3 col-md-12">
                 <div className="about-home-right bg-white p-a30">
                   <h3 className="m-t0">
-                    <span className="font-weight-100">Committed</span> to superior
-                    quality and results.
+                    <span className="font-weight-100">About</span> Company
+                 
                   </h3>
 
                   <p>
                     <strong>
-                      At our company, we are committed to delivering exceptional
-                      services that meet the needs and expectations of our clients.
+                     Founded in 2008, Specialize Maintenance is a professional maintenance company offering comprehensive technical and facility services, backed by years of experience, skilled teams, and proven results.
                     </strong>
-                  </p>
+                    </p>
 
-                  <p>
-                    We focus on providing innovative solutions in construction,
-                    architecture, and renovation. Our dedicated team works tirelessly
-                    to transform your ideas into reality.
-                  </p>
+                    <p>
+                      We provide reliable maintenance — electrical, plumbing, HVAC, and general repairs — to keep your facilities running smoothly.
+                    </p>
 
                   {/* ✅ WHATSAPP BUTTON */}
                   <div className="text-right">

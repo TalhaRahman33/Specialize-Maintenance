@@ -21,10 +21,10 @@ const Callus = () => {
               {/* REAL PHONE NUMBER */}
               <h2 className="call-us-number m-b10">
                 <a
-                  href="tel:+966539771718"
+                  href="tel:+966550196380"
                   style={{ color: "#fff", textDecoration: "none" }}
                 >
-                  +966 539 771 718
+                  +966 550196380
                 </a>
               </h2>
 
@@ -35,7 +35,7 @@ const Callus = () => {
 
               {/* CTA → WhatsApp */}
               <a
-                href="https://wa.me/966539771718"
+                href="https://wa.me/966550196380"
                 target="_blank"
                 rel="noreferrer"
                 className="site-button-secondry btn-effect site-bg-dark"

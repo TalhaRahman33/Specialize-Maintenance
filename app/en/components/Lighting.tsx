@@ -6,7 +6,7 @@ const Lighting = () => {
         {/* Text Content */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Lighting Design <br /> & Installation
+            Light up Your World <br /> indoor & Outdoors!
           </h1>
 
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">

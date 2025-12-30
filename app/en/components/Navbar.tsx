@@ -74,6 +74,12 @@ const Navbar = () => {
               <span className={styles.underline}></span>
             </Link>
           </li>
+          <li className={isActive(`/${currentLang}/contact`) ? styles.active : ''}>
+            <Link href={`/${currentLang}/contact`} onClick={() => setMenuOpen(false)}>
+              Contact
+              <span className={styles.underline}></span>
+            </Link>
+          </li>
         </ul>
         <div className={styles.langSwitch} onClick={switchLang}>
           {currentLang === 'en' ? 'Arabic' : 'English'}
