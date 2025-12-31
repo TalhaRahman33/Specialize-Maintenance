@@ -88,7 +88,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>Business Consulting & Strategy</b>
+                    <b>AC Technician</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
