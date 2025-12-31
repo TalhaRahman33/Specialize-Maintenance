@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay , Navigation} from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -80,9 +80,8 @@ export default function Testimonials() {
 
             {/* TESTIMONIAL SLIDER START */}
             <Swiper
-              modules={[Autoplay , Navigation]}
+              modules={[Autoplay]}
               loop
-              navigation
               pagination={{ clickable: true }}
               autoplay={{ delay: 3500, disableOnInteraction: false }}
               spaceBetween={20}

@@ -9,7 +9,7 @@ import "swiper/css";
 
 const partners = [
   "/images/partner-1.webp",
-  "/images/partner-2.webp",
+  "/images/partner1.2.webp",
   "/images/partner-3.webp",
   "/images/partner-4.webp",
   "/images/partner-5.webp",

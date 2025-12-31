@@ -11,7 +11,7 @@ const Callus = () => {
         style={{ backgroundImage: "url(/images/bg-1.jpg)" }}
       >
         {/* Overlay */}
-        <div className="overlay-main site-bg-primary opacity-07" />
+        <div className="overlay-main bg-secondry opacity-07" />
 
         <div className="container">
           <div className="section-content">
@@ -24,8 +24,8 @@ const Callus = () => {
                 dir="ltr"
                 style={{ unicodeBidi: "bidi-override" }}
               >
-                <a href="tel:+966539771718" style={{ color: "#fff" }}>
-                  +966 539 771 718
+                <a href="tel:+966576150857" style={{ color: "#fff" }}>
+                  +966 576 150 857
                 </a>
               </h2>
 
@@ -37,7 +37,7 @@ const Callus = () => {
 
               {/* CTA → WhatsApp */}
               <a
-                href="https://wa.me/966539771718"
+                href="https://wa.me/966576150857"
                 target="_blank"
                 rel="noreferrer"
                 className="site-button-secondry btn-effect site-bg-dark"

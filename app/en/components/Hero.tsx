@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Navigation } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -50,10 +50,10 @@ export default function Hero() {
   return (
     <section className="hero">
       <Swiper
-        modules={[Autoplay, EffectFade , Navigation]}
+        modules={[Autoplay, EffectFade ]}
         effect="fade"
         loop
-        navigation
+    
         pagination={{ clickable: true }}
         autoplay={{ delay: 4500, disableOnInteraction: false }}
         className="heroSwiper"
