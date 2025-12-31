@@ -404,6 +404,8 @@ export default function Ser() {
                   align-items: center;
                   justify-content: center;
                   padding: 18px;
+                  padding-top: 100px;
+                  overflow-y: auto;
                 }
 
                 .dialog {
@@ -415,6 +417,7 @@ export default function Ser() {
                   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
                   display: grid;
                   grid-template-columns: 1.1fr 1fr;
+                  margin: 50px auto;
                 }
 
                 @media (max-width: 900px) {

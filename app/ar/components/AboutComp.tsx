@@ -13,11 +13,11 @@ const WHATSAPP_NUMBER = "966576150857";
 const WHATSAPP_TEXT = "مرحبًا، أود الاستفسار عن خدماتكم.";
 
 const slides = [
-{ id: 1, img: "/images/pic1_1.webp", link: "#" },
-  { id: 2, img: "/images/weld.avif", link: "#" },
-  { id: 3, img: "/images/elect.webp", link: "#" },
-  { id: 4, img: "/images/pic6_1.jpg", link: "#" },
-  { id: 5, img: "/images/pic2_4.jpg", link: "#" },
+  { id: 1, img: "/images/Electrician.jpg", link: "#" },
+  { id: 2, img: "/images/Welding.jpg", link: "#" },
+  { id: 3, img: "/images/Electrician.jpg", link: "#" },
+  { id: 4, img: "/images/tiling.jpg", link: "#" },
+  { id: 5, img: "/images/Actechnician.jpg", link: "#" },
 ];
 
 export default function AboutCompAr() {
@@ -89,20 +89,17 @@ export default function AboutCompAr() {
               <div className="col-lg-3 col-md-12">
                 <div className="about-home-right bg-white p-a30">
                   <h3 className="m-t0">
-                    <span className="font-weight-100">ملتزمون</span> بتقديم أعلى
-                    مستويات الجودة وتحقيق أفضل النتائج.
+                    <span className="font-weight-100">عن</span> الشركة
                   </h3>
 
                   <p>
                     <strong>
-                      نحن نلتزم بتقديم خدمات استثنائية تلبي احتياجات وتوقعات عملائنا
-                      بأعلى معايير الجودة.
+                      تأسست عام 2008، شركة متخصصة الصيانة هي شركة صيانة احترافية توفر خدمات تقنية وسهولات شاملة، مدعومة بسنوات من الخبرة وفرق عاملة ماهرة ونتائج مثبتة.
                     </strong>
                   </p>
 
                   <p>
-                    نركز على تقديم حلول مبتكرة في مجالات البناء، والتصميم،
-                    والتجديد، مع فريق عمل متخصص يسعى لتحويل أفكاركم إلى واقع ملموس.
+                    نوفر صيانة موثوقة — كهربائية وسباكة والتهوية والتبريد والإصلاحات العامة — للحفاظ على سير مرافقك بسلاسة.
                   </p>
 
                   {/* ✅ SAME BUTTON – JUST ARABIC TEXT */}

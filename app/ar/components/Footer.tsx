@@ -200,12 +200,7 @@ const Footer = () => {
           <div className="container">
             <div className="footer-bottom-content">
               <p className="copyright">© 2025 شركة الأعمال المتخصصة. جميع الحقوق محفوظة.</p>
-              <p className="dev-credit">
-                صمم وطور بكل <span className="heart">❤</span> بواسطة{" "}
-                <a href="#" className="dev-link">
-                  شركتك
-                </a>
-              </p>
+             
             </div>
           </div>
         </div>
@@ -307,13 +302,13 @@ const Footer = () => {
 
           /* Center the underline for Quick Links */
           .widget_services .widget-title {
-            text-align: center;
+            text-align: right;
           }
 
           .widget_services .widget-title::after {
-            right: auto;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 0;
+            left: auto;
+            transform: none;
           }
 
           .widget_address_outer .widget-title {
@@ -431,14 +426,13 @@ const Footer = () => {
 
           .widget_services {
             max-width: 100%;
-            text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
           }
 
           .widget_services .widget-title {
-            text-align: center;
+            text-align: right;
             width: 100%;
           }
 
@@ -452,7 +446,7 @@ const Footer = () => {
             margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-end;
             width: 100%;
           }
 
@@ -659,24 +653,25 @@ const Footer = () => {
 
           /* Footer Bottom */
           .footer-bottom {
-            padding: 25px 0;
+            padding: 15px 0;
             background: rgba(0, 0, 0, 0.3);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
           }
 
           .footer-bottom-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
+            text-align: center;
           }
 
           .copyright,
           .dev-credit {
             margin: 0;
             color: #b0b0b0;
-            font-size: 14px;
+            font-size: 16px;
           }
 
           .heart {
@@ -751,7 +746,7 @@ const Footer = () => {
             .footer-links {
               display: flex;
               flex-direction: column;
-              align-items: center;
+              align-items: flex-end;
             }
 
             .contact-right {

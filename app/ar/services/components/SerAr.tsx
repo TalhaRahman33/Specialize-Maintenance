@@ -17,7 +17,7 @@ const WHATSAPP_DEFAULT_TEXT = "مرحباً! أريد الاستفسار عن خ
 const services: Service[] = [
   {
     id: 1,
-    img: "/images/plumbing.webp",
+      img: "/images/plumbing.jpg",
     title: "أعمال السباكة",
     desc:
       "تنفيذ وصيانة أعمال السباكة من تمديدات المياه، إصلاح التسريبات، وتركيب الخزانات بجودة عالية وضمان كامل.",
@@ -31,7 +31,7 @@ const services: Service[] = [
   },
   {
     id: 2,
-    img: "/images/painting.webp",
+    img: "/images/Painting.jpg",
     title: "دهانات الجدران والأسقف",
     desc:
       "خدمات دهان احترافية للجدران والأسقف باستخدام مواد عالية الجودة لنتائج تدوم طويلاً ومظهر أنيق.",
@@ -45,7 +45,7 @@ const services: Service[] = [
   },
   {
     id: 3,
-    img: "/images/electrician.avif",
+    img: "/images/Electrician.jpg",
     title: "الأعمال الكهربائية",
     desc:
       "تنفيذ وصيانة الأعمال الكهربائية من تمديدات، إصلاح الأعطال، والترقيات مع الالتزام بمعايير السلامة.",
@@ -59,7 +59,7 @@ const services: Service[] = [
   },
   {
     id: 4,
-    img: "/images/floor.avif",
+    img: "/images/tiling.jpg",
     title: "تركيب البلاط",
     desc:
       "تنفيذ أعمال تركيب البلاط بدقة عالية وتشطيب مثالي للأرضيات في المنازل والمشاريع التجارية.",
@@ -73,7 +73,7 @@ const services: Service[] = [
   },
   {
     id: 5,
-    img: "/images/gypsum.avif",
+    img: "/images/GypsumBoard.jpg",
     title: "الجبس بورد",
     desc:
       "تنفيذ أعمال الجبس بورد للأسقف والجدران بتصاميم عصرية وتشطيب ناعم يناسب جميع المساحات.",
@@ -87,7 +87,7 @@ const services: Service[] = [
   },
   {
     id: 6,
-    img: "/images/interiorD.avif",
+    img: "/images/interiordesigning.jpg",
     title: "التصميم الداخلي",
     desc:
       "خدمات تصميم داخلي متكاملة تشمل التخطيط، اختيار المواد، والألوان بما يناسب ذوق العميل.",
@@ -95,27 +95,27 @@ const services: Service[] = [
       "تحديد الفكرة/الثيم حسب ذوق العميل.",
       "اختيار مواد وألوان وإضاءة مناسبة.",
       "توزيع الأثاث وتحسين استغلال المساحة.",
-      "Moodboard وتوجيه تصميمي واضح.",
+      "لوحة مزاجية وتوجيه تصميمي واضح.",
       "إرشاد للتنفيذ للحصول على نتيجة مرتبة.",
     ],
   },
   {
     id: 7,
-    img: "/images/Layout.jpg",
-    title: "تخطيط المساحات",
+    img: "/images/Actechnician.jpg",
+      title: "تقني التكييف",
     desc:
-      "تخطيط المساحات الداخلية باستخدام مخططات ثنائية وثلاثية الأبعاد لتحسين الاستخدام والوظيفة.",
+        "خدمات تثبيت وصيانة وإصلاح التكييف الاحترافية لضمان أداء تبريد مثالي طوال الوقت.",
     details: [
-      "مخطط 2D للقياسات وتوزيع العناصر.",
-      "تصور 3D لتوضيح الفكرة بشكل أفضل.",
-      "تحسين حركة الاستخدام داخل المكان.",
-      "تخطيط تجديدات بشكل عملي وواضح.",
-      "تعديلات حسب ملاحظات العميل.",
+        "تركيب وحدة التكييف (منفصلة/نافذة).",
+        "صيانة دورية وتنظيف الأجهزة.",
+        "إعادة ملء المبرد وإصلاح التسريبات.",
+        "معايرة الثرموستات والفحوصات الكهربائية.",
+        "تشخيص مشاكل الأداء والتبريد.",
     ],
   },
   {
     id: 8,
-    img: "/images/CCTV.webp",
+      img: "/images/cctv.jpg",
     title: "تركيب كاميرات المراقبة",
     desc:
       "تركيب أنظمة كاميرات المراقبة مع التخطيط الصحيح، التوصيل، والبرمجة لضمان أعلى مستوى أمان.",
@@ -129,7 +129,7 @@ const services: Service[] = [
   },
   {
     id: 9,
-    img: "/images/welding.webp",
+    img: "/images/Welding.jpg",
     title: "أعمال اللحام",
     desc:
       "تنفيذ أعمال اللحام للأبواب، الهياكل المعدنية، والمشغولات الحديدية بجودة وقوة عالية.",
@@ -420,6 +420,8 @@ export default function SerAr() {
                   align-items: center;
                   justify-content: center;
                   padding: 18px;
+                  padding-top: 100px;
+                  overflow-y: auto;
                 }
 
                 .dialog {
@@ -432,6 +434,7 @@ export default function SerAr() {
                   display: grid;
                   grid-template-columns: 1.1fr 1fr;
                   direction: rtl;
+                  margin: 50px auto;
                 }
 
                 @media (max-width: 900px) {

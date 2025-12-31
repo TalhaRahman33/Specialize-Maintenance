@@ -26,7 +26,7 @@ const Topbar = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '12px 20px',
+          padding: '6px 20px',
           fontWeight: 700,
           color: '#ffffff',
           fontSize: '17px',

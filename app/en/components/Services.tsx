@@ -12,28 +12,28 @@ import "swiper/css/pagination";
 const services = [
   {
     id: 1,
-    clientUrl: "https://portal.maarif.sa/",
+    clientUrl: "",
     img: "/images/plumbing.jpg",
     title: "Plumbing",
     desc: "Installation, repair, and maintenance of plumbing lines, fittings, water tanks, and leak fixing with guaranteed workmanship.",
   },
   {
     id: 2,
-    clientUrl: "https://www.iks.edu.sa/",
+    clientUrl: "",
     img: "/images/Painting.jpg",
     title: "Wall & Roof Painting",
     desc: "Premium wall and roof painting using durable coatings for a clean finish, better protection, and long-lasting color.",
   },
   {
     id: 3,
-    clientUrl: "https://daffah.sa/",
+    clientUrl: "",
     img: "/images/Electrician.jpg",
     title: "Electrician",
     desc: "Safe electrical wiring, installations, troubleshooting, upgrades, and repairs handled by skilled technicians with guarantee.",
   },
   {
     id: 4,
-    clientUrl: "https://menu.broastalfarooj.com/",
+    clientUrl: "",
     img: "/images/tiling.jpg",
     title: "Floor Tiling",
     desc: "Accurate floor tiling installation with clean leveling, strong bonding, and premium finishing for homes and commercial sites.",
@@ -73,11 +73,24 @@ const services = [
     title: "Welding Services",
     desc: "Professional welding for gates, grills, frames, and metal fabrication with strong joints and clean finishing.",
   },
+  {
+    id: 10,
+    clientUrl: "https://spacializes.com/",
+    img: "/images/Electrician.jpg",
+    title: "Light up Your World",
+    desc: "Comprehensive lighting solutions including design, installation, and maintenance for residential and commercial spaces.",
+  },
 ];
 
 export default function ServicesSlider() {
   const router = useRouter();
-  const goServices = () => router.push("/en/services");
+  const goServices = (clientUrl?: string) => {
+    if (clientUrl) {
+      window.open(clientUrl, "_blank");
+    } else {
+      router.push("/en/services");
+    }
+  };
 
   return (
     <div className="services-slider-wrapper">
@@ -133,8 +146,8 @@ export default function ServicesSlider() {
                       className="mt-icon-box-wraper m-b30 service-card"
                       role="button"
                       tabIndex={0}
-                      onClick={goServices}
-                      onKeyDown={(e) => e.key === "Enter" && goServices()}
+                      onClick={() => goServices(s.clientUrl)}
+                      onKeyDown={(e) => e.key === "Enter" && goServices(s.clientUrl)}
                     >
                       <div className="card-inner">
                         <div className="card-glow"></div>

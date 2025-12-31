@@ -17,19 +17,20 @@ const OurValue = () => {
                       <h2 className="text-uppercase sep-line-one">
                         <span className="font-weight-300 site-text-primary">
                           قيمتنا
-                        </span>
+                        </span>{" "}
+                        الأساسية
                       </h2>
                     </div>
 
                     <p>
-                      نساعد الشركات على النمو من خلال خدمات احترافية، تواصل واضح،
-                      وتنفيذ يعتمد على النتائج. سواء كنت تحتاج حلول رقمية، دعم تشغيلي،
-                      أو استشارات متخصصة — نحن ننجز العمل بجودة واستمرارية.
+                      نساعد الشركات على النمو من خلال خدمات موثوقة، تواصل واضح،
+                      وتنفيذ يركز على النتائج. سواء احتجت لحلول رقمية أو دعم تشغيلي
+                      أو استشارات متخصصة — نحن ننجز الأعمال بالاتساق والمسؤولية.
                     </p>
 
                     <p className="m-b0">
-                      تركيزنا بسيط: <b>حل مشاكل حقيقية</b>، تحسين الأداء، وبناء قيمة
-                      طويلة المدى لعملائنا.
+                      تركيزنا بسيط: <b>حل مشاكل حقيقية</b>، تحسين الأداء، وخلق
+                      قيمة طويلة المدى لعملائنا.
                     </p>
                   </div>
                 </div>
@@ -39,10 +40,10 @@ const OurValue = () => {
                 {/* QUICK HIGHLIGHTS */}
                 <div className="p-t20 text-right">
                   <ul className="list-check-circle">
-                    <li>دعم سريع واستجابة واضحة</li>
-                    <li>تقارير شفافة وتحديثات دورية</li>
-                    <li>حلول مخصصة حسب نشاطك</li>
-                    <li>مراجعة جودة قبل التسليم</li>
+                    <li>دعم مخصص واستجابة سريعة</li>
+                    <li>تقارير شفافة وتحديثات أسبوعية</li>
+                    <li>حلول مخصصة لقطاعك</li>
+                    <li>ضمان الجودة عند كل تسليم</li>
                   </ul>
                 </div>
               </div>
@@ -75,17 +76,17 @@ const OurValue = () => {
                     <h3 className="m-t0">
                       <span className="font-weight-100">ندعم</span>
                       <span className="site-text-primary"> نمو الأعمال</span>{" "}
-                      عبر تنفيذ خدمات متعددة بشكل احترافي
+                      من خلال تقديم خدمات متعددة
                     </h3>
 
                     <p className="m-b20">
-                      من التخطيط إلى التنفيذ — فريقنا يتولى الاستراتيجية، التطوير،
-                      التحسين، والمتابعة المستمرة لضمان النتائج.
+                      من الإستراتيجية إلى التنفيذ — فريقنا يتعامل مع التخطيط،
+                      والتطبيق، والتحسين، والدعم المستمر.
                     </p>
                   </div>
 
                   <span className="progressText text-black">
-                    <b> الاستشارات والاستراتيجيات التجارية </b>
+                    <b>تقني التكييف</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -101,7 +102,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b>السباكة  </b>
+                    <b>السباكة</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -117,7 +118,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b> كهربائي </b>
+                    <b>كهربائي</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -133,7 +134,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b> تركيب كاميرات المراقبة </b>
+                    <b>تركيب كاميرات المراقبة</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div
@@ -149,7 +150,7 @@ const OurValue = () => {
                   </div>
 
                   <span className="progressText text-black">
-                    <b> لحام </b>
+                    <b>لحام</b>
                   </span>
                   <div className="progress m-b30 m-t10">
                     <div

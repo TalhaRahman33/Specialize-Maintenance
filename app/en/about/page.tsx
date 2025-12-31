@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import GoToTop from '../components/GoToTop'
 import Spacialization from '../components/Spacialization'
 import AboutComp from '../components/AboutComp'
+import WhatsappBtn from '../components/Whatsappbtn'
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
 
      <Footer />
      <GoToTop />  
+     <WhatsappBtn />
     </div>
   )
 }

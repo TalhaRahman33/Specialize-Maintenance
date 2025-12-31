@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import GoToTop from '../components/GoToTop'
 import Projects from './components/Projects'
+import Whatsappbtn from '../components/Whatsappbtn'
 
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
 
      <Footer />
      <GoToTop />
+     <Whatsappbtn />
     </div>
   )
 }
