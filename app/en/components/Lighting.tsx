@@ -10,14 +10,14 @@ const Lighting = () => {
           </h1>
 
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            We deliver professional lighting design and installation services
-            that transform your spaces with elegance, efficiency, and precision.
-            Our expert solutions enhance ambiance while ensuring functionality
-            and energy savings.
+            We offer professional lighting design and installation services to
+            transform spaces into elegant and efficient environments. Our
+            specialized solutions enhance aesthetic ambiance while ensuring
+            practical performance and energy savings.
           </p>
 
        <a
-  href="https://spacializes.com/"
+  href="https://lxdcjv.zid.store/"
   target="_blank"
   rel="noopener noreferrer"
   className="
@@ -48,7 +48,7 @@ const Lighting = () => {
 
   {/* Text */}
   <span className="relative z-10">
-    Explore More
+   Shop Now
   </span>
 </a>
 

@@ -73,7 +73,7 @@ const Footer = () => {
                     <li><a href="/en/about">› About</a></li>
                     <li><a href="/en/services">› Services</a></li>
                     <li><a href="/en/portfolio">› Portfolio</a></li>
-                    <li><a href="/policy">› Return & Refund Policy</a></li>
+                    <li><a href="/#">› Return & Refund Policy</a></li>
                   </ul>
                 </div>
               </div>
@@ -84,15 +84,16 @@ const Footer = () => {
                   <h4 className="widget-title">Contact Us</h4>
 
                   <ul className="contact-list">
+
                     <li className="contact-item">
                       <span className="icon-wrap whatsapp">
                         <MessageCircle size={20} />
                       </span>
                       <a
-                        href="https://wa.me/966539771718"
+                        href="https://wa.me/966550196380"
                         className="contact-link"
                       >
-                        +966 539 771 718
+                        +966 550196380
                       </a>
                     </li>
 
@@ -101,14 +102,14 @@ const Footer = () => {
                         <Smartphone size={20} />
                       </span>
                       <a
-                        href="tel:+966539774020"
+                        href="tel:+966576150857"
                         className="contact-link"
                       >
-                        +966 539 774 020
+                       +966 576150857
                       </a>
                     </li>
 
-                    <li className="contact-item">
+                    {/* <li className="contact-item">
                       <span className="icon-wrap phone">
                         <Phone size={20} />
                       </span>
@@ -118,7 +119,7 @@ const Footer = () => {
                       >
                         +966 539 771 718
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
 
                   <div className="credentials">

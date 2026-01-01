@@ -41,7 +41,8 @@ const page = () => {
           {/* <Blogs /> */}
                {/* <Spacialization /> */}
           <LightingAr />
-          <Testimonials />
+          
+          {/* <Testimonials /> */}
     
   
     

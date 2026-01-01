@@ -98,7 +98,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="/policy">
+                      <a href="#">
                         <span className="link-icon">‹</span>
                         سياسة الاستبدال والاسترجاع
                       </a>

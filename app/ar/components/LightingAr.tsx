@@ -16,7 +16,7 @@ const LightingAr = () => {
           </p>
 
           <a
-            href="https://spacializes.com/"
+            href="https://lxdcjv.zid.store/"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -47,7 +47,7 @@ const LightingAr = () => {
 
             {/* Text */}
             <span className="relative z-10">
-              اكتشف المزيد
+              تسوق الآن
             </span>
           </a>
         </div>
