@@ -1,90 +1,175 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     email: '',
     message: ''
   });
 
-  const handleChange = () => {
-    // const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      // [name]: value
+      [name]: value
     }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Thank you! Your message has been sent.');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ username: '', email: '', message: '' });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center py-16 px-4">
-      <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            CONTACT US
-          </h1>
-          <p className="text-white text-opacity-90 text-lg leading-relaxed px-4">
-            We're here to help! Whether you have questions about our services,
-            need support, or want to discuss a project, feel free to reach out.
-          
-          </p>
-        </div>
-
-        {/* Form */}
-        <div className="space-y-8">
-          <div>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              className="w-full bg-transparent border-b-2 border-blue-300 text-white placeholder-blue-200 py-3 px-2 focus:outline-none focus:border-white transition-colors duration-300"
-            />
-          </div>
-
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Mail"
-              className="w-full bg-transparent border-b-2 border-blue-300 text-white placeholder-blue-200 py-3 px-2 focus:outline-none focus:border-white transition-colors duration-300"
-            />
-          </div>
-
-          <div>
-            <input
-              type="text"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              className="w-full bg-transparent border-b-2 border-blue-300 text-white placeholder-blue-200 py-3 px-2 focus:outline-none focus:border-white transition-colors duration-300"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="flex justify-center pt-8">
-            <button
-              onClick={handleSubmit}
-              className="border-2 border-white text-white font-semibold px-10 py-3 rounded hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 flex items-center space-x-2"
-            >
-              <span className="tracking-wider">SUBMIT</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
+    <div>
+          <div className="page-content">
+      {/* INNER PAGE BANNER */}
+      <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(images/4.jpg)' }}>
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="relative container mx-auto px-4">
+          <div className="text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Putting a plan to action, to assure your satisfaction!
+            </h2>
+            {/* BREADCRUMB ROW */}
+            <nav className="flex justify-center space-x-2">
+              <ul className="flex space-x-4">
+                <li><a href="/" className="hover:text-blue-400">Home</a></li>
+                <li className="before:content-['/'] before:mr-4">Contact Us</li>
+              </ul>
+            </nav>
+            {/* BREADCRUMB ROW END */}
           </div>
         </div>
+      </div>
+      {/* INNER PAGE BANNER END */}
+
+      {/* SECTION CONTENT START */}
+      <div className="py-20 px-4">
+        <div className="container mx-auto">
+          {/* CONTACT FORM & INFO */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            {/* CONTACT FORM */}
+            <div className="lg:col-span-2">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* TITLE START */}
+                <div className="mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-uppercase">
+                    <span className="text-blue-600">Get</span> In touch
+                  </h2>
+                  <div className="h-1 w-24 bg-blue-600 mt-4"></div>
+                </div>
+                {/* TITLE END */}
+
+                <div>
+                  <input
+                    name="username"
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
+                    placeholder="Name"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    required
+                    className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+
+                <div className="text-right">
+                  <button
+                    type="submit"
+                    className="px-8 py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* CONTACT INFO */}
+            <div className="lg:col-span-1">
+              <div>
+                {/* TITLE START */}
+                <div className="mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-uppercase">
+                    <span className="text-blue-600">Contact</span> Info
+                  </h2>
+                  <div className="h-1 w-24 bg-blue-600 mt-4"></div>
+                </div>
+                {/* TITLE END */}
+
+                <div className="bg-gray-900 text-white p-8 rounded-lg space-y-8">
+                  {/* Phone */}
+                  <div className="flex space-x-4">
+                    <div className="text-2xl text-blue-600">
+                      <i className="fa fa-phone"></i>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Phone number</h5>
+                      <p className="text-gray-300">(123) 456-78910</p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex space-x-4">
+                    <div className="text-2xl text-blue-600">
+                      <i className="fa fa-envelope"></i>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Email address</h5>
+                      <p className="text-gray-300">7xthemehelp@gmail.com</p>
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div className="flex space-x-4">
+                    <div className="text-2xl text-blue-600">
+                      <i className="fa fa-map-marker"></i>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2">Address info</h5>
+                      <p className="text-gray-300">09, Martin Street B190 Polo Alto, San Francisco</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* GOOGLE MAP */}
+          <div className="w-full rounded-lg overflow-hidden">
+            <iframe
+              width="100%"
+              height="460"
+              frameBorder="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5543.044383174594!2d-73.98517634822427!3d40.753964399662806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a938897f87%3A0x77a53418bbd56c17!2s34%20St%20-%20Herald%20Sq!5e0!3m2!1sen!2sin!4v1658249652295!5m2!1sen!2sin"
+              allowFullScreen={true}
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      {/* SECTION CONTENT END */}
       </div>
     </div>
   );
