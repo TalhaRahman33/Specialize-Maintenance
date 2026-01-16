@@ -28,7 +28,7 @@ const Contact = () => {
     <div>
           <div className="page-content">
       {/* INNER PAGE BANNER */}
-      <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(images/4.jpg)' }}>
+      <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(/images/4.jpg)' }}>
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="relative container mx-auto px-4">
           <div className="text-center text-white">
@@ -126,7 +126,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold mb-2">Phone number</h5>
-                      <p className="text-gray-300">(123) 456-78910</p>
+                      <p className="text-gray-300">+966 576150857</p>
                     </div>
                   </div>
 
@@ -137,7 +137,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold mb-2">Email address</h5>
-                      <p className="text-gray-300">7xthemehelp@gmail.com</p>
+                      <p className="text-gray-300">info@specializemaintenance.com</p>
                     </div>
                   </div>
 
