@@ -37,7 +37,7 @@ const Footer = () => {
                   </p>
 
                   <div className="social-section">
-                    <h5 className="social-title">Follow Us</h5>
+                    {/* <h5 className="social-title">Follow Us</h5> */}
                     <ul className="social-icons">
                       <li>
                         <a className="social-btn facebook">
@@ -69,6 +69,7 @@ const Footer = () => {
                 <div className="widget widget_services">
                   <h4 className="widget-title">Quick Links</h4>
                   <ul className="footer-links">
+
                     <li><a href="/en/home">› Home</a></li>
                     <li><a href="/en/about">› About</a></li>
                     <li><a href="/en/services">› Services</a></li>
@@ -123,11 +124,11 @@ const Footer = () => {
                   </ul>
 
                   <div className="credentials">
-                    <div>
+                    <div className="cred-item">
                       <strong>Tax ID</strong>
                       <span>310448142800003</span>
                     </div>
-                    <div>
+                    <div className="cred-item">
                       <strong>CR</strong>
                       <span>1010601919</span>
                     </div>
@@ -137,6 +138,8 @@ const Footer = () => {
                       className="saudi-logo"
                     />
                   </div>
+
+                  
                 </div>
               </div>
             </div>
@@ -287,6 +290,22 @@ const Footer = () => {
             gap: 15px;
             align-items: center;
             flex-wrap: wrap;
+          }
+
+          .cred-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .cred-item strong {
+            color: #fff;
+            font-size: 12px;
+          }
+
+          .cred-item span {
+            color: #fff;
+            font-weight: 600;
           }
 
           .saudi-logo {

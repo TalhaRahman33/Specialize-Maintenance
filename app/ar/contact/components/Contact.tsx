@@ -21,12 +21,12 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    alert('Thank you! Your message has been sent.');
+    alert('شكراً! تم إرسال رسالتك بنجاح.');
     setFormData({ username: '', email: '', message: '' });
   };
 
   return (
-    <div>
+    <div dir="rtl">
           <div className="page-content">
       {/* INNER PAGE BANNER */}
       <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(/images/4.jpg)' }}>
@@ -34,7 +34,7 @@ const Contact = () => {
         <div className="relative container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Putting a plan to action, to assure your satisfaction!
+              تنفيذ خطة العمل، لضمان رضاك!
             </h2>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Contact = () => {
                 {/* TITLE START */}
                 <div className="mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-uppercase">
-                    <span className="text-blue-600">Get</span> In touch
+                    <span className="text-blue-600">تواصل</span> معنا
                   </h2>
                   <div className="h-1 w-24 bg-blue-600 mt-4"></div>
                 </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                     type="text"
                     required
                     className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
-                    placeholder="Name"
+                    placeholder="الاسم"
                   />
                 </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
                     type="email"
                     required
                     className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
-                    placeholder="Email"
+                    placeholder="البريد الإلكتروني"
                   />
                 </div>
 
@@ -84,16 +84,16 @@ const Contact = () => {
                     rows={4}
                     required
                     className="w-full px-4 py-3 border-b-2 border-gray-300 focus:border-blue-600 outline-none transition-colors"
-                    placeholder="Message"
+                    placeholder="الرسالة"
                   ></textarea>
                 </div>
 
-                <div className="text-right">
+                <div className="text-left">
                   <button
                     type="submit"
                     className="px-10 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
-                    Submit
+                    إرسال
                   </button>
                 </div>
               </form>
@@ -105,7 +105,7 @@ const Contact = () => {
                 {/* TITLE START */}
                 <div className="mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-uppercase">
-                    <span className="text-blue-600">Contact</span> Info
+                    <span className="text-blue-600">معلومات</span> التواصل
                   </h2>
                   <div className="h-1 w-24 bg-blue-600 mt-4"></div>
                 </div>
@@ -118,7 +118,7 @@ const Contact = () => {
                       <Phone size={28} />
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-2">Phone number</h5>
+                      <h5 className="font-semibold mb-2">رقم الهاتف</h5>
                       <p className="text-gray-300">+966 576150857</p>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                       <Mail size={28} />
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-2">Email address</h5>
+                      <h5 className="font-semibold mb-2">البريد الإلكتروني</h5>
                       <p className="text-gray-300">info@specializemaintenance.com</p>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ const Contact = () => {
                       <MapPin size={28} />
                     </div>
                     <div>
-                      <h5 className="font-semibold mb-2">Address info</h5>
+                      <h5 className="font-semibold mb-2">معلومات العنوان</h5>
                       <p className="text-gray-300">09, Martin Street B190 Polo Alto, San Francisco</p>
                     </div>
                   </div>

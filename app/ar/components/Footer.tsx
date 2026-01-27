@@ -1,26 +1,34 @@
 "use client";
 
 import React from "react";
-import { Instagram, Twitter, Youtube, Facebook, MessageCircle, Phone, Smartphone, Ghost, Music } from "lucide-react";
+import {
+  Instagram,
+  Twitter,
+  Facebook,
+  MessageCircle,
+  Phone,
+  Smartphone,
+  Music2,
+} from "lucide-react";
 
 const Footer = () => {
   return (
     <div dir="rtl">
-      <footer className="site-footer footer-large footer-dark footer-wide">
+      <footer className="site-footer">
         {/* FOOTER TOP */}
-        <div className="footer-top overlay-wraper">
-          <div className="overlay-main" />
-
+        <div className="footer-top">
           <div className="container">
             <div className="row">
-              {/* RIGHT: COMPANY */}
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="widget widget_about">
+              {/* LEFT */}
+              <div className="col">
+                <div className="widget">
                   <div className="footer-logo">
                     <img src="/images/logoo.png" alt="Logo" />
                   </div>
 
-                  <h4 className="widget-title">شركة الأعمال المتخصصة</h4>
+                  <h4 className="widget-title">
+                    شركة الأعمال المتخصصة
+                  </h4>
 
                   <p className="footer-description">
                     تختص شركة الأعمال المتخصصة بجميع المواد الكهربائية، وتوفر أفضل
@@ -28,135 +36,93 @@ const Footer = () => {
                     المبتكرة للشركات والمؤسسات والأفراد.
                   </p>
 
-                  {/* Social Icons */}
                   <div className="social-section">
-                    <h5 className="social-title">تابعنا</h5>
+                    {/* <h5 className="social-title">تابعنا</h5> */}
                     <ul className="social-icons">
                       <li>
-                        <a href="#" className="social-btn facebook" aria-label="Facebook">
+                        <a className="social-btn facebook">
                           <Facebook size={20} />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-btn youtube" aria-label="YouTube">
-                          <Youtube size={20} />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="social-btn instagram" aria-label="Instagram">
+                        <a className="social-btn instagram">
                           <Instagram size={20} />
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="social-btn twitter" aria-label="Twitter">
+                        <a className="social-btn twitter">
                           <Twitter size={20} />
                         </a>
                       </li>
-                      {/* <li>
-                        <a href="#" className="social-btn snapchat" aria-label="Snapchat">
-                          <Ghost size={20} />
+                      <li>
+                        <a className="social-btn tiktok">
+                          <Music2 size={20} />
                         </a>
-                      </li> */}
-                      {/* <li>
-                        <a href="#" className="social-btn tiktok" aria-label="TikTok">
-                          <Music size={20} />
-                        </a>
-                      </li> */}
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* CENTER: QUICK LINKS */}
-              <div className="col-lg-4 col-md-6 col-sm-6 footer-col-3">
+              {/* CENTER */}
+              <div className="col">
                 <div className="widget widget_services">
                   <h4 className="widget-title">روابط مهمة</h4>
+                  <ul className="footer-links">
 
-                  <ul className="footer-links no-borders">
-                    <li>
-                      <a href="/ar/home">
-                        <span className="link-icon">‹</span>
-                        الرئيسية
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/ar/about">
-                        <span className="link-icon">‹</span>
-                        من نحن
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/ar/services">
-                        <span className="link-icon">‹</span>
-                        خدماتنا
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/ar/portfolio">
-                        <span className="link-icon">‹</span>
-                        معرض الأعمال
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span className="link-icon">‹</span>
-                        سياسة الاستبدال والاسترجاع
-                      </a>
-                    </li>
+                    <li><a href="/ar/home">› الرئيسية</a></li>
+                    <li><a href="/ar/about">› من نحن</a></li>
+                    <li><a href="/ar/services">› خدماتنا</a></li>
+                    <li><a href="/ar/portfolio">› معرض الأعمال</a></li>
+                    <li><a href="/#">› سياسة الاستبدال والاسترجاع</a></li>
                   </ul>
                 </div>
               </div>
 
-              {/* LEFT: CONTACT US */}
-              <div className="col-lg-4 col-md-6 col-sm-6 footer-contact-col">
+              {/* RIGHT */}
+              <div className="col contact-col">
                 <div className="widget widget_address_outer">
                   <h4 className="widget-title">تواصل معنا</h4>
 
                   <ul className="contact-list">
+
                     <li className="contact-item">
-                      <div className="icon-wrap whatsapp">
+                      <span className="icon-wrap whatsapp">
                         <MessageCircle size={20} />
-                      </div>
-                      <div className="contact-info">
-                        <span className="label">واتساب</span>
-                        <a
-                          href="https://wa.me/966539771718"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="contact-link"
-                          dir="ltr"
-                        >
-                          +966 539 771 718
-                        </a>
-                      </div>
+                      </span>
+                      <a
+                        href="https://wa.me/966550196380"
+                        className="contact-link"
+                      >
+                        +966 550196380
+                      </a>
                     </li>
 
                     <li className="contact-item">
-                      <div className="icon-wrap mobile">
+                      <span className="icon-wrap mobile">
                         <Smartphone size={20} />
-                      </div>
-                      <div className="contact-info">
-                        <span className="label">جوال</span>
-                        <a href="tel:+966539774020" className="contact-link" dir="ltr">
-                          +966 539 774 020
-                        </a>
-                      </div>
+                      </span>
+                      <a
+                        href="tel:+966576150857"
+                        className="contact-link"
+                      >
+                       +966 576150857
+                      </a>
                     </li>
 
-                    <li className="contact-item">
-                      <div className="icon-wrap phone">
+                    {/* <li className="contact-item">
+                      <span className="icon-wrap phone">
                         <Phone size={20} />
-                      </div>
-                      <div className="contact-info">
-                        <span className="label">هاتف</span>
-                        <a href="tel:+966539771718" className="contact-link" dir="ltr">
-                          +966 539 771 718
-                        </a>
-                      </div>
-                    </li>
+                      </span>
+                      <a
+                        href="tel:+966539771718"
+                        className="contact-link"
+                      >
+                        +966 539 771 718
+                      </a>
+                    </li> */}
                   </ul>
 
-                  {/* Tax + CR */}
                   <div className="credentials">
                     <div className="cred-item">
                       <strong>الرقم الضريبي</strong>
@@ -166,56 +132,49 @@ const Footer = () => {
                       <strong>السجل التجاري</strong>
                       <span>1010601919</span>
                     </div>
-
-                    <img src="/images/saudilogo.avif" alt="Saudi Arabia" className="saudi-logo" />
+                    <img
+                      src="/images/saudilogo.avif"
+                      alt="Saudi Arabia"
+                      className="saudi-logo"
+                    />
                   </div>
+
+                  
                 </div>
               </div>
             </div>
 
-            {/* PAYMENT METHODS */}
+            {/* PAYMENT METHODS (ADDED ✅) */}
             <div className="paymentRow">
               <div className="payPill">
-                <img src="/images/cod.avif" alt="الدفع عند الاستلام" className="payImg" />
+                <img src="/images/cod.avif" alt="الدفع عند الاستلام" />
               </div>
               <div className="payPill">
-                <img src="/images/apple.avif" alt="Apple Pay" className="payImg" />
+                <img src="/images/apple.avif" alt="Apple Pay" />
               </div>
               <div className="payPill">
-                <img src="/images/credit.avif" alt="Visa" className="payImg" />
+                <img src="/images/credit.avif" alt="Visa" />
               </div>
               <div className="payPill">
-                <img src="/images/mada.avif" alt="Mastercard" className="payImg" />
+                <img src="/images/mada.avif" alt="Mada" />
               </div>
               <div className="payPill">
-                <img src="/images/bank.avif" alt="مدى" className="payImg" />
+                <img src="/images/bank.avif" alt="Bank Transfer" />
               </div>
             </div>
           </div>
         </div>
 
         {/* FOOTER BOTTOM */}
-        <div className="footer-bottom overlay-wraper">
-          <div className="overlay-main" />
-          <div className="container">
-            <div className="footer-bottom-content">
-              <p className="copyright">© 2025 شركة الأعمال المتخصصة. جميع الحقوق محفوظة.</p>
-             
-            </div>
-          </div>
+        <div className="footer-bottom">
+          © 2025 شركة الأعمال المتخصصة. جميع الحقوق محفوظة.
         </div>
 
         {/* STYLES */}
         <style jsx>{`
-          /* eslint-disable */
           .site-footer {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: #e0e0e0;
-          }
-
-          .footer-contact-col {
-            display: flex;
-            justify-content: flex-start;
           }
 
           .footer-top {
@@ -223,581 +182,179 @@ const Footer = () => {
           }
 
           .container {
-            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 15px;
           }
 
           .row {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
           }
 
-          .widget {
-            margin-bottom: 30px;
-          }
-
-          .col-lg-4 {
-            flex: 0 0 33.333%;
-            max-width: 33.333%;
-            padding: 0 15px;
-          }
-
-          .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            padding: 0 15px;
-          }
-
-          /* Ensure all columns stay in one row on desktop */
-          @media (min-width: 993px) {
-            .row {
-              display: flex;
-              flex-wrap: nowrap;
-              align-items: flex-start;
-            }
-            
-            .col-lg-4 {
-              flex: 1 1 33.333%;
-              min-width: 0;
-            }
-          }
-
-          /* Logo */
-          .footer-logo {
-            margin-bottom: 20px;
+          .col {
+            flex: 1;
+            padding: 15px;
+            min-width: 280px;
           }
 
           .footer-logo img {
-            height: 60px;
             width: 60px;
-            background: white;
+            background: #fff;
             padding: 8px;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
           }
 
           .widget-title {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 12px;
-            text-align: right;
-          }
-
-          .widget-title::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b35 0%, #ff8c42 100%);
-            border-radius: 2px;
-          }
-
-          /* Center the underline for Quick Links */
-          .widget_services .widget-title {
-            text-align: right;
-          }
-
-          .widget_services .widget-title::after {
-            right: 0;
-            left: auto;
-            transform: none;
-          }
-
-          .widget_address_outer .widget-title {
-            text-align: left;
-            margin-bottom: 20px;
-          }
-
-          .widget_address_outer .widget-title::after {
-            right: auto;
-            left: 0;
+            color: #fff;
+            margin: 20px 0;
           }
 
           .footer-description {
-            line-height: 1.8;
             color: #b0b0b0;
-            margin-bottom: 25px;
-            text-align: right;
+            line-height: 1.7;
           }
 
-          /* Social Icons */
-          .social-section {
-            margin-top: 25px;
-          }
-
-          .social-title {
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-align: right;
-          }
-
+          /* SOCIAL */
           .social-icons {
             display: flex;
             gap: 12px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
           }
 
           .social-btn {
             width: 44px;
             height: 44px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
             color: #fff;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-          }
-
-          .social-btn::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-            z-index: 0;
-          }
-
-          .social-btn:hover::before {
-            transform: scale(1.2);
-          }
-
-          .social-btn svg {
-            position: relative;
-            z-index: 1;
-          }
-
-          .facebook {
-            background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
-            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
-          }
-
-          .youtube {
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-          }
-
-          .instagram {
-            background: linear-gradient(135deg, #e1306c 0%, #fd1d1d 50%, #f77737 100%);
-            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
-          }
-
-          .twitter {
-            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
-            box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
-          }
-
-          .snapchat {
-            background: linear-gradient(135deg, #fffc00 0%, #f5e600 100%);
-            box-shadow: 0 4px 15px rgba(255, 252, 0, 0.3);
-          }
-
-          .tiktok {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
           }
 
           .social-btn:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
           }
 
-          /* Footer Links */
-          .widget_about {
-            max-width: 100%;
-          }
+          .facebook { background: #1877f2; }
+          .instagram { background: #e1306c; }
+          .twitter { background: #1da1f2; }
+          .tiktok { background: #000; }
 
-          .widget_services {
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-          }
-
-          .widget_services .widget-title {
-            text-align: right;
-            width: 100%;
-          }
-
-          .widget_address_outer {
-            max-width: 100%;
-          }
-
+          /* LINKS */
           .footer-links {
             list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            width: 100%;
           }
 
           .footer-links li {
-            margin-bottom: 12px;
-            border: none !important;
-            width: 100%;
-          }
-
-          .footer-links.no-borders li,
-          .footer-links.no-borders a {
-            border: none !important;
-            background: transparent !important;
-          }
-
-          /* Override global CSS dotted border */
-          .site-footer .widget_services ul li {
-            border-bottom: none !important;
-            padding: 0 !important;
-            margin-bottom: 12px !important;
+            margin-bottom: 10px;
           }
 
           .footer-links a {
             color: #b0b0b0;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border-bottom: none !important;
-            outline: none !important;
-            font-size: 15px;
-            direction: rtl;
           }
 
-          .footer-links a:hover {
-            color: #ff6b35;
-            transform: translateX(-5px);
-          }
-
-          .link-icon {
-            color: #ff6b35;
-            font-size: 22px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-          }
-
-          .footer-links a:hover .link-icon {
-            transform: translateX(-4px);
-          }
-
-          /* Contact List */
-          .contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: flex-start;
-          }
-
-          .contact-right {
-            align-items: flex-start;
-          }
-
+          /* CONTACT */
           .contact-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            justify-content: flex-start;
-            direction: ltr;
-            width: 100%;
+            margin-bottom: 14px;
           }
 
           .icon-wrap {
-            width: 46px;
-            height: 46px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
           }
 
-          .whatsapp {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-          }
-
-          .mobile {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
-          }
-
-          .phone {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          }
-
-          .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            text-align: left;
-            align-items: flex-start;
-            flex: 1;
-          }
-
-          .label {
-            font-size: 11px;
-            color: #888;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-          }
+          .whatsapp { background: #25d366; }
+          .mobile { background: #ff6b35; }
+          .phone { background: #667eea; }
 
           .contact-link {
-            color: #ffffff;
-            text-decoration: none;
+            color: #fff;
             font-weight: 600;
-            font-size: 16px;
-            transition: color 0.3s ease;
-            white-space: nowrap;
+            text-decoration: none;
           }
 
-          .contact-link:hover {
-            color: #ff6b35;
-          }
-
-          /* Credentials */
           .credentials {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+            margin-top: 20px;
             display: flex;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             flex-wrap: wrap;
-            justify-content: flex-start;
           }
 
           .cred-item {
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            align-items: flex-start;
-            text-align: left;
+            gap: 4px;
           }
 
           .cred-item strong {
-            color: #ff6b35;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #fff;
+            font-size: 12px;
           }
 
           .cred-item span {
-            color: #ffffff;
+            color: #fff;
             font-weight: 600;
-            font-size: 14px;
           }
 
           .saudi-logo {
             height: 40px;
-            margin-right: 15px;
-            order: -1;
           }
 
-          /* Payment Methods */
+          /* PAYMENT */
           .paymentRow {
             margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
             display: flex;
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
           }
 
           .payPill {
             background: #fff;
-            border-radius: 999px;
             padding: 8px 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 999px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
           }
 
-          .payPill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-          }
-
-          .payImg {
+          .payPill img {
             height: 24px;
-            width: auto;
-            display: block;
           }
 
-          /* Footer Bottom */
           .footer-bottom {
-            padding: 15px 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-          }
-
-          .footer-bottom-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 15px;
             text-align: center;
-          }
-
-          .copyright,
-          .dev-credit {
-            margin: 0;
-            color: #b0b0b0;
+            background: rgba(0,0,0,0.3);
             font-size: 16px;
           }
 
-          .heart {
-            color: #ff6b35;
-            animation: heartbeat 1.5s ease-in-out infinite;
-          }
-
-          @keyframes heartbeat {
-            0%,
-            100% {
-              transform: scale(1);
-            }
-            25% {
-              transform: scale(1.2);
-            }
-            50% {
-              transform: scale(1);
-            }
-          }
-
-          .dev-link {
-            color: #ff6b35;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-          }
-
-          .dev-link:hover {
-            color: #ff8c42;
-          }
-
-          /* Responsive */
-          @media (max-width: 992px) {
-            .footer-contact-col {
-              justify-content: center;
-            }
-            .footer-contact-col .widget_address_outer {
-              margin-right: 0;
+          @media (max-width: 768px) {
+            .row {
+              flex-direction: column;
               text-align: center;
-            }
-            .contact-item {
-              justify-content: center;
-            }
-
-            .col-lg-4 {
-              flex: 0 0 100%;
-              max-width: 100%;
-            }
-
-            .footer-top {
-              padding: 40px 0 30px;
-            }
-
-            .widget {
-              text-align: center;
-            }
-
-            .widget-title {
-              text-align: center;
-            }
-
-            .widget-title::after {
-              right: auto;
-              left: 50%;
-              transform: translateX(-50%);
             }
 
             .social-icons {
               justify-content: center;
             }
 
-            .footer-links {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-            }
-
-            .contact-right {
-              align-items: center;
-            }
-            .contact-item {
+            .paymentRow {
               justify-content: center;
             }
-            .contact-info {
-              text-align: center;
-              align-items: center;
-            }
-
-            .credentials {
-              justify-content: center;
-            }
-
-            .saudi-logo {
-              margin-right: 0;
-            }
-
-            .footer-bottom-content {
-              flex-direction: column;
-              text-align: center;
-            }
-
-            .footer-description {
-              text-align: center;
-            }
-
-            .social-title {
-              text-align: center;
-            }
           }
-
-          @media (max-width: 768px) {
-            .col-md-6 {
-              flex: 0 0 100%;
-              max-width: 100%;
-            }
-
-            .footer-logo img {
-              height: 50px;
-              width: 50px;
-            }
-
-            .widget-title {
-              font-size: 18px;
-            }
-          }
-          /* eslint-enable */
         `}</style>
       </footer>
     </div>
