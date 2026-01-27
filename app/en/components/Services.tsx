@@ -13,7 +13,7 @@ const services = [
   {
     id: 1,
     clientUrl: "",
-    img: "/images/plumbing.jpg",
+    img: "/images/Plumbing.jpg",
     title: "Plumbing",
     desc: "Installation, repair, and maintenance of plumbing lines, fittings, water tanks, and leak fixing with guaranteed workmanship.",
   },

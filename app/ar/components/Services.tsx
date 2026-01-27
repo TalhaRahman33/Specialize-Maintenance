@@ -21,7 +21,7 @@ const services: ServiceItem[] = [
   {
     id: 1,
     clientUrl: "",
-    img: "/images/plumbing.jpg",
+    img: "/images/Plumbing.jpg",
     title: "أعمال السباكة",
     desc: "تركيب وإصلاح وصيانة خطوط السباكة والوصلات وخزانات المياه ومعالجة التسريبات باحترافية وجودة مضمونة.",
   },

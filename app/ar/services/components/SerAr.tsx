@@ -17,7 +17,7 @@ const WHATSAPP_DEFAULT_TEXT = "مرحباً! أريد الاستفسار عن خ
 const services: Service[] = [
   {
     id: 1,
-      img: "/images/plumbing.jpg",
+      img: "/images/Plumbing.jpg",
     title: "أعمال السباكة",
     desc:
       "تنفيذ وصيانة أعمال السباكة من تمديدات المياه، إصلاح التسريبات، وتركيب الخزانات بجودة عالية وضمان كامل.",

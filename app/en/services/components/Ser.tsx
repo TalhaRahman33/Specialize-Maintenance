@@ -17,7 +17,7 @@ const WHATSAPP_DEFAULT_TEXT = "Hello! I want to inquire about your services.";
 const services: Service[] = [
   {
     id: 1,
-    img: "/images/plumbing.jpg",
+    img: "/images/Plumbing.jpg",
     title: "Plumbing",
     desc:
       "Installation, repair, and maintenance of plumbing lines, fittings, water tanks, and leak fixing with guaranteed workmanship.",
