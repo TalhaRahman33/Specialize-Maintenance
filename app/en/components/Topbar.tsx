@@ -50,7 +50,7 @@ const Topbar = () => {
             borderRadius: '50%',
             animation: 'pulse 2s ease-in-out infinite',
           }}></span>
-          Specialize Maintenance Company
+          Specialize Maintenance 
           <span style={{
             display: 'inline-block',
             width: '8px',

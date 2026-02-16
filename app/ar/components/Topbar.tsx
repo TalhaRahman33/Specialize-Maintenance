@@ -50,7 +50,7 @@ const Topbar = () => {
             borderRadius: '50%',
             animation: 'pulse 2s ease-in-out infinite',
           }}></span>
-          شركة الصيانة المتخصصة
+         الصيانة المتخصصة
           <span style={{
             display: 'inline-block',
             width: '8px',

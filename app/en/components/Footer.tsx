@@ -27,11 +27,11 @@ const Footer = () => {
                   </div>
 
                   <h4 className="widget-title">
-                    Specialized Working Company
+                    Specialize Working Company
                   </h4>
 
                   <p className="footer-description">
-                    Specialized Working Company provides premium electrical
+                    Specialize Working Company provides premium electrical
                     products and reliable maintenance solutions with the best
                     quality at competitive prices.
                   </p>
@@ -167,7 +167,7 @@ const Footer = () => {
 
         {/* FOOTER BOTTOM */}
         <div className="footer-bottom">
-          © 2025 Specialized Working Company. All rights reserved.
+          © 2025 Specialize Working Company. All rights reserved.
         </div>
 
         {/* STYLES */}

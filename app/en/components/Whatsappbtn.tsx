@@ -6,7 +6,7 @@ interface Props {
 }
 
 const WhatsappBtn: React.FC<Props> = ({ message, className }) => {
-    const phone = "966550196380"; // +966-550196380
+    const phone = "966576150857"; // +966 576150857
     const waUrl = `https://wa.me/${phone}${message ? `?text=${encodeURIComponent(message)}` : ""}`;
 
     return (
