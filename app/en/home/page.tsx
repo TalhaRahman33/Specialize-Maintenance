@@ -7,7 +7,7 @@ import Mission from '../components/Mission'
 import Services from '../components/Services'
 import Callus from '../components/Callus'
 import Projects from '../components/Projects'
-import Blogs from '../components/Blogs'
+
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 import GoToTop from '../components/GoToTop'

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Lighting = () => {
   return (
     <section className="py-20 bg-gray-50">
@@ -16,7 +18,7 @@ const Lighting = () => {
             practical performance and energy savings.
           </p>
 
-       <a
+       <Link
   href="https://lxdcjv.zid.store/"
   target="_blank"
   rel="noopener noreferrer"
@@ -50,7 +52,7 @@ const Lighting = () => {
   <span className="relative z-10">
    Shop Now
   </span>
-</a>
+</Link>
 
         </div>
 

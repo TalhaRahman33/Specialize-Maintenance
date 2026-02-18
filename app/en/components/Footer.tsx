@@ -10,6 +10,7 @@ import {
   Smartphone,
   Music2,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -40,22 +41,46 @@ const Footer = () => {
                     {/* <h5 className="social-title">Follow Us</h5> */}
                     <ul className="social-icons">
                       <li>
-                        <a className="social-btn facebook">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn facebook"
+                          aria-label="Follow us on Facebook"
+                        >
                           <Facebook size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn instagram">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn instagram"
+                          aria-label="Follow us on Instagram"
+                        >
                           <Instagram size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn twitter">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn twitter"
+                          aria-label="Follow us on Twitter"
+                        >
                           <Twitter size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn tiktok">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn tiktok"
+                          aria-label="Follow us on TikTok"
+                        >
                           <Music2 size={20} />
                         </a>
                       </li>
@@ -64,20 +89,27 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* CENTER */}
-              <div className="col">
-                <div className="widget widget_services">
-                  <h4 className="widget-title">Quick Links</h4>
-                  <ul className="footer-links">
-
-                    <li><a href="/en/home">› Home</a></li>
-                    <li><a href="/en/about">› About</a></li>
-                    <li><a href="/en/services">› Services</a></li>
-                    <li><a href="/en/portfolio">› Portfolio</a></li>
-                    <li><a href="/#">› Return & Refund Policy</a></li>
-                  </ul>
-                </div>
-              </div>
+           
+             {/* CENTER */}
+<div className="col">
+  <div className="widget widget_services">
+    <h4 className="widget-title">Quick Links</h4>
+    <ul className="footer-links">
+      <li>
+        <Link href="/en/home" className="ql-link">› Home</Link>
+      </li>
+      <li>
+        <Link href="/en/about" className="ql-link">› About</Link>
+      </li>
+      <li>
+        <Link href="/en/services" className="ql-link">› Services</Link>
+      </li>
+      <li>
+        <Link href="/en/portfolio" className="ql-link">› Portfolio</Link>
+      </li>
+    </ul>
+  </div>
+</div>
 
               {/* RIGHT */}
               <div className="col contact-col">
@@ -106,7 +138,7 @@ const Footer = () => {
                         href="tel:+966576150857"
                         className="contact-link"
                       >
-                       +966 576150857
+                        +966 576150857
                       </a>
                     </li>
 
@@ -139,7 +171,7 @@ const Footer = () => {
                     />
                   </div>
 
-                  
+
                 </div>
               </div>
             </div>
@@ -242,20 +274,45 @@ const Footer = () => {
           .tiktok { background: #000; }
 
           /* LINKS */
-          .footer-links {
-            list-style: none;
-            padding: 0;
-          }
+ 
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  color: #ffffff; /* ← yeh add karo */
+}
 
-          .footer-links li {
-            margin-bottom: 10px;
-          }
+.footer-links li {
+  margin-bottom: 10px;
+  color: #ffffff; /* ← yeh add karo */
+}
 
-          .footer-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-          }
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
 
+
+
+
+/* QUICK LINKS - Custom Fix */
+.ql-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.ql-link:hover {
+  color: #f5c518 !important;
+  padding-left: 6px;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
           /* CONTACT */
           .contact-item {
             display: flex;

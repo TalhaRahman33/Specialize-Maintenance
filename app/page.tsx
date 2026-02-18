@@ -7,7 +7,7 @@ export default function HomePage() {
 
   useEffect(() => {
   
-    router.push('/en/home');
+    router.push('/ar/home');
   }, [router]); 
 
   return null;

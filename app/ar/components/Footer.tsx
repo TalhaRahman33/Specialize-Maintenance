@@ -10,6 +10,7 @@ import {
   Smartphone,
   Music2,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -40,22 +41,46 @@ const Footer = () => {
                     {/* <h5 className="social-title">تابعنا</h5> */}
                     <ul className="social-icons">
                       <li>
-                        <a className="social-btn facebook">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn facebook"
+                          aria-label="تابعنا على فيسبوك"
+                        >
                           <Facebook size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn instagram">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn instagram"
+                          aria-label="تابعنا على إنستغرام"
+                        >
                           <Instagram size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn twitter">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn twitter"
+                          aria-label="تابعنا على تويتر"
+                        >
                           <Twitter size={20} />
                         </a>
                       </li>
                       <li>
-                        <a className="social-btn tiktok">
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="social-btn tiktok"
+                          aria-label="تابعنا على تيك توك"
+                        >
                           <Music2 size={20} />
                         </a>
                       </li>
@@ -64,20 +89,34 @@ const Footer = () => {
                 </div>
               </div>
 
+
+
+
+
               {/* CENTER */}
               <div className="col">
                 <div className="widget widget_services">
-                  <h4 className="widget-title">روابط مهمة</h4>
+                  <h4 className="widget-title"> روابط مهمة </h4>
                   <ul className="footer-links">
-
-                    <li><a href="/ar/home">› الرئيسية</a></li>
-                    <li><a href="/ar/about">› من نحن</a></li>
-                    <li><a href="/ar/services">› خدماتنا</a></li>
-                    <li><a href="/ar/portfolio">› معرض الأعمال</a></li>
-                    <li><a href="/#">› سياسة الاستبدال والاسترجاع</a></li>
+                    <li>
+                      <Link href="/ar/home" className="ql-link">› الرئيسية</Link>
+                    </li>
+                    <li>
+                      <Link href="/ar/about" className="ql-link">› من نحن</Link>
+                    </li>
+                    <li>
+                      <Link href="/ar/services" className="ql-link">› خدماتنا</Link>
+                    </li>
+                    <li>
+                      <Link href="/ar/portfolio" className="ql-link">› معرض الأعمال</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
+
+
+
+
 
               {/* RIGHT */}
               <div className="col contact-col">
@@ -106,7 +145,7 @@ const Footer = () => {
                         href="tel:+966576150857"
                         className="contact-link"
                       >
-                       +966 576150857
+                        +966 576150857
                       </a>
                     </li>
 
@@ -139,7 +178,7 @@ const Footer = () => {
                     />
                   </div>
 
-                  
+
                 </div>
               </div>
             </div>
@@ -252,7 +291,7 @@ const Footer = () => {
           }
 
           .footer-links a {
-            color: #b0b0b0;
+            color: #ffffff;
             text-decoration: none;
           }
 

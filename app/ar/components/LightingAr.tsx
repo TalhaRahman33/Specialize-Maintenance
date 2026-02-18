@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const LightingAr = () => {
   return (
     <section className="py-20 bg-gray-50" dir="rtl">
@@ -15,7 +17,7 @@ const LightingAr = () => {
             وتضمن الأداء العملي وتوفير الطاقة.
           </p>
 
-          <a
+          <Link
             href="https://lxdcjv.zid.store/"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +51,7 @@ const LightingAr = () => {
             <span className="relative z-10">
               تسوق الآن
             </span>
-          </a>
+          </Link>
         </div>
 
         {/* Image */}

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Spacialization = () => {
   return (
@@ -21,9 +22,9 @@ const Spacialization = () => {
                     <p>
                       تركيب وإعداد أنظمة كاميرات المراقبة لتعزيز الأمان والمراقبة الفعّالة.
                     </p>
-                    <a href="/ar/services">
+                    <Link href="/ar/services">
                       <i className="link-plus site-bg-primary" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -37,9 +38,9 @@ const Spacialization = () => {
                     <p>
                       نحول أحلامك في البناء إلى واقع بخبرة عالية ودقة في التنفيذ.
                     </p>
-                    <a href="/ar/services">
+                    <Link href="/ar/services">
                       <i className="link-plus site-bg-primary" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -53,9 +54,9 @@ const Spacialization = () => {
                     <p>
                       تنفيذ هياكل قوية ومتينة بدقة عالية وخبرة احترافية.
                     </p>
-                    <a href="/ar/services">
+                    <Link href="/ar/services">
                       <i className="link-plus site-bg-primary" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -71,9 +72,9 @@ const Spacialization = () => {
                     في شركتنا، لا نقوم ببناء المنازل فقط؛ بل نصنع بيوتًا متكاملة.
                     التزامنا بالجودة والابتكار يضمن تحويل رؤيتك إلى واقع ملموس.
                   </p>
-                  <a href="/ar/services" className="site-button btn-effect">
+                  <Link href="/ar/services" className="site-button btn-effect">
                     عرض جميع الخدمات
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

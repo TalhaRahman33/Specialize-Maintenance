@@ -16,7 +16,8 @@ const Navbar = () => {
       home: 'الرئيسية',
       about: 'حول',
       services: 'الخدمات',
-      portfolio: 'المحفظة'
+      portfolio: 'المحفظة',
+      contact: 'اتصل بنا',
     },
   };
 
@@ -70,6 +71,12 @@ const Navbar = () => {
           <li className={isActive('/ar/portfolio') ? styles.active : ''}>
             <Link href="/ar/portfolio" onClick={() => setMenuOpen(false)}>
               {texts.ar.portfolio}
+              <span className={styles.underlineAr}></span>
+            </Link>
+          </li>
+            <li className={isActive('/ar/contact') ? styles.active : ''}>
+            <Link href="/ar/contact" onClick={() => setMenuOpen(false)}>
+              {texts.ar.contact}
               <span className={styles.underlineAr}></span>
             </Link>
           </li>

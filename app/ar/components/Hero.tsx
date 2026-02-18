@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
@@ -68,9 +69,9 @@ export default function Hero() {
               <div className="content">
                 <h1>{s.title}</h1>
                 <p>{s.desc}</p>
-                <a className="btn" href={s.btnLink}>
+                <Link className="btn" href={s.btnLink}>
                   {s.btnText}
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
