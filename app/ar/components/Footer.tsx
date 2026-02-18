@@ -42,7 +42,7 @@ const Footer = () => {
                     <ul className="social-icons">
                       <li>
                         <a
-                          href="#"
+                          href="https://web.facebook.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="social-btn facebook"
@@ -53,7 +53,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="https://www.instagram.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="social-btn instagram"
@@ -64,7 +64,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="https://www.twitter.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="social-btn twitter"
@@ -75,7 +75,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="https://www.tiktok.com/"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="social-btn tiktok"
