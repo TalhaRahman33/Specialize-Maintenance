@@ -141,7 +141,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold mb-2">معلومات العنوان</h5>
-                      <p className="text-gray-300">09, Martin Street B190 Polo Alto, San Francisco</p>
+                      <p className="text-gray-300">Prince Abdul Muhsin Bin Abdulaziz Rd, Al Malaz, Riyadh 12841</p>
                     </div>
                   </div>
                 </div>
